@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas Mentais: Patologia Veterinária</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ebee;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tab-container {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .tab-button {
+            background-color: #f0f4f8;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-right: 5px;
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .tab-button:hover {
+            background-color: #dfe9f3;
+        }
+
+        .tab-button.active {
+            background-color: #3498db; /* Aula I */
+            color: white;
+            border-color: #3498db;
+            font-weight: bold;
+        }
+        
+        .tab-button.active.aula2-active {
+            background-color: #27ae60; /* Aula II */
+            border-color: #27ae60;
+        }
+        .tab-button.active.aula3-active {
+            background-color: #8e44ad; /* Roxo para Aula III */
+            border-color: #8e44ad;
+        }
+
+
+        .tab-content {
+            display: none;
+            width: 100%;
+            animation: fadeIn 0.5s;
+            text-align: center;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .mindmap-title {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .mindmap-title.aula1-title { color: #2c3e50; }
+        .mindmap-title.aula2-title { color: #1e8449; }
+        .mindmap-title.aula3-title { color: #732d91; } 
+
+
+        .central-node {
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            margin-bottom: 35px;
+            display: inline-block;
+        }
+        .central-node.aula1-node { background-color: #3498db; border: 3px solid #2980b9; }
+        .central-node.aula2-node { background-color: #2ecc71; border: 3px solid #27ae60; }
+        .central-node.aula3-node { background-color: #9b59b6; border: 3px solid #8e44ad; } 
+
+
+        .branches-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 35px auto;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        
+        .branches-container.two-branches .branch {
+            flex-basis: calc(50% - 20px);
+            max-width: 480px;
+        }
+         .branches-container.single-branch .branch {
+            flex-basis: calc(70% - 20px);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .branch {
+            background-color: #ffffff;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            flex-basis: calc(33.333% - 20px);
+            min-width: 270px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .branch h3 {
+            margin-top: 0;
+            font-size: 1.25em;
+            border-bottom: 2px solid;
+            padding-bottom: 7px;
+            margin-bottom: 12px;
+            flex-shrink: 0;
+        }
+
+        .branch ul { list-style-type: none; padding-left: 0; flex-grow: 1; }
+        .branch ul li { margin-bottom: 8px; line-height: 1.45; font-size: 0.92em; }
+        .branch ul ul { padding-left: 18px; margin-top: 4px; }
+        .branch ul ul li { font-size: 0.88em; margin-bottom: 4px; }
+
+        .branch-oque-e { border-color: #1abc9c; }
+        .branch-oque-e h3 { color: #1abc9c; border-bottom-color: #1abc9c; }
+        .branch-saude-doenca { border-color: #e67e22; }
+        .branch-saude-doenca h3 { color: #e67e22; border-bottom-color: #e67e22; }
+        .branch-divisoes { border-color: #9b59b6; }
+        .branch-divisoes h3 { color: #9b59b6; border-bottom-color: #9b59b6; }
+
+        .branch-fundamentos { border-color: #3498db; }
+        .branch-fundamentos h3 { color: #3498db; border-bottom-color: #3498db; }
+        .branch-estimulos { border-color: #f1c40f; }
+        .branch-estimulos h3 { color: #f1c40f; border-bottom-color: #f1c40f; }
+        
+        .branch-contexto-lesao { border-color: #e74c3c;  }
+        .branch-contexto-lesao h3 { color: #e74c3c; border-bottom-color: #e74c3c; }
+        .branch-degeneracoes-geral { border-color: #f39c12;  }
+        .branch-degeneracoes-geral h3 { color: #f39c12; border-bottom-color: #f39c12; }
+
+
+        .main-flow-title {
+            font-size: 1.8em;
+            margin-top: 25px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+        }
+        .main-flow-title.aula1-flow-title { color: #c0392b; }
+        .main-flow-title.aula2-flow-title { color: #d35400; }
+        .main-flow-title.aula3-flow-title { color: #c0392b; } 
+
+
+        .pre-flow-info, .flow-path-description {
+            border: 1px dashed #bdc3c7;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px auto 15px auto;
+            text-align: center;
+            font-size: 1em;
+            color: #7f8c8d;
+            max-width: 90%;
+        }
+        .pre-flow-info { background-color: #f9f9f9; }
+        .flow-path-description { background-color: #fdfefe; font-style: italic; }
+
+
+        .main-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch; 
+            width: 100%;
+            max-width: 1700px; 
+            margin: 0 auto 30px auto;
+            text-align: left;
+        }
+        
+        .bifurcated-flow-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+        .flow-path {
+            flex-basis: calc(45% - 20px);
+            min-width: 300px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flow-or-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #7f8c8d;
+            margin: auto 10px;
+            height: 100px;
+        }
+
+
+        .flow-step {
+            background-color: #ecf0f1; 
+            border: 2px solid #bdc3c7; 
+            color: #2c3e50;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 10px; 
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px; /* Largura aumentada para mais conteúdo */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .flow-path .flow-step { 
+             margin: 10px 0; 
+             width: 100%;
+             max-width: 400px;
+        }
+
+        .flow-step.aula3-step-hidropica { background-color: #d6eaf8; border-color: #85c1e9; } 
+        .flow-step.aula3-step-glicogenica { background-color: #fdebd0; border-color: #f5cba7; } 
+        .flow-step.aula3-step-gordurosa { background-color: #fcf3cf; border-color: #f7dc6f; } 
+        .flow-step.aula3-step-inclusao { background-color: #e8daef; border-color: #d7bde2; } 
+        .flow-step.aula3-step-outros { background-color: #d5f5e3; border-color: #82e0aa; } 
+
+        
+        .flow-step.full-width-step {
+            width: calc(100% - 20px);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lesion-type-block {
+            border: 2px dashed;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        .lesion-reversivel { border-color: #2980b9; background-color: #eaf2f8;}
+        .lesion-irreversivel { border-color: #c0392b; background-color: #fdedec;}
+        .lesion-type-block h5 { margin: 0 0 8px 0; font-size: 1em; }
+        .lesion-type-block h6 { margin: 5px 0 5px 0; font-size: 0.95em; font-weight: bold; }
+
+
+        .flow-step h4 {
+            margin-top: 0;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            flex-shrink: 0;
+        }
+        .flow-step.aula1-step h4 { color: #2980b9; }
+        .flow-step.aula2-step h4 { color: #16a085; }
+        .flow-step.aula3-step h4 { color: #7d3c98; } 
+        
+        .flow-step p, .flow-step .details-list, .flow-step .etiology-types, .flow-step .adaptation-types, .flow-step .lesion-types-list {
+            font-size: 0.9em; /* Aumentado um pouco para melhor legibilidade do conteúdo expandido */
+            flex-grow: 1;
+            overflow-y: auto;
+            text-align: left;
+            padding: 0 5px; /* Pequeno padding interno */
+        }
+        .flow-step ul { list-style-type: '✓ '; padding-left: 18px; margin-top: 4px; margin-bottom: 8px; }
+        .flow-step ul ul { list-style-type: '▪ '; padding-left: 12px; }
+        .flow-step .path-label-internal { font-style: italic; color: #555; font-size:0.9em; margin-top:10px; text-align:center;}
+
+
+        .arrow {
+            font-size: 2.8em;
+            margin: auto 15px;
+            align-self: center;
+            line-height: 1;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .arrow.aula1-arrow { color: #c0392b; }
+        .arrow.aula2-arrow { color: #c0392b; }
+        .arrow.aula3-arrow { color: #7d3c98; } 
+        .arrow-down { width:100%; margin: 10px auto; font-size: 2em; }
+
+        .highlight { font-weight: bold; }
+        .highlight.aula1-hl { color: #e74c3c; }
+        .highlight.aula2-hl { color: #d35400; }
+        .highlight.aula3-hl { color: #c0392b; } 
+
+
+        .sub-item { font-size: 0.9em; color: #555; }
+        
+        .details-list h5, .etiology-types h5, .adaptation-types h5, .lesion-types-list h5 {
+            margin: 5px 0 6px 0; /* Ajuste de margem */
+            color: #34495e;
+            text-align: left; /* Alinhado à esquerda para listas de detalhes */
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+        .details-list ul { margin-bottom: 10px; } /* Espaçamento após listas de detalhes */
+        
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .branch { flex-basis: calc(50% - 20px); }
+            .flow-step:not(.full-width-step):not(.flow-path .flow-step) { width: calc(50% - 40px); }
+        }
+
+        @media (max-width: 900px) {
+            .bifurcated-flow-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .flow-path {
+                flex-basis: 100%;
+                max-width: 500px;
+            }
+            .flow-or-separator {
+                width: 100%;
+                height: auto;
+                margin: 15px 0;
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tab-button { padding: 10px 15px; font-size: 1em;}
+            .mindmap-title { font-size: 1.8em; }
+            .central-node { font-size: 1.3em; padding: 15px 25px; }
+            .branches-container, .branches-container.two-branches, .branches-container.single-branch {
+                flex-direction: column;
+                align-items: center;
+            }
+            .branch {
+                flex-basis: 85%;
+                min-width: unset;
+                width: 85%;
+                margin-bottom: 18px;
+            }
+            .main-flow {
+                 flex-direction: column;
+                 align-items: center;
+            }
+            .flow-step, .flow-step.full-width-step, .flow-path .flow-step {
+                width: 85%;
+                min-height: auto;
+                margin: 10px auto; 
+            }
+            .arrow:not(.arrow-down) {
+                transform: rotate(90deg);
+                margin: 15px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'Aula1', this)">Aula I: Introdução</button>
+        <button class="tab-button" onclick="openTab(event, 'Aula2', this)">Aula II: Lesões e Adaptações</button>
+        <button class="tab-button" onclick="openTab(event, 'Aula3', this)">Aula III: Degenerações</button>
+    </div>
+
+    <!-- Conteúdo da Aula I (Mantido) -->
+    <div id="Aula1" class="tab-content active">
+        <div class="mindmap-title aula1-title">🗺️ Mapa Mental: Introdução à Patologia Geral Veterinária 🐾</div>
+        <div class="central-node aula1-node">PATOLOGIA GERAL VETERINÁRIA <br> (Aula 1: Introdução) 🔬</div>
+        <div class="branches-container">
+            <div class="branch branch-oque-e"><h3>🤔 O QUE É PATOLOGIA?</h3><ul><li><strong>Etimologia:</strong> Pathos (Doença) + Logia (Estudo)</li><li><strong>Definição:</strong> Ciência que estuda alterações morfológicas e fisiológicas dos estados de saúde/doença.</li><li class="sub-item">Indivíduo doente: alterações não compensadas.</li><li><strong>Foco:</strong> Estudo <span class="highlight aula1-hl">DA</span> doença ✅ (não a doença em si ❌)</li><li><strong>Estuda Alterações:</strong><ul><li>Estruturais</li><li>Bioquímicas</li><li>Funcionais</li></ul></li><li><strong>Níveis:</strong> Células ➡️ Tecidos ➡️ Órgãos</li><li><strong>Técnicas:</strong> Molecular, Morfológica, Microbiológica</li></ul></div>
+            <div class="branch branch-saude-doenca"><h3>⚖️ SAÚDE vs. DOENÇA</h3><ul><li><strong>Saúde:</strong> Completo bem-estar (físico, mental, social), não só ausência de doença. ✅🐕</li><li><strong>Doença:</strong> Perda da homeostase (total/parcial). ❌🤕<ul><li>Conjunto de sinais clínicos com etiologia.</li><li>Dano: Estrutural ou Funcional.</li></ul></li></ul></div>
+            <div class="branch branch-divisoes"><h3>📚 DIVISÕES DA PATOLOGIA</h3><ul><li><strong>Patologia Geral:</strong> Alterações comuns a todas as células, tecidos, órgãos.</li><li><strong>Patologia Animal (Especial/Sistêmica):</strong> Alterações específicas de enfermidades em sistemas/órgãos/tecidos.</li></ul></div>
+        </div>
+        <div class="main-flow-title aula1-flow-title">🔄 FLUXO PRINCIPAL: DESENVOLVIMENTO DA ENFERMIDADE 🧬</div>
+        <div class="pre-flow-info">Níveis de Organização Afetados: Organelas ➡️ Células ➡️ Tecidos ➡️ Órgãos ➡️ Sistemas<br><strong>⬆️ INJÚRIA / AGRESSÃO 💥⬆️</strong></div>
+        <div class="main-flow">
+            <div class="flow-step aula1-step"><h4>1. ETIOLOGIA (Causa) ❓</h4><p>Agentes/Fatores causais (agressão, virulência)</p><div class="etiology-types"><h5>Proveniência:</h5><ul><li><strong>Intrínsecos/Endógenos:</strong><ul><li>Genéticos 🧬</li><li>Imunes 🛡️</li><li>Hormonais 🧪</li></ul></li><li><strong>Extrínsecos/Exógenos:</strong><ul><li>Nutricionais 🥕</li><li>Ag. Físicos 🔥</li><li>Ag. Químicos ☠️</li><li>Infecciosos 🦠</li><li>Anóxia 💨</li></ul></li></ul></div></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>2. PATOGENIA (Mecanismos) ⚙️</h4><p>Como agentes agridem e organismo reage. Surgimento de lesões/disfunções.</p><p><em>Ex: Ag. Etiológico ➡️ Lesão Celular ➡️ Fisiopatologia ➡️ Propedêutica</em></p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>3. ANATOMIA PATOLÓGICA (Lesões) 👁️‍🗨️</h4><p>Alterações morfológicas (macro/micro).</p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>4. FISIOPATOLOGIA (Alt. Funcionais) 📉📈</h4><p>Distúrbios funcionais.</p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>5. PROPEDÊUTICA (Sinais) 🩺</h4><p>Exame clínico.</p><ul><li><strong>Sinais Clínicos:</strong> Objetivos.</li></ul><p style="text-align:center; margin-top:auto;"><strong>➡️ DIAGNÓSTICO 🎯</strong></p></div>
+        </div>
+    </div>
+
+    <!-- Conteúdo da Aula II (Mantido) -->
+    <div id="Aula2" class="tab-content">
+        <div class="mindmap-title aula2-title">🔬 Mapa Mental: Lesões e Adaptações Celulares 🧬</div>
+        <div class="central-node aula2-node">AULA II: Lesões Celulares <br> Reversíveis, Irreversíveis e Adaptações</div>
+        <div class="branches-container two-branches">
+             <div class="branch branch-fundamentos"><h3>🌱 FUNDAMENTOS CELULARES</h3><ul><li><strong>Célula Normal:</strong> Funcionamento = <span class="highlight aula2-hl">Homeostase</span>.</li><li>Organelas organizadas, Membrana Celular, Vias Metabólicas, Proteínas de membrana.</li><li><strong>Capacidade de Adaptação:</strong> Limitada. Se ultrapassada ➡️ Lesão.</li></ul></div>
+            <div class="branch branch-estimulos"><h3>🎯 ESTÍMULOS CELULARES (Etiologia da Lesão)</h3><div class="etiology-types"><h5>Fatores Predisponentes <small>(Aumentam susceptibilidade)</small></h5><ul><li><strong>Intrínsecos:</strong> Doenças hereditárias, Espécie/Raça, Gênero, Cor, Imunodeficiências congênitas.</li><li><strong>Extrínsecos:</strong> Fármacos imunossupressores, Estresse.</li></ul><br><h5>Fatores Determinantes <small>(Causam diretamente)</small></h5><ul><li><strong>Intrínsecos:</strong> Reações imunológicas, Envelhecimento, Alt. pressão arterial, Alt. endócrinas, Alt. genéticas/desenvolvimento.</li><li><strong>Extrínsecos:</strong> Ag. Físicos, Químicos, Biológicos, Desequilíbrio Nutricional, Hipóxia/Anóxia.</li></ul></div></div>
+        </div>
+        <div class="main-flow-title aula2-flow-title">🔄 RESPOSTAS CELULARES AOS AGRESSORES</div>
+        <div class="flow-step aula2-step full-width-step" style="background-color: #d1f2eb; border-color: #a3e4d7;"><h4>PONTO DE PARTIDA: CÉLULA NORMAL (Homeostase) 🏠</h4></div>
+        <div class="arrow aula2-arrow arrow-down">⬇️</div>
+        <div class="bifurcated-flow-container">
+            <div class="flow-path"><div class="flow-path-description">Se Estresse ou Aumento de Demanda...</div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em;">⤵️</div><div class="flow-step aula2-step"><h4>ADAPTAÇÃO CELULAR 🛡️</h4><p>Objetivo: Sobrevivência, novo equilíbrio.</p><div class="adaptation-types"><h5>Formas de Adaptação:</h5><ul><li><span class="highlight aula2-hl">Hiperplasia</span></li> <li><span class="highlight aula2-hl">Hipertrofia</span></li><li><span class="highlight aula2-hl">Atrofia</span></li> <li><span class="highlight aula2-hl">Metaplasia</span></li><li><span class="highlight aula2-hl">Displasia</span></li> <li><span class="highlight aula2-hl">Autofagia</span></li></ul></div><div class="path-label-internal">Se incapacidade de adaptação ➡️ (Lesão Celular Intensa)</div></div></div>
+            <div class="flow-or-separator">OU</div>
+            <div class="flow-path"><div class="flow-path-description">Se Estímulos Nocivos...</div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em;">⤵️</div><div class="flow-step aula2-step" style="border-color: #f1c40f;"><h4>LESÃO CELULAR 💥</h4><p>Severidade do estímulo determina o resultado.</p></div><div class="arrow aula2-arrow arrow-down">⬇️</div><div class="main-flow" style="flex-direction:column; align-items:center; width:100%; max-width:450px;"><div class="flow-step aula2-step"><h4 style="color: #2980b9;">LESÃO REVERSÍVEL ⏳</h4><p>(Estímulo Leve/Transitório)</p><div class="lesion-types-list lesion-reversivel"><h5>Tipos Comuns:</h5><ul><li>Deg. Hidrópica</li><li>Deg. Glicogênica</li><li>Deg. Gordurosa</li><li>Corpúsculos de Inclusão</li></ul></div></div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em; margin: 5px 0;">OU</div><div class="flow-step aula2-step"><h4 style="color: #c0392b;">LESÃO IRREVERSÍVEL (MORTE) ☠️</h4><p>(Estímulo Intenso/Progressivo)</p><div class="lesion-type-block lesion-irreversivel" style="margin-bottom:10px;"><h6>🍂 APOPTOSE</h6> <p style="font-size:0.85em; text-align:center;">Morte programada.</p></div><div class="lesion-type-block lesion-irreversivel"><h6>💀 NECROSE</h6> <p style="font-size:0.85em; text-align:center; margin-bottom:5px;">Morte acidental.</p><h5 style="font-size:0.9em; text-align:left;">Tipos:</h5><ul style="font-size:0.85em;"><li>Coagulação</li> <li>Liquefação</li> <li>Caseosa</li> <li>Gordurosa</li> <li>Gangrenosa</li></ul></div></div></div></div>
+        </div>
+    </div>
+
+    <!-- Conteúdo da Aula III - EXPANDIDO -->
+    <div id="Aula3" class="tab-content">
+        <div class="mindmap-title aula3-title">🧩 Mapa Mental: Degenerações e Acúmulos Intracelulares</div>
+        <div class="central-node aula3-node">
+            AULA III: Degenerações Celulares <br> e Acúmulos Intracelulares 💧🧈🍬🧱
+        </div>
+
+        <div class="branches-container two-branches">
+            <div class="branch branch-contexto-lesao">
+                <h3>🔄 CONTEXTO: LESÃO CELULAR REVERSÍVEL</h3>
+                <ul>
+                    <li>Alteração morfológica e funcional por estímulo nocivo transitório/baixa intensidade.</li>
+                    <li>Célula <span class="highlight aula3-hl">CAPAZ</span> de recuperar estrutura e função se agente agressor removido a tempo.</li>
+                    <li>Preservação da integridade da membrana plasmática.</li>
+                    <li>Alterações limitadas ao citoplasma.</li>
+                    <li>Principal manifestação morfológica ➡️ <span class="highlight aula3-hl">DEGENERAÇÕES CELULARES</span>.</li>
+                </ul>
+            </div>
+            <div class="branch branch-degeneracoes-geral">
+                <h3>🔬 DEGENERAÇÕES CELULARES: VISÃO GERAL</h3>
+                <ul>
+                    <li><strong>Definição:</strong> Acúmulo anormal de substâncias nas células.</li>
+                    <li><strong>Substâncias Envolvidas:</strong> Água, lipídios, proteínas, glicogênio, pigmentos, minerais, subst. exógenas.</li>
+                    <li><strong>Afetam 3 Respostas Celulares Básicas:</strong>
+                        <ol style="padding-left: 20px; margin-top:5px;">
+                            <li>Alterações do balanço hidro-eletrolítico (Ex: Deg. Hidrópica).</li>
+                            <li>Sobrecarga de produtos catabólicos (Ex: Glicogênio, Lipídios, Proteínas).</li>
+                            <li>Acúmulo de produtos complexos não degradáveis (Ex: Pigmentos, Minerais, Corpúsculos).</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-flow-title aula3-flow-title">🔎 TIPOS DETALHADOS DE DEGENERAÇÕES E ACÚMULOS</div>
+        <div class="main-flow">
+            <div class="flow-step aula3-step aula3-step-hidropica">
+                <h4 style="color:#2e86c1;">1. DEGENERAÇÃO HIDRÓPICA (Tumefação Celular) 💧</h4>
+                <p><strong>Definição:</strong> Acúmulo de água e eletrólitos ➡️ células tumefeitas, volume aumentado. Lesão reversível <span class="highlight aula3-hl">mais comum</span>.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5>
+                    <ul>
+                        <li>Falha na bomba de Na+/K+-ATPase (ATP dependente) ➡️ Distúrbios hidroeletrolíticos.</li>
+                        <li>Agressão ➡️ ↓ATP ➡️ Falha Bomba Na+/K+ ➡️ Retenção Na+ intracelular ➡️ ↑Pressão osmótica ➡️ Entrada de água ➡️ Distensão RE, formação vacúolos.</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Hipóxia (depleção ATP).</li>
+                        <li>Toxinas (dano direto organelas/membranas).</li>
+                        <li>Radicais livres (danificam lipídios de membranas).</li>
+                        <li>Infecções virais (lesões membrana/organelas).</li>
+                        <li>Distúrbios osmóticos (hipo/hipernatremia, hipocalemia).</li>
+                        <li>Metabólicos (anorexia, hiperglicemia/Diabetes ➡️ depleção ATP).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Quase todos os tecidos; mais comum em órgãos de alta atividade metabólica (fígado, rins, coração, pele, mucosas, túbulos renais, endotélio).
+                    <h5>Aspectos Macroscópicos:</h5> Órgãos aumentados (tumefação), pálidos, pesados, saliência ao corte, protrusão do parênquima.
+                    <h5>Aspectos Microscópicos:</h5> Células tumefeitas (↑ volume), citoplasma claro/granuloso, vacúolos citoplasmáticos, <span class="highlight aula3-hl">núcleo em posição original</span>.
+                </div>
+            </div>
+            <div class="arrow aula3-arrow">➡️</div>
+            <div class="flow-step aula3-step aula3-step-glicogenica">
+                <h4 style="color:#af601a;">2. DEGENERAÇÃO GLICOGÊNICA 🍬</h4>
+                <p><strong>Definição:</strong> Acúmulo excessivo de glicogênio no citoplasma, especialmente hepatócitos.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5>
+                    <ul>
+                        <li>Glicogênio normalmente armazenado (fígado, músculos).</li>
+                        <li>Acúmulo exagerado por distúrbios hormonais ou metabólicos.</li>
+                        <li>Acúmulo no retículo endoplasmático liso ➡️ citoplasma claro e mal delimitado.</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Uso crônico de corticosteroides (iatrogênico/endógeno).</li>
+                        <li>Síndrome de Cushing (hiperadrenocorticismo).</li>
+                        <li>Diabetes mellitus.</li>
+                        <li>Doenças hepáticas com distúrbio no metabolismo de carboidratos.</li>
+                        <li>Glicogenoses congênitas (raro).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Principalmente hepatócitos.
+                </div>
+            </div>
+        </div>
+        <div class="main-flow" style="margin-top:0;"> <!-- Continuação do fluxo -->
+            <div class="flow-step aula3-step aula3-step-gordurosa">
+                <h4 style="color:#d4ac0d;">3. DEGENERAÇÃO GORDUROSA (Esteatose/Lipidose) 🧈</h4>
+                <p><strong>Definição:</strong> Acúmulo anormal de lipídios (mono, di, triglicerídeos) no citoplasma de células parenquimatosas, principalmente hepatócitos.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5> Alterações no metabolismo de ácidos graxos:
+                    <ul>
+                        <li>Maior aporte de AG da dieta.</li>
+                        <li>Redução na β-oxidação (lesão mitocondrial por hipóxia/toxinas).</li>
+                        <li>Síntese prejudicada de apoproteínas (ex: aflatoxinas) ➡️ menor secreção de lipoproteínas.</li>
+                        <li>Combinação prejudicada de lipoproteínas.</li>
+                        <li>Deficiência de proteínas/calorias na dieta ➡️ síntese prejudicada de lipoproteínas.</li>
+                        <li>Mobilização aumentada de gordura corporal (anorexia, vacas no final gestação/lactação).</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Falha nutricional, hipóxia, toxinas, deficiência proteico-calórica.</li>
+                        <li>Diabetes mellitus.</li>
+                        <li>Anorexia (ex: Síndrome da Lipidose Hepática Felina em gatos obesos).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Células parenquimatosas (fígado, coração, rins).
+                    <h5>Aspectos Macroscópicos:</h5> Órgão aumentado, amarelado, macio, friável, textura gordurosa, bordos arredondados, <span class="highlight aula3-hl">flutua no formol</span> (fígado).
+                    <h5>Aspectos Microscópicos:</h5> Vacúolos de tamanhos variáveis, claros (imagem negativa da gordura), <span class="highlight aula3-hl">núcleo deslocado para periferia</span> por grandes vacúolos.
+                </div>
+            </div>
+            <div class="arrow aula3-arrow">➡️</div>
+            <div class="flow-step aula3-step aula3-step-inclusao">
+                <h4 style="color:#512e5f;">4. CORPÚSCULOS DE INCLUSÃO 🧱🦠</h4>
+                <p><strong>Definição:</strong> Acúmulo intracelular anormal de material viral, proteínas alteradas (resíduo de replicação viral) ou outras substâncias.</p>
+                <div class="details-list">
+                    <h5>Locais e Tipos (Exemplos Virais):</h5>
+                    <ul>
+                        <li><strong>Intranucleares:</strong>
+                            <ul><li>DNA Vírus: Hepatite Infecciosa Canina (Adenovírus), Herpesvírus, Parvovírus, Cinomose (SNC).</li></ul>
+                        </li>
+                        <li><strong>Citoplasmáticos:</strong>
+                            <ul><li>RNA Vírus: Raiva (Corpúsculos de Negri), Cinomose (Corpúsculos de Lentz).</li><li>DNA Vírus: Poxvírus.</li></ul>
+                        </li>
+                    </ul>
+                    <h5>Importância:</h5> <span class="highlight aula3-hl">Diagnóstica</span> (identificação do agente ou processo).
+                </div>
+            </div>
+        </div>
+        <div class="main-flow" style="margin-top:0; justify-content: center;"> <!-- Último bloco centralizado -->
+             <div class="flow-step aula3-step aula3-step-outros">
+                <h4 style="color:#1e8449;">5. OUTROS ACÚMULOS E DEGENERAÇÕES 🎨</h4>
+                <p><strong>Breves Descrições:</strong></p>
+                <div class="details-list">
+                    <ul>
+                        <li><strong>Degeneração Hialina:</strong> Acúmulo (intra ou extracelular) de material proteico, homogêneo, eosinofílico, vítreo.</li>
+                        <li><strong>Degeneração Mucóide:</strong> Acúmulo excessivo de mucina (mucopolissacarídeos).</li>
+                        <li><strong>Degeneração Amiloide (Amiloidose):</strong> Deposição de proteína amiloide fibrilar anormal, insolúvel, geralmente extracelular, causando compressão e atrofia celular.</li>
+                        <li><strong>Pigmentos:</strong>
+                            <ul>
+                                <li><span class="highlight aula3-hl">Endógenos:</span> Melanina (pele), Hemossiderina (hemorragias, hemólise), Bilirrubina (icterícia), Lipofuscina (pigmento do envelhecimento).</li>
+                                <li><span class="highlight aula3-hl">Exógenos:</span> Carvão (antracose pulmonar), Tatuagens.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName, buttonElement) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active", "aula2-active", "aula3-active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            buttonElement.classList.add("active");
+            if (tabName === 'Aula2') {
+                buttonElement.classList.add("aula2-active");
+            } else if (tabName === 'Aula3') {
+                buttonElement.classList.add("aula3-active");
+            }
+        }
+        // Abre a primeira aba por padrão
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementsByClassName("tab-button")[0].click();
+        });
+    </script>
+
+</body>
+</html>
