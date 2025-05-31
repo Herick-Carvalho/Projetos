@@ -3,206 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arco-Iris Vet - Oftalmologia Veterinária</title>
+    <title>Arco-Iris Vet - Oftalmologia Veterinária de Excelência</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos Globais Básicos */
+        /* Variáveis de Cor - Facilita a personalização! */
+        :root {
+            --primary-color: #4CAF50; /* Verde esperança/saúde - pode ajustar para um tom mais "arco-íris" se quiser */
+            --secondary-color: #388E3C; /* Verde mais escuro para contrastes */
+            --accent-color: #FFC107; /* Amarelo/Laranja para chamadas de ação - um toque do arco-íris */
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --dark-blue-text: #2c3e50; /* Para textos importantes */
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 16px;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         /* Cabeçalho e Navegação */
         header {
-            background: #50b3a2; /* Um tom de verde/azulado calmo */
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #378c7d 3px solid;
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 15px 0;
+            border-bottom: 3px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; /* Faz o cabeçalho ficar fixo no topo ao rolar */
+            top: 0;
+            z-index: 1000; /* Garante que fique acima de outros elementos */
         }
 
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        header #branding {
-            float: left;
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header #branding h1 {
             margin: 0;
-            font-size: 28px; /* Tamanho um pouco maior para o nome */
+            font-size: 28px;
+            font-weight: 700;
+        }
+        header #branding h1 a {
+            color: var(--primary-color);
+            text-decoration: none;
         }
         header #branding .slogan-mini {
-            font-size: 14px;
-            margin-top: 5px;
+            font-size: 13px;
+            margin-top: -5px;
+            color: #777;
         }
 
-        header nav {
-            float: right;
-            margin-top: 10px;
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        header nav li {
+            display: inline;
+            margin-left: 25px;
+        }
+
+        header nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover, header nav .current a {
+            color: var(--accent-color);
         }
 
         /* Seção Hero (Principal) */
         #hero {
-            min-height: 400px;
-            background: url('https://via.placeholder.com/1500x500?text=Imagem+Inspiradora+de+Pets+Felizes') no-repeat 0 -100px; /* Imagem de placeholder, substitua! */
-            background-size: cover; /* Para cobrir toda a área */
-            background-position: center center; /* Centralizar a imagem */
-            text-align: center;
-            color: #fff;
-            display: flex; /* Para centralizar o conteúdo verticalmente */
+            min-height: 70vh; /* Altura maior */
+            /* IMAGEM AQUI: Uma foto de alta qualidade de um cão e um gato com olhares saudáveis, talvez um leve brilho/arco-íris sutil no fundo se possível, ou um ambiente de clínica moderno e acolhedor */
+            background: url('https://placekitten.com/1500/700') no-repeat center center/cover; /* Placeholder - SUBSTITUA! */
+            color: var(--white);
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-shadow: 2px 2px 4px #000000; /* Sombra no texto para melhor leitura sobre imagem */
+            text-align: center;
+            padding: 0 20px;
+            position: relative; /* Para o overlay */
+        }
+        #hero::before { /* Overlay para escurecer um pouco a imagem e destacar o texto */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade conforme necessário */
+        }
+
+        #hero h1, #hero p, #hero .button {
+            position: relative; /* Para ficarem acima do overlay */
+            z-index: 1;
         }
 
         #hero h1 {
-            margin-top: 0; /* Ajustado para flexbox */
-            font-size: 55px;
-            margin-bottom: 10px;
+            font-size: 3.2em; /* Maior e mais impacto */
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
 
         #hero p {
-            font-size: 20px;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
         }
 
-        #hero .button {
+        .button { /* Estilo de botão global */
             display: inline-block;
-            background: #e8491d; /* Cor de destaque para o botão */
-            color: #fff;
-            padding: 10px 20px;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-weight: bold;
+            border-radius: 25px; /* Bordas mais arredondadas */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
-         #hero .button:hover {
-            background: #333;
-         }
+        .button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+        }
+        .button-secondary { /* Botão com estilo alternativo */
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .button-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
 
 
         /* Seções de Conteúdo */
         section {
-            padding: 30px 0;
-            border-bottom: 1px solid #ddd;
+            padding: 60px 0;
         }
-        section:last-of-type {
-            border-bottom: none;
+        section:nth-child(even) { /* Alternar cor de fundo para algumas seções */
+             background-color: var(--white);
         }
 
         section h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #378c7d;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            color: var(--dark-blue-text);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        /* Linha decorativa abaixo do título da seção */
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
         }
 
-        .service-item, .diferencial-item {
-            background: #fff;
-            padding: 20px;
+        /* Estilo de "Card" para serviços e diferenciais */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo em grade */
+            gap: 30px; /* Espaçamento entre os cards */
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center; /* Centralizar texto dentro do card */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .card img.icon { /* Se você usar ícones como imagens */
+            width: 60px;
+            height: 60px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            /* IMAGEM AQUI (ÍCONE): Ícones representando cada serviço/diferencial. Ex: olho, microscópio, pet relaxando, etc. */
         }
-
-        .service-item h3, .diferencial-item h3 {
-            color: #50b3a2;
+        .card h3 {
+            color: var(--primary-color);
             margin-top:0;
-        }
-
-        /* Rodapé */
-        footer {
-            padding: 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #378c7d;
-            text-align: center;
-        }
-
-        /* Estilos para o "App" e "Transporte" - podem ser cards */
-        .feature-box {
-            text-align: center;
-            padding: 20px;
-            background: #e7f6f2; /* Um tom mais claro do verde */
-            border-radius: 5px;
-            margin: 10px;
-            flex: 1; /* Para layout flex */
-        }
-        .features-container {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px; /* Espaço entre os boxes */
-            flex-wrap: wrap; /* Para quebrar em telas menores */
-        }
-        .feature-box img { /* Se você adicionar ícones */
-            width: 50px;
-            height: 50px;
             margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        .card p {
+            font-size: 0.95em;
+            color: #555;
         }
 
-        /* Formulário de Contato Simples */
-        #contato form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        /* Seção Sobre */
+        #sobre p {
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        /* IMAGEM AQUI (Sobre Nós): Uma foto da equipe sorrindo, ou um ambiente interno da clínica que seja convidativo e moderno. */
+        #sobre .about-image {
+            display: block;
             max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+
+
+        /* Formulário de Contato */
+        #contato form {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        #contato .form-group {
+            margin-bottom: 20px;
         }
         #contato label {
-            font-weight: bold;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark-blue-text);
         }
         #contato input[type="text"],
         #contato input[type="email"],
         #contato textarea {
-            padding: 10px;
+            width: calc(100% - 24px);
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            width: calc(100% - 22px); /* Ajuste para padding e borda */
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        #contato input[type="text"]:focus,
+        #contato input[type="email"]:focus,
+        #contato textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
         }
         #contato textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 120px;
         }
-        #contato button {
-            background: #e8491d;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+        #contato .form-actions {
+            text-align: center; /* Centralizar o botão */
         }
-        #contato button:hover {
-            background: #333;
+        #contato button { /* Usa o estilo .button global */
+            font-size: 1.1em;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+        .contact-info strong {
+            color: var(--dark-blue-text);
+        }
+
+
+        /* Rodapé */
+        footer {
+            padding: 40px 0;
+            background-color: var(--dark-blue-text);
+            color: var(--light-gray);
+            text-align: center;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade Básica */
+        @media(max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            header nav {
+                margin-top: 15px;
+            }
+            header nav li {
+                display: block;
+                margin: 10px 0;
+            }
+            #hero h1 {
+                font-size: 2.5em;
+            }
+            #hero p {
+                font-size: 1.1em;
+            }
+            section h2 {
+                font-size: 1.8em;
+            }
+            .card-container {
+                grid-template-columns: 1fr; /* Uma coluna em telas menores */
+            }
         }
 
     </style>
@@ -212,11 +356,11 @@
         <div class="container">
             <div id="branding">
                 <h1><a href="#">Arco-Iris Vet</a></h1>
-                <p class="slogan-mini">Oftalmologia Veterinária</p>
+                <p class="slogan-mini">Oftalmologia Veterinária de Excelência</p>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="#">Início</a></li>
+                    <li class="current"><a href="#hero">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#diferenciais">Diferenciais</a></li>
@@ -227,116 +371,145 @@
     </header>
 
     <section id="hero">
-        <div class="container">
-            <h1>Iluminando o caminho para uma visão saudável.</h1>
-            <p>Cuidado oftalmológico especializado para cães e gatos. Porque cada olhar merece um arco-íris.</p>
-            <a href="#contato" class="button">Agende uma Consulta</a>
-        </div>
+        <!-- Conteúdo já definido no CSS para centralização e overlay -->
+        <h1>Iluminando o caminho para uma visão saudável.</h1>
+        <p>Cuidado oftalmológico especializado e humanizado para cães e gatos. Porque cada olhar merece um arco-íris de cores e felicidade.</p>
+        <a href="#contato" class="button">Agende uma Consulta</a>
     </section>
 
     <section id="sobre" class="container">
-        <h2>Sobre a Arco-Iris Vet</h2>
-        <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets. Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores.</p>
-        <p>Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento, promovendo a reabilitação e o conforto.</p>
+        <h2>Nossa Missão e Paixão</h2>
+        <!-- IMAGEM AQUI: Uma foto da equipe sorrindo, ou um ambiente interno da clínica que seja convidativo e moderno. -->
+        <img src="https://placekitten.com/g/500/300" alt="Equipe Arco-Iris Vet ou Ambiente da Clínica" class="about-image"> <!-- Placeholder - SUBSTITUA! -->
+        <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets.</p>
+        <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores. Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento.</p>
     </section>
 
-    <section id="servicos" class="container">
-        <h2>Nossos Serviços Especializados</h2>
-        <div class="service-item">
-            <h3>Consultas Oftalmológicas e Emergências</h3>
-            <p>Atendimento especializado para avaliações de rotina, diagnósticos complexos e emergências oculares em cães e gatos.</p>
-        </div>
-        <div class="service-item">
-            <h3>Diagnósticos Avançados</h3>
-            <p>Contamos com equipamentos modernos para exames precisos, como ultrassonografia ocular, fundoscopia, tonometria, entre outros.</p>
-        </div>
-        <div class="service-item">
-            <h3>Procedimentos Cirúrgicos e Terapêuticos</h3>
-            <p>Realizamos uma ampla gama de cirurgias oftálmicas e terapias avançadas, incluindo o uso de laser para tratamentos inovadores.</p>
-        </div>
-        <div class="service-item">
-            <h3>Reabilitação e Fisioterapia Ocular</h3>
-            <p>Programas personalizados para a recuperação da função visual e conforto do paciente, utilizando técnicas de fisioterapia e estímulo sensorial.</p>
-        </div>
-        <div class="service-item">
-            <h3>Espaço de Spa Ocular e Bem-Estar</h3>
-            <p>Ambiente relaxante com massagens e banhos terapêuticos focados no bem-estar ocular e geral do seu pet. Contamos também com uma sala de convivência para tutores.</p>
-        </div>
-    </section>
-
-    <section id="diferenciais" class="container">
-        <h2>Por que escolher a Arco-Iris Vet?</h2>
-        <div class="diferencial-item">
-            <h3>Tecnologia de Ponta e Diagnósticos Precisos</h3>
-            <p>Investimos em equipamentos de última geração para garantir diagnósticos rápidos e tratamentos eficazes.</p>
-        </div>
-        <div class="diferencial-item">
-            <h3>Atendimento Humanizado e Integrado</h3>
-            <p>Nossa equipe é apaixonada por animais e dedicada a oferecer um cuidado carinhoso e completo, considerando o pet e seu tutor.</p>
-        </div>
-        <div class="diferencial-item">
-            <h3>Ambiente Relaxante e Confortável</h3>
-            <p>Projetamos nossos espaços para reduzir o estresse dos animais e proporcionar uma experiência positiva para todos.</p>
-        </div>
-        <div class="diferencial-item">
-            <h3>Conveniência e Suporte Completo</h3>
-            <p>Oferecemos serviços que facilitam sua vida, como nosso aplicativo para agendamentos e o serviço de transporte especializado.</p>
-        </div>
-    </section>
-
-    <section id="features-extra" class="container">
-        <h2>Facilidades Pensadas para Você e seu Pet</h2>
-        <div class="features-container">
-            <div class="feature-box">
-                <!-- Você pode adicionar um ícone aqui, ex: <img src="icon-app.png" alt="Ícone App"> -->
-                <h3>Aplicativo Exclusivo</h3>
-                <p>Agende consultas, acompanhe o histórico do seu pet e receba lembretes importantes diretamente no seu celular.</p>
-            </div>
-            <div class="feature-box">
-                <!-- Você pode adicionar um ícone aqui, ex: <img src="icon-transport.png" alt="Ícone Transporte"> -->
-                <h3>Serviço de Transporte Pet</h3>
-                <p>Veículos adaptados para o deslocamento seguro e confortável do seu animal de estimação até a clínica e de volta para casa.</p>
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços Especializados</h2>
+            <div class="card-container">
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: um olho estilizado ou um estetoscópio com um olho -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=Eye" alt="Ícone Consulta" class="icon">
+                    <h3>Consultas e Emergências</h3>
+                    <p>Atendimento especializado para avaliações de rotina, diagnósticos complexos e emergências oculares.</p>
+                </div>
+                <div class="card">
+                     <!-- ÍCONE AQUI: Ex: um microscópio ou uma lupa -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=Diag" alt="Ícone Diagnóstico" class="icon">
+                    <h3>Diagnósticos Avançados</h3>
+                    <p>Equipamentos modernos para exames precisos como ultrassonografia ocular, fundoscopia e tonometria.</p>
+                </div>
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: um bisturi estilizado ou um feixe de laser -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=Surg" alt="Ícone Cirurgia" class="icon">
+                    <h3>Cirurgias e Terapias a Laser</h3>
+                    <p>Realizamos cirurgias oftálmicas e terapias avançadas, incluindo o uso de laser para tratamentos inovadores.</p>
+                </div>
+                <div class="card">
+                     <!-- ÍCONE AQUI: Ex: um pet fazendo um exercício ocular ou um símbolo de reabilitação -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=Rehab" alt="Ícone Reabilitação" class="icon">
+                    <h3>Reabilitação e Fisioterapia Ocular</h3>
+                    <p>Programas personalizados para recuperação da função visual e conforto do paciente, com estímulo sensorial.</p>
+                </div>
+                <div class="card">
+                     <!-- ÍCONE AQUI: Ex: um pet relaxando, uma folha (natureza/bem-estar) -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=Spa" alt="Ícone Spa" class="icon">
+                    <h3>Spa Ocular e Bem-Estar</h3>
+                    <p>Ambiente relaxante com massagens e banhos terapêuticos, além de sala de convivência para tutores.</p>
+                </div>
+                 <div class="card">
+                    <!-- ÍCONE AQUI: Ex: um celular com o logo da clínica ou um calendário -->
+                    <img src="https://via.placeholder.com/60/4CAF50/FFFFFF?Text=App" alt="Ícone App" class="icon">
+                    <h3>Aplicativo Exclusivo</h3>
+                    <p>Agende consultas, acompanhe históricos e receba lembretes importantes diretamente no seu celular.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="container">
-        <h2>Entre em Contato</h2>
-        <p>Estamos prontos para cuidar da saúde ocular do seu melhor amigo! Agende uma consulta ou tire suas dúvidas.</p>
-        <form action="#" method="POST"> <!-- O action="#" é um placeholder -->
-            <div>
-                <label for="nome">Nome do Tutor:</label>
-                <input type="text" id="nome" name="nome" required>
+    <section id="diferenciais">
+        <div class="container">
+            <h2>Por que escolher a Arco-Iris Vet?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: uma engrenagem ou um cérebro com uma lâmpada (tecnologia/inovação) -->
+                    <img src="https://via.placeholder.com/60/FFC107/333333?Text=Tech" alt="Ícone Tecnologia" class="icon">
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>Investimos em equipamentos de última geração para diagnósticos rápidos e tratamentos eficazes.</p>
+                </div>
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: duas mãos se cumprimentando ou um coração com uma pata -->
+                    <img src="https://via.placeholder.com/60/FFC107/333333?Text=Care" alt="Ícone Cuidado Humanizado" class="icon">
+                    <h3>Atendimento Humanizado</h3>
+                    <p>Nossa equipe é apaixonada por animais e dedicada a oferecer um cuidado carinhoso e completo.</p>
+                </div>
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: um sofá confortável ou um símbolo de tranquilidade (zen) -->
+                    <img src="https://via.placeholder.com/60/FFC107/333333?Text=Comfort" alt="Ícone Conforto" class="icon">
+                    <h3>Ambiente Acolhedor</h3>
+                    <p>Projetamos nossos espaços para reduzir o estresse dos animais e proporcionar uma experiência positiva.</p>
+                </div>
+                <div class="card">
+                    <!-- ÍCONE AQUI: Ex: uma van ou um símbolo de localização/GPS -->
+                    <img src="https://via.placeholder.com/60/FFC107/333333?Text=Van" alt="Ícone Transporte" class="icon">
+                    <h3>Serviço de Transporte</h3>
+                    <p>Veículos adaptados para o deslocamento seguro e confortável do seu pet até a clínica.</p>
+                </div>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p style="text-align:center; max-width: 600px; margin: 0 auto 30px auto;">Estamos prontos para cuidar da saúde ocular do seu melhor amigo! Agende uma consulta ou tire suas dúvidas.</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome do Tutor:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+                <div class="form-group">
+                    <label for="nome_pet">Nome do Pet:</label>
+                    <input type="text" id="nome_pet" name="nome_pet" placeholder="Nome do seu cão ou gato">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="button">Enviar Mensagem</button>
+                </div>
+            </form>
+            <div class="contact-info">
+                <p><strong>Endereço:</strong> Rua das Palmeiras Coloridas, 123 - Bairro Vista Alegre - Sua Cidade, UF</p>
+                <p><strong>Telefone:</strong> (XX) 1234-5678 | <strong>WhatsApp:</strong> (XX) 91234-5678</p>
+                <p><strong>Email:</strong> <a href="mailto:contato@arcoirisvet.com.br">contato@arcoirisvet.com.br</a></p>
             </div>
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone">
-            </div>
-            <div>
-                <label for="nome_pet">Nome do Pet:</label>
-                <input type="text" id="nome_pet" name="nome_pet">
-            </div>
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-            </div>
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-        <p style="text-align:center; margin-top:20px;">
-            <strong>Endereço:</strong> Rua das Palmeiras, 123 - Bairro Vista Alegre - Sua Cidade, UF<br>
-            <strong>Telefone:</strong> (XX) XXXX-XXXX | <strong>WhatsApp:</strong> (XX) XXXXX-XXXX<br>
-            <strong>Email:</strong> contato@arcoirisvet.com.br
-        </p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Arco-Iris Vet. Todos os direitos reservados. | Iluminando o caminho para uma visão saudável.</p>
-        <p><em>Este é um site modelo para apresentação acadêmica.</em></p>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Arco-Iris Vet. Todos os direitos reservados.</p>
+            <p>Iluminando o caminho para uma visão saudável. Porque cada olhar merece um arco-íris.</p>
+            <p><em>Este é um site modelo para apresentação acadêmica. Desenvolvido com carinho.</em></p>
+        </div>
     </footer>
 
+    <script>
+        // Pequeno script para atualizar o ano no rodapé automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
