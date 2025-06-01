@@ -8,9 +8,9 @@
     <style>
         /* Variáveis de Cor - Facilita a personalização! */
         :root {
-            --primary-color: #4CAF50; /* Verde esperança/saúde - pode ajustar para um tom mais "arco-íris" se quiser */
+            --primary-color: #4CAF50; /* Verde esperança/saúde */
             --secondary-color: #388E3C; /* Verde mais escuro para contrastes */
-            --accent-color: #FFC107; /* Amarelo/Laranja para chamadas de ação - um toque do arco-íris */
+            --accent-color: #FFC107; /* Amarelo/Laranja para chamadas de ação */
             --text-color: #333;
             --light-gray: #f4f4f4;
             --white: #ffffff;
@@ -33,19 +33,18 @@
             max-width: 1200px;
             margin: auto;
             overflow: hidden;
-            padding: 20px;
+            padding: 0 20px; /* Ajustado para evitar padding dobrado no header/footer */
         }
 
         /* Cabeçalho e Navegação */
         header {
             background: var(--white);
-            color: var(--primary-color);
-            padding: 15px 0;
+            padding: 10px 0; /* Reduzido um pouco o padding vertical */
             border-bottom: 3px solid var(--primary-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky; /* Faz o cabeçalho ficar fixo no topo ao rolar */
+            position: sticky;
             top: 0;
-            z-index: 1000; /* Garante que fique acima de outros elementos */
+            z-index: 1000;
         }
 
         header .container {
@@ -54,33 +53,24 @@
             align-items: center;
         }
 
-        header #branding h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-        }
-        header #branding h1 a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        header #branding .slogan-mini {
-            font-size: 13px;
-            margin-top: -5px;
-            color: #777;
+        header #branding #logo-img {
+            max-height: 50px; /* Ajuste conforme o tamanho da sua logo */
+            width: auto;
+            vertical-align: middle;
         }
 
-        header nav ul {
+        header nav#main-nav ul {
             padding: 0;
             list-style: none;
             margin: 0;
         }
 
-        header nav li {
+        header nav#main-nav li {
             display: inline;
             margin-left: 25px;
         }
 
-        header nav a {
+        header nav#main-nav a {
             color: var(--secondary-color);
             text-decoration: none;
             font-weight: 600;
@@ -88,98 +78,110 @@
             transition: color 0.3s ease;
         }
 
-        header nav a:hover, header nav .current a {
+        header nav#main-nav a:hover, header nav#main-nav .current a {
             color: var(--accent-color);
+        }
+
+        /* Estilos para o Botão Hambúrguer */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
         }
 
         /* Seção Hero (Principal) */
         #hero {
-            min-height: 70vh; /* Altura maior */
-            /* IMAGEM AQUI: Uma foto de alta qualidade de um cão e um gato com olhares saudáveis, talvez um leve brilho/arco-íris sutil no fundo se possível, ou um ambiente de clínica moderno e acolhedor */
-            background: url('https://cdn.pixabay.com/photo/2020/01/14/17/55/dog-4765784_1280.jpg') no-repeat center center/cover; /* Placeholder - SUBSTITUA! */
+            min-height: 70vh;
+            background: url('https://cdn.pixabay.com/photo/2020/01/14/17/55/dog-4765784_1280.jpg') no-repeat center center/cover;
             color: var(--white);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
-            position: relative; /* Para o overlay */
+            padding: 40px 20px; /* Adicionado padding para conteúdo não colar nas bordas */
+            position: relative;
         }
-        #hero::before { /* Overlay para escurecer um pouco a imagem e destacar o texto */
+        #hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade conforme necessário */
+            background: rgba(0, 0, 0, 0.45); /* Um pouco mais de overlay */
         }
 
         #hero h1, #hero p, #hero .button {
-            position: relative; /* Para ficarem acima do overlay */
+            position: relative;
             z-index: 1;
         }
 
         #hero h1 {
-            font-size: 3.2em; /* Maior e mais impacto */
+            font-size: 3em; /* Ajustado */
             margin-bottom: 15px;
             font-weight: 700;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
 
         #hero p {
-            font-size: 1.3em;
+            font-size: 1.25em; /* Ajustado */
             margin-bottom: 30px;
             max-width: 700px;
             text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
         }
 
-        .button { /* Estilo de botão global */
+        .button {
             display: inline-block;
             background: var(--accent-color);
-            color: var(--white);
-            padding: 12px 25px;
+            color: var(--white) !important; /* Para garantir cor do texto no botão */
+            padding: 12px 28px; /* Ajustado */
             text-decoration: none;
-            border-radius: 25px; /* Bordas mais arredondadas */
+            border-radius: 25px;
             font-weight: 600;
             transition: background-color 0.3s ease, transform 0.2s ease;
             border: none;
             cursor: pointer;
+            font-size: 1em; /* Ajustado */
         }
         .button:hover {
             background-color: var(--secondary-color);
-            transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+            transform: translateY(-2px);
         }
-        .button-secondary { /* Botão com estilo alternativo */
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-        .button-secondary:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
 
         /* Seções de Conteúdo */
         section {
             padding: 60px 0;
         }
-        section:nth-child(even) { /* Alternar cor de fundo para algumas seções */
+        section .container { /* Para que o padding do container da seção seja aplicado */
+             padding-top: 20px;
+             padding-bottom: 20px;
+        }
+        section:nth-child(even) {
              background-color: var(--white);
         }
 
         section h2 {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2em;
+            margin-bottom: 45px; /* Aumentado */
+            font-size: 2.1em; /* Ajustado */
             color: var(--dark-blue-text);
             font-weight: 700;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px; /* Aumentado */
         }
-        /* Linha decorativa abaixo do título da seção */
         section h2::after {
             content: '';
             position: absolute;
@@ -192,63 +194,66 @@
             border-radius: 2px;
         }
 
-        /* Estilo de "Card" para serviços e diferenciais */
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo em grade */
-            gap: 30px; /* Espaçamento entre os cards */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado minmax */
+            gap: 30px;
         }
 
         .card {
             background: var(--white);
-            padding: 25px;
+            padding: 30px; /* Aumentado */
             border-radius: 8px;
             box-shadow: var(--box-shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center; /* Centralizar texto dentro do card */
+            text-align: center;
+            display: flex; /* Para alinhar conteúdo verticalmente se necessário */
+            flex-direction: column;
+            justify-content: flex-start; /* Alinha itens ao topo */
         }
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        .card img.icon { /* Se você usar ícones como imagens */
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-            /* IMAGEM AQUI (ÍCONE): Ícones representando cada serviço/diferencial. Ex: olho, microscópio, pet relaxando, etc. */
+        .card img.icon {
+            width: 50px; /* Ajustado */
+            height: 50px; /* Ajustado */
+            margin-bottom: 20px; /* Aumentado */
+            align-self: center; /* Centraliza o ícone */
         }
         .card h3 {
             color: var(--primary-color);
             margin-top:0;
             margin-bottom: 10px;
-            font-size: 1.4em;
+            font-size: 1.3em; /* Ajustado */
             font-weight: 600;
         }
         .card p {
-            font-size: 0.95em;
+            font-size: 0.9em; /* Ajustado */
             color: #555;
+            flex-grow: 1; /* Faz o parágrafo ocupar espaço, ajudando no alinhamento se os textos variarem muito */
         }
 
-        /* Seção Sobre */
         #sobre p {
             text-align: center;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 20px;
-            font-size: 1.1em;
+            font-size: 1.05em; /* Ajustado */
         }
-        /* IMAGEM AQUI (Sobre Nós): Uma foto da equipe sorrindo, ou um ambiente interno da clínica que seja convidativo e moderno. */
         #sobre .about-image {
             display: block;
-            max-width: 500px;
+            max-width: 100%; /* Para ser responsiva */
+            height: auto;
+            max-height: 400px; /* Limitar altura se desejar */
+            object-fit: cover; /* Para cobrir a área sem distorcer */
+            width: 500px; /* Largura máxima */
             margin: 30px auto;
             border-radius: 8px;
             box-shadow: var(--box-shadow);
         }
 
-
-        /* Formulário de Contato */
         #contato form {
             max-width: 700px;
             margin: 30px auto;
@@ -269,13 +274,14 @@
         #contato input[type="text"],
         #contato input[type="email"],
         #contato textarea {
-            width: calc(100% - 24px);
+            width: 100%; /* Simplificado */
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: 'Poppins', sans-serif;
             font-size: 1em;
             transition: border-color 0.3s ease;
+            box-sizing: border-box; /* Importante para o width 100% funcionar bem com padding */
         }
         #contato input[type="text"]:focus,
         #contato input[type="email"]:focus,
@@ -288,30 +294,28 @@
             min-height: 120px;
         }
         #contato .form-actions {
-            text-align: center; /* Centralizar o botão */
+            text-align: center;
         }
-        #contato button { /* Usa o estilo .button global */
+        #contato button {
             font-size: 1.1em;
         }
         .contact-info {
             text-align: center;
             margin-top: 40px;
-            font-size: 1.1em;
+            font-size: 1.05em; /* Ajustado */
         }
         .contact-info strong {
             color: var(--dark-blue-text);
         }
 
-
-        /* Rodapé */
         footer {
-            padding: 40px 0;
+            padding: 30px 0; /* Ajustado */
             background-color: var(--dark-blue-text);
             color: var(--light-gray);
             text-align: center;
         }
         footer p {
-            margin: 5px 0;
+            margin: 8px 0; /* Ajustado */
             font-size: 0.9em;
         }
         footer a {
@@ -322,43 +326,130 @@
             text-decoration: underline;
         }
 
-        /* Responsividade Básica */
+        /* Responsividade e Menu Hambúrguer */
         @media(max-width: 768px) {
             header .container {
-                flex-direction: column;
-                text-align: center;
+                flex-wrap: nowrap;
+                padding: 0 15px; /* Menor padding no mobile para o container do header */
             }
-            header nav {
-                margin-top: 15px;
+
+            header #branding #logo-img {
+                max-height: 40px; /* Logo menor no mobile */
             }
-            header nav li {
+
+            .menu-toggle {
                 display: block;
-                margin: 10px 0;
             }
+
+            header nav#main-nav {
+                display: none;
+                position: absolute;
+                top: calc(100% + 3px); /* Abaixo da borda do header */
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+                border-top: 1px solid var(--light-gray);
+                padding-bottom: 10px;
+            }
+
+            header nav#main-nav.active {
+                display: block;
+            }
+
+            header nav#main-nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            header nav#main-nav li {
+                display: block;
+                margin: 0;
+                width: 100%;
+                text-align: left; /* Alinhamento à esquerda para melhor leitura */
+            }
+
+            header nav#main-nav li a {
+                display: block;
+                padding: 12px 20px; /* Ajustado padding */
+                border-bottom: 1px solid var(--light-gray);
+                font-size: 1em; /* Ajustado */
+            }
+            header nav#main-nav li:last-child a {
+                border-bottom: none;
+            }
+
+            header nav#main-nav a:hover, header nav#main-nav .current a {
+                background-color: var(--light-gray);
+                color: var(--primary-color);
+            }
+
+            .menu-toggle.active .hamburger-line:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .menu-toggle.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.active .hamburger-line:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
             #hero h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             #hero p {
                 font-size: 1.1em;
             }
+            section {
+                padding: 40px 0; /* Menor padding nas seções */
+            }
             section h2 {
-                font-size: 1.8em;
+                font-size: 1.9em; /* Ajustado */
+                margin-bottom: 30px;
+            }
+            section h2::after {
+                width: 60px; /* Linha menor */
+                height: 3px;
             }
             .card-container {
-                grid-template-columns: 1fr; /* Uma coluna em telas menores */
+                grid-template-columns: 1fr;
+                gap: 20px; /* Menor espaçamento entre cards */
+            }
+            .card {
+                padding: 20px; /* Menor padding nos cards */
+            }
+            .container { /* Container geral para seções */
+                width: 90%;
+                padding: 0 15px;
+            }
+            #contato form {
+                padding: 20px;
+            }
+            #contato input[type="text"],
+            #contato input[type="email"],
+            #contato textarea {
+                padding: 10px;
             }
         }
-
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1><a href="#">Arco-Iris Vet</a></h1>
-                <p class="slogan-mini">Oftalmologia Veterinária de Excelência</p>
+                <a href="#hero">
+                    <img src="logo.png" alt="Arco-Iris Vet Logo" id="logo-img">
+                    <!-- Se quiser o nome ao lado da logo (ajustar CSS para display: flex no #branding):
+                    <span style="font-size: 1.5em; font-weight: 700; color: var(--primary-color); margin-left: 10px; vertical-align: middle;">Arco-Iris Vet</span>
+                    -->
+                </a>
             </div>
-            <nav>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="main-nav">
                 <ul>
                     <li class="current"><a href="#hero">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
@@ -371,18 +462,18 @@
     </header>
 
     <section id="hero">
-        <!-- Conteúdo já definido no CSS para centralização e overlay -->
         <h1>Iluminando o caminho para uma visão saudável.</h1>
         <p>Cuidado oftalmológico especializado e humanizado para cães e gatos. Porque cada olhar merece um arco-íris de cores e felicidade.</p>
         <a href="#contato" class="button">Agende uma Consulta</a>
     </section>
 
-    <section id="sobre" class="container">
-        <h2>Nossa Missão e Paixão</h2>
-        <!-- IMAGEM AQUI: Uma foto da equipe sorrindo, ou um ambiente interno da clínica que seja convidativo e moderno. -->
-        <img src="https://media.istockphoto.com/id/964301888/pt/foto/team-of-smiling-veterinarian-with-animals-at-pet-ambulance.jpg?s=2048x2048&w=is&k=20&c=mCrN3YBjVfHsGeliSDFh4d7VQIZKKoOAZ86lzXVsIUM=" alt="Equipe Arco-Iris Vet ou Ambiente da Clínica" class="about-image"> <!-- Placeholder - SUBSTITUA! -->
-        <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets.</p>
-        <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores. Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento.</p>
+    <section id="sobre">
+        <div class="container">
+            <h2>Nossa Missão e Paixão</h2>
+            <img src="https://media.istockphoto.com/id/964301888/pt/foto/team-of-smiling-veterinarian-with-animals-at-pet-ambulance.jpg?s=2048x2048&w=is&k=20&c=mCrN3YBjVfHsGeliSDFh4d7VQIZKKoOAZ86lzXVsIUM=" alt="Equipe Arco-Iris Vet ou Ambiente da Clínica" class="about-image">
+            <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets.</p>
+            <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores. Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento.</p>
+        </div>
     </section>
 
     <section id="servicos">
@@ -390,37 +481,31 @@
             <h2>Nossos Serviços Especializados</h2>
             <div class="card-container">
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: um olho estilizado ou um estetoscópio com um olho -->
                     <img src="https://cdn-icons-png.flaticon.com/512/7104/7104303.png" alt="Ícone Consulta" class="icon">
                     <h3>Consultas e Emergências</h3>
                     <p>Atendimento especializado para avaliações de rotina, diagnósticos complexos e emergências oculares.</p>
                 </div>
                 <div class="card">
-                     <!-- ÍCONE AQUI: Ex: um microscópio ou uma lupa -->
-                    <img src="	https://cdn-icons-png.flaticon.com/512/9419/9419227.png" alt="Ícone Diagnóstico" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9419/9419227.png" alt="Ícone Diagnóstico" class="icon">
                     <h3>Diagnósticos Avançados</h3>
                     <p>Equipamentos modernos para exames precisos como ultrassonografia ocular, fundoscopia e tonometria.</p>
                 </div>
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: um bisturi estilizado ou um feixe de laser -->
                     <img src="https://cdn-icons-png.flaticon.com/512/13852/13852157.png" alt="Ícone Cirurgia" class="icon">
                     <h3>Cirurgias e Terapias a Laser</h3>
                     <p>Realizamos cirurgias oftálmicas e terapias avançadas, incluindo o uso de laser para tratamentos inovadores.</p>
                 </div>
                 <div class="card">
-                     <!-- ÍCONE AQUI: Ex: um pet fazendo um exercício ocular ou um símbolo de reabilitação -->
                     <img src="https://cdn-icons-png.flaticon.com/512/12846/12846199.png" alt="Ícone Reabilitação" class="icon">
                     <h3>Reabilitação e Fisioterapia Ocular</h3>
                     <p>Programas personalizados para recuperação da função visual e conforto do paciente, com estímulo sensorial.</p>
                 </div>
                 <div class="card">
-                     <!-- ÍCONE AQUI: Ex: um pet relaxando, uma folha (natureza/bem-estar) -->
                     <img src="https://cdn-icons-png.flaticon.com/512/6774/6774586.png" alt="Ícone Spa" class="icon">
                     <h3>Spa Ocular e Bem-Estar</h3>
                     <p>Ambiente relaxante com massagens e banhos terapêuticos, além de sala de convivência para tutores.</p>
                 </div>
                  <div class="card">
-                    <!-- ÍCONE AQUI: Ex: um celular com o logo da clínica ou um calendário -->
                     <img src="https://cdn-icons-png.flaticon.com/512/1049/1049520.png" alt="Ícone App" class="icon">
                     <h3>Aplicativo Exclusivo</h3>
                     <p>Agende consultas, acompanhe históricos e receba lembretes importantes diretamente no seu celular.</p>
@@ -434,25 +519,21 @@
             <h2>Por que escolher a Arco-Iris Vet?</h2>
             <div class="card-container">
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: uma engrenagem ou um cérebro com uma lâmpada (tecnologia/inovação) -->
                     <img src="https://cdn-icons-png.flaticon.com/512/12754/12754762.png" alt="Ícone Tecnologia" class="icon">
                     <h3>Tecnologia de Ponta</h3>
                     <p>Investimos em equipamentos de última geração para diagnósticos rápidos e tratamentos eficazes.</p>
                 </div>
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: duas mãos se cumprimentando ou um coração com uma pata -->
                     <img src="https://cdn-icons-png.flaticon.com/512/2138/2138309.png" alt="Ícone Cuidado Humanizado" class="icon">
                     <h3>Atendimento Humanizado</h3>
                     <p>Nossa equipe é apaixonada por animais e dedicada a oferecer um cuidado carinhoso e completo.</p>
                 </div>
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: um sofá confortável ou um símbolo de tranquilidade (zen) -->
                     <img src="https://cdn-icons-png.flaticon.com/512/449/449452.png" alt="Ícone Conforto" class="icon">
                     <h3>Ambiente Acolhedor</h3>
                     <p>Projetamos nossos espaços para reduzir o estresse dos animais e proporcionar uma experiência positiva.</p>
                 </div>
                 <div class="card">
-                    <!-- ÍCONE AQUI: Ex: uma van ou um símbolo de localização/GPS -->
                     <img src="https://cdn-icons-png.flaticon.com/512/15516/15516334.png" alt="Ícone Transporte" class="icon">
                     <h3>Serviço de Transporte</h3>
                     <p>Veículos adaptados para o deslocamento seguro e confortável do seu pet até a clínica.</p>
@@ -507,8 +588,30 @@
     </footer>
 
     <script>
-        // Pequeno script para atualizar o ano no rodapé automaticamente
+        // Script para o ano atual
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script para o Menu Hambúrguer
+        const menuToggleButton = document.getElementById('mobile-menu');
+        const mainNav = document.getElementById('main-nav');
+        const navLinks = document.querySelectorAll('#main-nav ul li a'); // Seleciona todos os links do menu
+
+        menuToggleButton.addEventListener('click', () => {
+            const isExpanded = mainNav.classList.toggle('active');
+            menuToggleButton.classList.toggle('active');
+            menuToggleButton.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Fechar o menu ao clicar em um link (para single page)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    menuToggleButton.classList.remove('active');
+                    menuToggleButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
     </script>
 </body>
 </html>
