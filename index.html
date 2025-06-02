@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arco-Iris Vet - Oftalmologia Veterinária de Excelência</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         /* Variáveis de Cor - Facilita a personalização! */
         :root {
@@ -104,6 +104,7 @@
         /* Seção Hero (Principal) */
         #hero {
             min-height: 70vh;
+			background-attachment: fixed;
             background: url('https://cdn.pixabay.com/photo/2020/01/14/17/55/dog-4765784_1280.jpg') no-repeat center center/cover;
             color: var(--white);
             display: flex;
@@ -159,6 +160,7 @@
         .button:hover {
             background-color: var(--secondary-color);
             transform: translateY(-2px);
+			box-shadow: 0 4px 15px 0px rgba(255, 193, 7, 0.3); /* Usando --accent-color como base */
         }
 
         /* Seções de Conteúdo */
@@ -221,6 +223,14 @@
             margin-bottom: 20px; /* Aumentado */
             align-self: center; /* Centraliza o ícone */
         }
+		.card img.icon:hover {
+			animation: pulseIcon 0.8s infinite alternate;
+		}
+
+		@keyframes pulseIcon {
+			from { transform: scale(1); }
+			to { transform: scale(1.1); }
+		}
         .card h3 {
             color: var(--primary-color);
             margin-top:0;
@@ -508,6 +518,75 @@
             #contato textarea {
                 padding: 10px;
             }
+			/* Estilos para a Seção de Blog Preview */
+			#blog-preview {
+				background-color: var(--light-gray); /* Ou var(--white) para alternar */
+			}
+
+			.blog-card {
+				text-align: left; /* Alinhar texto à esquerda dentro do card */
+				padding: 0; /* Remover padding padrão do card para a imagem preencher */
+				overflow: hidden; /* Para que a imagem não vaze se tiver cantos arredondados no card */
+			}
+
+			.blog-card-image {
+				width: 100%;
+				height: 200px; /* Altura fixa para a imagem do post */
+				object-fit: cover; /* Cobre a área sem distorcer */
+				display: block;
+				/* Removido: margin-bottom: 15px; */
+			}
+
+			.blog-card-content {
+				padding: 20px;
+			}
+
+			.blog-card h3 {
+				font-size: 1.2em;
+				margin-bottom: 10px;
+				color: var(--dark-blue-text); /* Cor diferente para título de post */
+			}
+
+			.blog-card p {
+				font-size: 0.9em;
+				margin-bottom: 15px;
+			}
+			.blog-button {
+				font-size: 0.9em;
+				padding: 8px 15px;
+				display: inline-block; /* Para o botão não ocupar toda a largura */
+			}
+
+			/* Ajustes no card-container se usado para o blog */
+			@media(max-width: 768px) {
+				.blog-card-image {
+					height: 180px;
+				}
+			}
+			.social-media-links {
+				margin-bottom: 20px;
+			}
+			.social-media-links p {
+				margin-bottom: 10px;
+				font-weight: 600;
+				color: var(--white); /* Se o fundo do footer for escuro */
+			}
+			.social-media-links a {
+				margin: 0 10px;
+				display: inline-block; /* Para aplicar margens corretamente */
+			}
+			.social-media-links img {
+				width: 30px; /* Ajuste o tamanho dos ícones */
+				height: 30px;
+				vertical-align: middle;
+				border-radius: 5px; /* Opcional, para suavizar cantos se usar placeholders */
+				transition: opacity 0.3s ease;
+			}
+			.social-media-links a:hover img {
+				opacity: 0.8;
+			}
+
+
         }
     </style>
 </head>
@@ -528,16 +607,18 @@
                 <span class="hamburger-line"></span>
             </button>
             <nav id="main-nav">
-                <ul>
-                    <li class="current"><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+				<ul>
+					<li class="current"><a href="#hero">Início</a></li>
+					<li><a href="#sobre">Sobre Nós</a></li>
+					<li><a href="#servicos">Serviços</a></li>
+					<li><a href="#diferenciais">Diferenciais</a></li>
+					<li><a href="#blog-preview">Blog</a></li> <!-- Nova seção -->
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</nav>
         </div>
     </header>
+	
 
     <section id="hero">
         <h1>Iluminando o caminho para uma visão saudável.</h1>
@@ -643,6 +724,46 @@
             </div>
         </div>
     </section>
+	
+	<section id="blog-preview">
+    <div class="container">
+        <h2>Fique por Dentro: Dicas e Novidades</h2>
+        <p style="text-align:center; max-width: 700px; margin: 0 auto 40px auto;">
+            Comprometidos com a educação e o bem-estar, compartilhamos conhecimento para ajudar você a cuidar da visão do seu pet.
+        </p>
+        <div class="card-container">
+            <div class="card blog-card">
+                <!-- IMAGEM AQUI: Uma imagem representativa do tema do artigo -->
+                <img src="https://www.olhoclinico.com.br/wp-content/uploads/2021/04/pexels-samson-katt-5257587-1080x675.jpg" alt="Cachorro olhando atentamente" class="blog-card-image">
+                <div class="blog-card-content">
+                    <h3>Sinais de Alerta: Problemas Oculares no Seu Pet</h3>
+                    <p>Saiba identificar os primeiros sintomas que indicam a necessidade de uma consulta oftalmológica.</p>
+                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                </div>
+            </div>
+            <div class="card blog-card">
+                <!-- IMAGEM AQUI: Uma imagem de um check-up ocular -->
+                <img src="https://www.atendepet.com/wp-content/uploads/2023/08/importancia-dos-exames-preventivos.webp" alt="Veterinário examinando olho de pet" class="blog-card-image">
+                <div class="blog-card-content">
+                    <h3>A Importância do Check-up Oftalmológico Regular</h3>
+                    <p>Prevenção é o melhor remédio. Entenda por que avaliações periódicas são cruciais.</p>
+                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                </div>
+            </div>
+            <div class="card blog-card">
+                <!-- IMAGEM AQUI: Uma imagem relacionada a tecnologia ou cuidado avançado -->
+                <img src="https://petnofuturo.com.br/wp-content/uploads/2024/06/tecnologiasparapets.jpg" alt="Tecnologia em oftalmologia veterinária" class="blog-card-image">
+                <div class="blog-card-content">
+                    <h3>Nossas Tecnologias: Cuidado Avançado para a Visão</h3>
+                    <p>Conheça os equipamentos e técnicas que utilizamos para diagnósticos e tratamentos precisos.</p>
+                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	</section>
+
+
 
     <section id="contato">
         <div class="container">
@@ -682,14 +803,29 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Arco-Iris Vet. Todos os direitos reservados.</p>
-            <p>Iluminando o caminho para uma visão saudável. Porque cada olhar merece um arco-íris.</p>
-            <p><em>Este é um site modelo para apresentação acadêmica. Desenvolvido com carinho.</em></p>
+    <div class="container">
+        <div class="social-media-links">
+            <p>Siga-nos e acompanhe nossas dicas:</p>
+            <a href="https://instagram.com/arcoirisvet" target="_blank" aria-label="Instagram Arco-Iris Vet"><img src="https://via.placeholder.com/30x30/000000/FFFFFF?Text=IG" alt="Instagram"></a>
+            <a href="https://facebook.com/arcoirisvet" target="_blank" aria-label="Facebook Arco-Iris Vet"><img src="https://via.placeholder.com/30x30/000000/FFFFFF?Text=FB" alt="Facebook"></a>
+            <!-- Adicione mais redes se aplicável -->
         </div>
-    </footer>
+        <p>&copy; <span id="currentYear"></span> Arco-Iris Vet. Todos os direitos reservados.</p>
+        <p>Iluminando o caminho para uma visão saudável. Porque cada olhar merece um arco-íris.</p>
+        <p><em>Este é um site modelo para apresentação acadêmica. Desenvolvido com carinho.</em></p>
+    </div>
+	</footer>
 
-    <script>
+
+    <script>src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+        AOS.init({
+            duration: 800, // Duração da animação em ms
+            once: true,    // Animação acontece apenas uma vez
+            offset: 50,    // Distância do elemento para disparar a animação
+            easing: 'ease-in-out', // Tipo de "aceleração" da animação
+        });
+	
         // Script para o ano atual
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
