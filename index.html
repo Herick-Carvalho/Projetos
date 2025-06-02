@@ -253,6 +253,84 @@
             border-radius: 8px;
             box-shadow: var(--box-shadow);
         }
+		/* Estilos para a Seção de Fundadoras */
+		.fundadoras-container {
+			margin-top: 50px; /* Espaço após o texto principal da seção "Sobre" */
+			text-align: center; /* Centraliza o subtítulo */
+		}
+
+		.fundadoras-container h3 {
+			font-size: 1.8em;
+			color: var(--dark-blue-text);
+			margin-bottom: 30px;
+			position: relative;
+			display: inline-block; /* Para que o ::after funcione bem */
+			padding-bottom: 8px;
+		}
+
+		.fundadoras-container h3::after { /* Linha decorativa menor para o subtítulo */
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 3px;
+			background-color: var(--secondary-color); /* Cor diferente para diferenciar */
+			border-radius: 2px;
+		}
+
+		.fundadoras-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 1 a 3 colunas, responsivo */
+			gap: 30px;
+			margin-top: 20px;
+			text-align: left; /* Alinha o texto dentro dos cards à esquerda */
+		}
+
+		.fundadora-card {
+			background: var(--white); /* Pode usar var(--light-gray) ou var(--white) */
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: var(--box-shadow);
+			text-align: center; /* Centraliza o conteúdo do card */
+		}
+
+		.fundadora-foto {
+			width: 150px; /* Tamanho da foto */
+			height: 150px;
+			border-radius: 50%; /* Deixa a foto redonda - um toque moderno */
+			object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+			margin-bottom: 15px;
+			border: 3px solid var(--primary-color); /* Borda sutil na cor primária */
+		}
+
+		.fundadora-card h4 {
+			color: var(--primary-color);
+			font-size: 1.3em;
+			margin-bottom: 8px;
+		}
+
+		.fundadora-card p {
+			font-size: 0.9em;
+			color: #555;
+			line-height: 1.5;
+		}
+
+		/* Ajustes para mobile na seção de fundadoras */
+		@media(max-width: 768px) {
+			.fundadoras-grid {
+				grid-template-columns: 1fr; /* Uma coluna no mobile */
+			}
+			.fundadoras-container h3 {
+				font-size: 1.6em;
+			}
+			.fundadora-foto {
+				width: 120px;
+				height: 120px;
+			}
+		}
+
 
         #contato form {
             max-width: 700px;
@@ -468,13 +546,36 @@
     </section>
 
     <section id="sobre">
-        <div class="container">
-            <h2>Nossa Missão e Paixão</h2>
-            <img src="fachada_clinica.jpeg" alt="Equipe Arco-Iris Vet ou Ambiente da Clínica" class="about-image">
-            <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets.</p>
-            <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores. Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento.</p>
+    <div class="container">
+        <h2>Nossa Missão e Paixão</h2>
+        <!-- Mantenha seu texto introdutório aqui -->
+        <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado...</p>
+        <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor...</p>
+
+        <!-- Nova Subseção para Fundadoras -->
+        <div class="fundadoras-container">
+            <h3>Conheça Nossas Fundadoras</h3>
+            <div class="fundadoras-grid">
+                <div class="fundadora-card">
+                    <img src="Foto_Camila.jpeg" alt="Foto de Camila Aguiar" class="fundadora-foto">
+                    <h4>Camila Aguiar</h4>
+                    <p>Co-fundadora e Médica Veterinária com foco em Oftalmologia. Apaixonada por trazer clareza e conforto à visão dos nossos amigos de quatro patas.</p>
+                </div>
+                <div class="fundadora-card">
+                    <img src="Foto_Adrieli.jpeg" alt="Foto de Adrieli" class="fundadora-foto">
+                    <h4>Adrieli Sampaio</h4>
+                    <p>Co-fundadora e [Sua Especialidade/Foco]. Dedicada a criar um ambiente acolhedor e tratamentos inovadores para a saúde ocular animal.</p>
+                </div>
+                <div class="fundadora-card">
+                    <img src="Foto_Julia.jpeg" alt="Foto de Julia" class="fundadora-foto">
+                    <h4>Julia Azenha</h4>
+                    <p>Co-fundadora e [Sua Especialidade/Foco]. Comprometida com a excelência no cuidado e a busca contínua por novas soluções em oftalmologia veterinária.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="servicos">
         <div class="container">
