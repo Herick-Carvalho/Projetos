@@ -26,6 +26,14 @@
             color: var(--text-color);
             line-height: 1.7;
             font-size: 16px;
+			background-image: url('subtle-background.jpeg'); 
+			background-size: cover; /* Cobre toda a área */
+			background-position: center center; /* Centraliza a imagem */
+			background-repeat: no-repeat; /* Não repete a imagem */
+			background-attachment: fixed; /* Faz o fundo ficar fixo durante a rolagem - cria um efeito parallax suave */
+										  /* ATENÇÃO: Teste bem o background-attachment: fixed,
+											 especialmente em mobile. Se causar problemas de performance
+											 ou layout, remova-o ou use 'scroll'. */
         }
 
         .container {
@@ -170,9 +178,7 @@
              padding-top: 20px;
              padding-bottom: 20px;
         }
-        section:nth-child(even) {
-             background-color: var(--white);
-        }
+
 
         section h2 {
             text-align: center;
@@ -737,7 +743,7 @@
                 <div class="blog-card-content">
                     <h3>Sinais de Alerta: Problemas Oculares no Seu Pet</h3>
                     <p>Saiba identificar os primeiros sintomas que indicam a necessidade de uma consulta oftalmológica.</p>
-                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                    <a href="https://www.olhoclinico.com.br/principais-sinais-que-indicam-que-seu-pet-esta-com-problema-de-visao/" class="button button-secondary blog-button">Leia Mais</a>
                 </div>
             </div>
             <div class="card blog-card">
@@ -746,7 +752,7 @@
                 <div class="blog-card-content">
                     <h3>A Importância do Check-up Oftalmológico Regular</h3>
                     <p>Prevenção é o melhor remédio. Entenda por que avaliações periódicas são cruciais.</p>
-                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                    <a href="https://www.atendepet.com/entenda-a-importancia-dos-exames-preventivos-em-caes-e-gatos/" class="button button-secondary blog-button">Leia Mais</a>
                 </div>
             </div>
             <div class="card blog-card">
@@ -755,7 +761,7 @@
                 <div class="blog-card-content">
                     <h3>Nossas Tecnologias: Cuidado Avançado para a Visão</h3>
                     <p>Conheça os equipamentos e técnicas que utilizamos para diagnósticos e tratamentos precisos.</p>
-                    <a href="#" class="button button-secondary blog-button">Leia Mais</a>
+                    <a href="https://petnofuturo.com.br/tecnologias-para-pets-inovacoes-que-melhoram-a-vida-dos-animais-de-estimacao/" class="button button-secondary blog-button">Leia Mais</a>
                 </div>
             </div>
         </div>
@@ -816,39 +822,39 @@
 	</footer>
 
 
-    <script>src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> {/* TAG CORRIGIDA AQUI */}
 	<script>
-        AOS.init({
-            duration: 800, // Duração da animação em ms
-            once: true,    // Animação acontece apenas uma vez
-            offset: 50,    // Distância do elemento para disparar a animação
-            easing: 'ease-in-out', // Tipo de "aceleração" da animação
-        });
+      // Inicialização da AOS primeiro
+	  AOS.init({
+		duration: 800,
+		once: true,
+		offset: 50,
+		easing: 'ease-in-out',
+	  });
 	
-        // Script para o ano atual
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      // Script para o ano atual
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Script para o Menu Hambúrguer
-        const menuToggleButton = document.getElementById('mobile-menu');
-        const mainNav = document.getElementById('main-nav');
-        const navLinks = document.querySelectorAll('#main-nav ul li a'); // Seleciona todos os links do menu
+      // Script para o Menu Hambúrguer
+      const menuToggleButton = document.getElementById('mobile-menu');
+      const mainNav = document.getElementById('main-nav');
+      const navLinks = document.querySelectorAll('#main-nav ul li a');
 
-        menuToggleButton.addEventListener('click', () => {
-            const isExpanded = mainNav.classList.toggle('active');
-            menuToggleButton.classList.toggle('active');
-            menuToggleButton.setAttribute('aria-expanded', isExpanded);
-        });
+      menuToggleButton.addEventListener('click', () => {
+          const isExpanded = mainNav.classList.toggle('active');
+          menuToggleButton.classList.toggle('active');
+          menuToggleButton.setAttribute('aria-expanded', isExpanded);
+      });
 
-        // Fechar o menu ao clicar em um link (para single page)
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    menuToggleButton.classList.remove('active');
-                    menuToggleButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
+      navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+              if (mainNav.classList.contains('active')) {
+                  mainNav.classList.remove('active');
+                  menuToggleButton.classList.remove('active');
+                  menuToggleButton.setAttribute('aria-expanded', 'false');
+              }
+          });
+      });
     </script>
 </body>
 </html>
