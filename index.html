@@ -3,858 +3,886 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arco-Iris Vet - Oftalmologia Veterinária de Excelência</title>
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Mapas Mentais: Patologia Veterinária</title>
     <style>
-        /* Variáveis de Cor - Facilita a personalização! */
-        :root {
-            --primary-color: #4CAF50; /* Verde esperança/saúde */
-            --secondary-color: #388E3C; /* Verde mais escuro para contrastes */
-            --accent-color: #FFC107; /* Amarelo/Laranja para chamadas de ação */
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-            --dark-blue-text: #2c3e50; /* Para textos importantes */
-            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ebee;
+            color: #333;
             margin: 0;
-            padding: 0;
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            line-height: 1.7;
-            font-size: 16px;
-			background-image: url('subtle-background.jpeg'); 
-			background-size: cover; /* Cobre toda a área */
-			background-position: center center; /* Centraliza a imagem */
-			background-repeat: no-repeat; /* Não repete a imagem */
-			background-attachment: fixed; /* Faz o fundo ficar fixo durante a rolagem - cria um efeito parallax suave */
-										  /* ATENÇÃO: Teste bem o background-attachment: fixed,
-											 especialmente em mobile. Se causar problemas de performance
-											 ou layout, remova-o ou use 'scroll'. */
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px; /* Ajustado para evitar padding dobrado no header/footer */
-        }
-
-        /* Cabeçalho e Navegação */
-        header {
-            background: var(--white);
-            padding: 10px 0; /* Reduzido um pouco o padding vertical */
-            border-bottom: 3px solid var(--primary-color);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header #branding #logo-img {
-            max-height: 70px; /* Ajuste conforme o tamanho da sua logo */
-            width: auto;
-            vertical-align: middle;
-        }
-
-        header nav#main-nav ul {
-            padding: 0;
-            list-style: none;
-            margin: 0;
-        }
-
-        header nav#main-nav li {
-            display: inline;
-            margin-left: 25px;
-        }
-
-        header nav#main-nav a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1em;
-            transition: color 0.3s ease;
-        }
-
-        header nav#main-nav a:hover, header nav#main-nav .current a {
-            color: var(--accent-color);
-        }
-
-        /* Estilos para o Botão Hambúrguer */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        .hamburger-line {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: var(--primary-color);
-            margin: 5px 0;
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Seção Hero (Principal) */
-        #hero {
-            min-height: 70vh;
-            background: url('https://cdn.pixabay.com/photo/2020/01/14/17/55/dog-4765784_1280.jpg') no-repeat center center/cover;
-            color: var(--white);
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 40px 20px; /* Adicionado padding para conteúdo não colar nas bordas */
-            position: relative;
-        }
-        #hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.45); /* Um pouco mais de overlay */
         }
 
-        #hero h1, #hero p, #hero .button {
-            position: relative;
-            z-index: 1;
-        }
-
-        #hero h1 {
-            font-size: 3em; /* Ajustado */
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-
-        #hero p {
-            font-size: 1.25em; /* Ajustado */
+        .tab-container {
+            display: flex;
             margin-bottom: 30px;
-            max-width: 700px;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            justify-content: center;
         }
 
-        .button {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--white) !important; /* Para garantir cor do texto no botão */
-            padding: 12px 28px; /* Ajustado */
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border: none;
+        .tab-button {
+            background-color: #f0f4f8;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 12px 25px;
             cursor: pointer;
-            font-size: 1em; /* Ajustado */
-        }
-        .button:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-			box-shadow: 0 4px 15px 0px rgba(255, 193, 7, 0.3); /* Usando --accent-color como base */
-        }
-
-        /* Seções de Conteúdo */
-        section {
-            padding: 60px 0;
-        }
-        section .container { /* Para que o padding do container da seção seja aplicado */
-             padding-top: 20px;
-             padding-bottom: 20px;
-        }
-
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 45px; /* Aumentado */
-            font-size: 2.1em; /* Ajustado */
-            color: var(--dark-blue-text);
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 15px; /* Aumentado */
-        }
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado minmax */
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px; /* Aumentado */
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            display: flex; /* Para alinhar conteúdo verticalmente se necessário */
-            flex-direction: column;
-            justify-content: flex-start; /* Alinha itens ao topo */
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        .card img.icon {
-            width: 50px; /* Ajustado */
-            height: 50px; /* Ajustado */
-            margin-bottom: 20px; /* Aumentado */
-            align-self: center; /* Centraliza o ícone */
-        }
-		.card img.icon:hover {
-			animation: pulseIcon 0.8s infinite alternate;
-		}
-
-		@keyframes pulseIcon {
-			from { transform: scale(1); }
-			to { transform: scale(1.1); }
-		}
-        .card h3 {
-            color: var(--primary-color);
-            margin-top:0;
-            margin-bottom: 10px;
-            font-size: 1.3em; /* Ajustado */
-            font-weight: 600;
-        }
-        .card p {
-            font-size: 0.9em; /* Ajustado */
+            font-size: 1.1em;
+            margin-right: 5px;
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 500;
             color: #555;
-            flex-grow: 1; /* Faz o parágrafo ocupar espaço, ajudando no alinhamento se os textos variarem muito */
         }
 
-        #sobre p {
+        .tab-button:hover {
+            background-color: #dfe9f3;
+        }
+
+        .tab-button.active {
+            background-color: #3498db; /* Aula I */
+            color: white;
+            border-color: #3498db;
+            font-weight: bold;
+        }
+        
+        .tab-button.active.aula2-active {
+            background-color: #27ae60; /* Aula II */
+            border-color: #27ae60;
+        }
+        .tab-button.active.aula3-active {
+            background-color: #8e44ad; /* Roxo para Aula III */
+            border-color: #8e44ad;
+        }
+
+
+        .tab-content {
+            display: none;
+            width: 100%;
+            animation: fadeIn 0.5s;
             text-align: center;
-            max-width: 800px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .mindmap-title {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .mindmap-title.aula1-title { color: #2c3e50; }
+        .mindmap-title.aula2-title { color: #1e8449; }
+        .mindmap-title.aula3-title { color: #732d91; } 
+
+
+        .central-node {
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            margin-bottom: 35px;
+            display: inline-block;
+        }
+        .central-node.aula1-node { background-color: #3498db; border: 3px solid #2980b9; }
+        .central-node.aula2-node { background-color: #2ecc71; border: 3px solid #27ae60; }
+        .central-node.aula3-node { background-color: #9b59b6; border: 3px solid #8e44ad; } 
+
+
+        .branches-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 35px auto;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        
+        .branches-container.two-branches .branch {
+            flex-basis: calc(50% - 20px);
+            max-width: 480px;
+        }
+         .branches-container.single-branch .branch {
+            flex-basis: calc(70% - 20px);
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 20px;
-            font-size: 1.05em; /* Ajustado */
         }
-        #sobre .about-image {
-            display: block;
-            max-width: 100%; /* Para ser responsiva */
-            height: auto;
-            max-height: 400px; /* Limitar altura se desejar */
-            object-fit: cover; /* Para cobrir a área sem distorcer */
-            width: 500px; /* Largura máxima */
-            margin: 30px auto;
+
+
+        .branch {
+            background-color: #ffffff;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            flex-basis: calc(33.333% - 20px);
+            min-width: 270px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .branch h3 {
+            margin-top: 0;
+            font-size: 1.25em;
+            border-bottom: 2px solid;
+            padding-bottom: 7px;
+            margin-bottom: 12px;
+            flex-shrink: 0;
+        }
+
+        .branch ul { list-style-type: none; padding-left: 0; flex-grow: 1; }
+        .branch ul li { margin-bottom: 8px; line-height: 1.45; font-size: 0.92em; }
+        .branch ul ul { padding-left: 18px; margin-top: 4px; }
+        .branch ul ul li { font-size: 0.88em; margin-bottom: 4px; }
+
+        .branch-oque-e { border-color: #1abc9c; }
+        .branch-oque-e h3 { color: #1abc9c; border-bottom-color: #1abc9c; }
+        .branch-saude-doenca { border-color: #e67e22; }
+        .branch-saude-doenca h3 { color: #e67e22; border-bottom-color: #e67e22; }
+        .branch-divisoes { border-color: #9b59b6; }
+        .branch-divisoes h3 { color: #9b59b6; border-bottom-color: #9b59b6; }
+
+        .branch-fundamentos { border-color: #3498db; }
+        .branch-fundamentos h3 { color: #3498db; border-bottom-color: #3498db; }
+        .branch-estimulos { border-color: #f1c40f; }
+        .branch-estimulos h3 { color: #f1c40f; border-bottom-color: #f1c40f; }
+        
+        .branch-contexto-lesao { border-color: #e74c3c;  }
+        .branch-contexto-lesao h3 { color: #e74c3c; border-bottom-color: #e74c3c; }
+        .branch-degeneracoes-geral { border-color: #f39c12;  }
+        .branch-degeneracoes-geral h3 { color: #f39c12; border-bottom-color: #f39c12; }
+
+
+        .main-flow-title {
+            font-size: 1.8em;
+            margin-top: 25px;
+            margin-bottom: 18px;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+        }
+        .main-flow-title.aula1-flow-title { color: #c0392b; }
+        .main-flow-title.aula2-flow-title { color: #d35400; }
+        .main-flow-title.aula3-flow-title { color: #c0392b; } 
+
+
+        .pre-flow-info, .flow-path-description {
+            border: 1px dashed #bdc3c7;
+            padding: 10px 15px;
             border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-		/* Estilos para a Seção de Fundadoras */
-		.fundadoras-container {
-			margin-top: 50px; /* Espaço após o texto principal da seção "Sobre" */
-			text-align: center; /* Centraliza o subtítulo */
-		}
-
-		.fundadoras-container h3 {
-			font-size: 1.8em;
-			color: var(--dark-blue-text);
-			margin-bottom: 30px;
-			position: relative;
-			display: inline-block; /* Para que o ::after funcione bem */
-			padding-bottom: 8px;
-		}
-
-		.fundadoras-container h3::after { /* Linha decorativa menor para o subtítulo */
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 60px;
-			height: 3px;
-			background-color: var(--secondary-color); /* Cor diferente para diferenciar */
-			border-radius: 2px;
-		}
-
-		.fundadoras-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 1 a 3 colunas, responsivo */
-			gap: 30px;
-			margin-top: 20px;
-			text-align: left; /* Alinha o texto dentro dos cards à esquerda */
-		}
-
-		.fundadora-card {
-			background: var(--white); /* Pode usar var(--light-gray) ou var(--white) */
-			padding: 20px;
-			border-radius: 8px;
-			box-shadow: var(--box-shadow);
-			text-align: center; /* Centraliza o conteúdo do card */
-		}
-
-		.fundadora-foto {
-			width: 150px; /* Tamanho da foto */
-			height: 150px;
-			border-radius: 50%; /* Deixa a foto redonda - um toque moderno */
-			object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
-			margin-bottom: 15px;
-			border: 3px solid var(--primary-color); /* Borda sutil na cor primária */
-		}
-
-		.fundadora-card h4 {
-			color: var(--primary-color);
-			font-size: 1.3em;
-			margin-bottom: 8px;
-		}
-
-		.fundadora-card p {
-			font-size: 0.9em;
-			color: #555;
-			line-height: 1.5;
-		}
-
-		/* Ajustes para mobile na seção de fundadoras */
-		@media(max-width: 768px) {
-			.fundadoras-grid {
-				grid-template-columns: 1fr; /* Uma coluna no mobile */
-			}
-			.fundadoras-container h3 {
-				font-size: 1.6em;
-			}
-			.fundadora-foto {
-				width: 120px;
-				height: 120px;
-			}
-		}
-
-
-        #contato form {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 30px;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-        }
-        #contato .form-group {
-            margin-bottom: 20px;
-        }
-        #contato label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark-blue-text);
-        }
-        #contato input[type="text"],
-        #contato input[type="email"],
-        #contato textarea {
-            width: 100%; /* Simplificado */
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
+            margin: 10px auto 15px auto;
+            text-align: center;
             font-size: 1em;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box; /* Importante para o width 100% funcionar bem com padding */
+            color: #7f8c8d;
+            max-width: 90%;
         }
-        #contato input[type="text"]:focus,
-        #contato input[type="email"]:focus,
-        #contato textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
+        .pre-flow-info { background-color: #f9f9f9; }
+        .flow-path-description { background-color: #fdfefe; font-style: italic; }
+
+
+        .main-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch; 
+            width: 100%;
+            max-width: 1700px; 
+            margin: 0 auto 30px auto;
+            text-align: left;
         }
-        #contato textarea {
-            resize: vertical;
-            min-height: 120px;
+        
+        .bifurcated-flow-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            flex-wrap: wrap;
         }
-        #contato .form-actions {
+        .flow-path {
+            flex-basis: calc(45% - 20px);
+            min-width: 300px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flow-or-separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #7f8c8d;
+            margin: auto 10px;
+            height: 100px;
+        }
+
+
+        .flow-step {
+            background-color: #ecf0f1; 
+            border: 2px solid #bdc3c7; 
+            color: #2c3e50;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 10px; 
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px; /* Largura aumentada para mais conteúdo */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .flow-path .flow-step { 
+             margin: 10px 0; 
+             width: 100%;
+             max-width: 400px;
+        }
+
+        .flow-step.aula3-step-hidropica { background-color: #d6eaf8; border-color: #85c1e9; } 
+        .flow-step.aula3-step-glicogenica { background-color: #fdebd0; border-color: #f5cba7; } 
+        .flow-step.aula3-step-gordurosa { background-color: #fcf3cf; border-color: #f7dc6f; } 
+        .flow-step.aula3-step-inclusao { background-color: #e8daef; border-color: #d7bde2; } 
+        .flow-step.aula3-step-outros { background-color: #d5f5e3; border-color: #82e0aa; } 
+
+        
+        .flow-step.full-width-step {
+            width: calc(100% - 20px);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lesion-type-block {
+            border: 2px dashed;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        .lesion-reversivel { border-color: #2980b9; background-color: #eaf2f8;}
+        .lesion-irreversivel { border-color: #c0392b; background-color: #fdedec;}
+        .lesion-type-block h5 { margin: 0 0 8px 0; font-size: 1em; }
+        .lesion-type-block h6 { margin: 5px 0 5px 0; font-size: 0.95em; font-weight: bold; }
+
+
+        .flow-step h4 {
+            margin-top: 0;
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            flex-shrink: 0;
+        }
+        .flow-step.aula1-step h4 { color: #2980b9; }
+        .flow-step.aula2-step h4 { color: #16a085; }
+        .flow-step.aula3-step h4 { color: #7d3c98; } 
+        
+        .flow-step p, .flow-step .details-list, .flow-step .etiology-types, .flow-step .adaptation-types, .flow-step .lesion-types-list {
+            font-size: 0.9em; /* Aumentado um pouco para melhor legibilidade do conteúdo expandido */
+            flex-grow: 1;
+            overflow-y: auto;
+            text-align: left;
+            padding: 0 5px; /* Pequeno padding interno */
+        }
+        .flow-step ul { list-style-type: '✓ '; padding-left: 18px; margin-top: 4px; margin-bottom: 8px; }
+        .flow-step ul ul { list-style-type: '▪ '; padding-left: 12px; }
+        .flow-step .path-label-internal { font-style: italic; color: #555; font-size:0.9em; margin-top:10px; text-align:center;}
+
+
+        .arrow {
+            font-size: 2.8em;
+            margin: auto 15px;
+            align-self: center;
+            line-height: 1;
+            flex-shrink: 0;
             text-align: center;
         }
-        #contato button {
-            font-size: 1.1em;
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 1.05em; /* Ajustado */
-        }
-        .contact-info strong {
-            color: var(--dark-blue-text);
-        }
+        .arrow.aula1-arrow { color: #c0392b; }
+        .arrow.aula2-arrow { color: #c0392b; }
+        .arrow.aula3-arrow { color: #7d3c98; } 
+        .arrow-down { width:100%; margin: 10px auto; font-size: 2em; }
 
-        footer {
-            padding: 30px 0; /* Ajustado */
-            background-color: var(--dark-blue-text);
-            color: var(--light-gray);
-            text-align: center;
+        .highlight { font-weight: bold; }
+        .highlight.aula1-hl { color: #e74c3c; }
+        .highlight.aula2-hl { color: #d35400; }
+        .highlight.aula3-hl { color: #c0392b; } 
+
+
+        .sub-item { font-size: 0.9em; color: #555; }
+        
+        .details-list h5, .etiology-types h5, .adaptation-types h5, .lesion-types-list h5 {
+            margin: 5px 0 6px 0; /* Ajuste de margem */
+            color: #34495e;
+            text-align: left; /* Alinhado à esquerda para listas de detalhes */
+            font-size: 0.95em;
+            font-weight: bold;
         }
-        footer p {
-            margin: 8px 0; /* Ajustado */
-            font-size: 0.9em;
-        }
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
+        .details-list ul { margin-bottom: 10px; } /* Espaçamento após listas de detalhes */
+        
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .branch { flex-basis: calc(50% - 20px); }
+            .flow-step:not(.full-width-step):not(.flow-path .flow-step) { width: calc(50% - 40px); }
         }
 
-        /* Responsividade e Menu Hambúrguer */
-        @media(max-width: 768px) {
-            header .container {
-                flex-wrap: nowrap;
-                padding: 0 15px; /* Menor padding no mobile para o container do header */
-            }
-
-            header #branding #logo-img {
-                max-height: 50px; /* Logo menor no mobile */
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            header nav#main-nav {
-                display: none;
-                position: absolute;
-                top: calc(100% + 3px); /* Abaixo da borda do header */
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
-                border-top: 1px solid var(--light-gray);
-                padding-bottom: 10px;
-            }
-
-            header nav#main-nav.active {
-                display: block;
-            }
-
-            header nav#main-nav ul {
+        @media (max-width: 900px) {
+            .bifurcated-flow-container {
                 flex-direction: column;
+                align-items: center;
+            }
+            .flow-path {
+                flex-basis: 100%;
+                max-width: 500px;
+            }
+            .flow-or-separator {
                 width: 100%;
+                height: auto;
+                margin: 15px 0;
+                font-size: 1.5em;
             }
-
-            header nav#main-nav li {
-                display: block;
-                margin: 0;
-                width: 100%;
-                text-align: left; /* Alinhamento à esquerda para melhor leitura */
-            }
-
-            header nav#main-nav li a {
-                display: block;
-                padding: 12px 20px; /* Ajustado padding */
-                border-bottom: 1px solid var(--light-gray);
-                font-size: 1em; /* Ajustado */
-            }
-            header nav#main-nav li:last-child a {
-                border-bottom: none;
-            }
-
-            header nav#main-nav a:hover, header nav#main-nav .current a {
-                background-color: var(--light-gray);
-                color: var(--primary-color);
-            }
-
-            .menu-toggle.active .hamburger-line:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-            .menu-toggle.active .hamburger-line:nth-child(2) {
-                opacity: 0;
-            }
-            .menu-toggle.active .hamburger-line:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            #hero h1 {
-                font-size: 2.2em;
-            }
-            #hero p {
-                font-size: 1.1em;
-            }
-            section {
-                padding: 40px 0; /* Menor padding nas seções */
-            }
-            section h2 {
-                font-size: 1.9em; /* Ajustado */
-                margin-bottom: 30px;
-            }
-            section h2::after {
-                width: 60px; /* Linha menor */
-                height: 3px;
-            }
-            .card-container {
-                grid-template-columns: 1fr;
-                gap: 20px; /* Menor espaçamento entre cards */
-            }
-            .card {
-                padding: 20px; /* Menor padding nos cards */
-            }
-            .container { /* Container geral para seções */
-                width: 90%;
-                padding: 0 15px;
-            }
-            #contato form {
-                padding: 20px;
-            }
-            #contato input[type="text"],
-            #contato input[type="email"],
-            #contato textarea {
-                padding: 10px;
-            }
-			/* Estilos para a Seção de Blog Preview */
-			#blog-preview {
-				background-color: var(--light-gray); /* Ou var(--white) para alternar */
-			}
-
-			.blog-card {
-				text-align: left; /* Alinhar texto à esquerda dentro do card */
-				padding: 0; /* Remover padding padrão do card para a imagem preencher */
-				overflow: hidden; /* Para que a imagem não vaze se tiver cantos arredondados no card */
-			}
-
-			.blog-card-image {
-				width: 100%;
-				height: 200px; /* Altura fixa para a imagem do post */
-				object-fit: cover; /* Cobre a área sem distorcer */
-				display: block;
-				/* Removido: margin-bottom: 15px; */
-			}
-
-			.blog-card-content {
-				padding: 20px;
-			}
-
-			.blog-card h3 {
-				font-size: 1.2em;
-				margin-bottom: 10px;
-				color: var(--dark-blue-text); /* Cor diferente para título de post */
-			}
-
-			.blog-card p {
-				font-size: 0.9em;
-				margin-bottom: 15px;
-			}
-			.blog-button {
-				font-size: 0.9em;
-				padding: 8px 15px;
-				display: inline-block; /* Para o botão não ocupar toda a largura */
-			}
-
-			/* Ajustes no card-container se usado para o blog */
-			@media(max-width: 768px) {
-				.blog-card-image {
-					height: 180px;
-				}
-			}
-			.social-media-links {
-				margin-bottom: 20px;
-			}
-			.social-media-links p {
-				margin-bottom: 10px;
-				font-weight: 600;
-				color: var(--white); /* Se o fundo do footer for escuro */
-			}
-			.social-media-links a {
-				margin: 0 10px;
-				display: inline-block; /* Para aplicar margens corretamente */
-			}
-			.social-media-links img {
-				width: 30px; /* Ajuste o tamanho dos ícones */
-				height: 30px;
-				vertical-align: middle;
-				border-radius: 5px; /* Opcional, para suavizar cantos se usar placeholders */
-				transition: opacity 0.3s ease;
-			}
-			.social-media-links a:hover img {
-				opacity: 0.8;
-			}
-
-
         }
+
+        @media (max-width: 768px) {
+            .tab-button { padding: 10px 15px; font-size: 1em;}
+            .mindmap-title { font-size: 1.8em; }
+            .central-node { font-size: 1.3em; padding: 15px 25px; }
+            .branches-container, .branches-container.two-branches, .branches-container.single-branch {
+                flex-direction: column;
+                align-items: center;
+            }
+            .branch {
+                flex-basis: 85%;
+                min-width: unset;
+                width: 85%;
+                margin-bottom: 18px;
+            }
+            .main-flow {
+                 flex-direction: column;
+                 align-items: center;
+            }
+            .flow-step, .flow-step.full-width-step, .flow-path .flow-step {
+                width: 85%;
+                min-height: auto;
+                margin: 10px auto; 
+            }
+            .arrow:not(.arrow-down) {
+                transform: rotate(90deg);
+                margin: 15px 0;
+            }
+					/* Estilos para Aba Aula V Ativa */
+			.tab-button.active.aula5-active {
+				background-color: #34495e; /* Azul Petróleo/Cinza Escuro */
+				border-color: #34495e;
+			}
+
+			/* Estilos para Título e Nó Central Aula V */
+			.mindmap-title.aula5-title { color: #2c3e50; } 
+			.central-node.aula5-node {
+				background-color: #4a6b82; 
+				border: 3px solid #34495e;
+			}
+
+			/* Estilos para Ramos Laterais Aula V */
+			.branch-definicao-apoptose { border-color: #5dade2;  }
+			.branch-definicao-apoptose h3 { color: #5dade2; border-bottom-color: #5dade2; }
+
+			.branch-comparativo-necrose { border-color: #7f8c8d;  }
+			.branch-comparativo-necrose h3 { color: #7f8c8d; border-bottom-color: #7f8c8d; }
+
+			.main-flow-title.aula5-flow-title { color: #21618c; } 
+
+			.flow-step.aula5-step h4 { color: #2c3e50; } 
+			.flow-step.aula5-causas-fisiologicas { background-color: #d6eaf8; border-color: #aed6f1; } 
+			.flow-step.aula5-causas-patologicas { background-color: #fadedc; border-color: #f5b7b1; } /* Ajustado para tom mais claro */
+			.flow-step.aula5-mecanismos-vias { background-color: #e8f8f5; border-color: #a2d9ce; } 
+
+			.arrow.aula5-arrow { color: #2c3e50; } 
+
+			.highlight.aula5-hl { color: #2980b9; } 
+
+			.apoptosis-morphology-flow {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center; 
+				margin: 15px 0;
+				padding: 10px;
+				background-color: #f8f9f9;
+				border-radius: 8px;
+				border: 1px dashed #b2babb;
+			}
+			.morph-step {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				margin: 5px 10px;
+				font-size: 0.85em;
+				min-width: 100px; 
+			}
+			.morph-arrow {
+				font-size: 1.5em;
+				color: #566573;
+				margin: auto 5px; 
+			}
+
+
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <a href="#hero">
-                    <img src="logo_2.jpeg" alt="Arco-Iris Vet Logo" id="logo-img">
-                    <!-- Se quiser o nome ao lado da logo (ajustar CSS para display: flex no #branding):
-                    <span style="font-size: 1.5em; font-weight: 700; color: var(--primary-color); margin-left: 10px; vertical-align: middle;">Arco-Iris Vet</span>
-                    -->
-                </a>
-            </div>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav id="main-nav">
-				<ul>
-					<li class="current"><a href="#hero">Início</a></li>
-					<li><a href="#sobre">Sobre Nós</a></li>
-					<li><a href="#servicos">Serviços</a></li>
-					<li><a href="#diferenciais">Diferenciais</a></li>
-					<li><a href="#blog-preview">Blog</a></li> <!-- Nova seção -->
-					<li><a href="#contato">Contato</a></li>
-				</ul>
-			</nav>
+
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'Aula1', this)">Aula I: Introdução</button>
+        <button class="tab-button" onclick="openTab(event, 'Aula2', this)">Aula II: Lesões e Adaptações</button>
+        <button class="tab-button" onclick="openTab(event, 'Aula3', this)">Aula III: Degenerações</button>
+		<button class="tab-button" onclick="openTab(event, 'Aula5', this)">Aula IV: Necrose</button>
+		<button class="tab-button" onclick="openTab(event, 'Aula5', this)">Aula V: Apoptose</button>
+		<button class="tab-button" onclick="openTab(event, 'Aula5', this)">Aula VI: Disturbios Circulatorios</button>
+
+    </div>
+
+    <!-- Conteúdo da Aula I (Mantido) -->
+    <div id="Aula1" class="tab-content active">
+        <div class="mindmap-title aula1-title">🗺️ Mapa Mental: Introdução à Patologia Geral Veterinária 🐾</div>
+        <div class="central-node aula1-node">PATOLOGIA GERAL VETERINÁRIA <br> (Aula 1: Introdução) 🔬</div>
+        <div class="branches-container">
+            <div class="branch branch-oque-e"><h3>🤔 O QUE É PATOLOGIA?</h3><ul><li><strong>Etimologia:</strong> Pathos (Doença) + Logia (Estudo)</li><li><strong>Definição:</strong> Ciência que estuda alterações morfológicas e fisiológicas dos estados de saúde/doença.</li><li class="sub-item">Indivíduo doente: alterações não compensadas.</li><li><strong>Foco:</strong> Estudo <span class="highlight aula1-hl">DA</span> doença ✅ (não a doença em si ❌)</li><li><strong>Estuda Alterações:</strong><ul><li>Estruturais</li><li>Bioquímicas</li><li>Funcionais</li></ul></li><li><strong>Níveis:</strong> Células ➡️ Tecidos ➡️ Órgãos</li><li><strong>Técnicas:</strong> Molecular, Morfológica, Microbiológica</li></ul></div>
+            <div class="branch branch-saude-doenca"><h3>⚖️ SAÚDE vs. DOENÇA</h3><ul><li><strong>Saúde:</strong> Completo bem-estar (físico, mental, social), não só ausência de doença. ✅🐕</li><li><strong>Doença:</strong> Perda da homeostase (total/parcial). ❌🤕<ul><li>Conjunto de sinais clínicos com etiologia.</li><li>Dano: Estrutural ou Funcional.</li></ul></li></ul></div>
+            <div class="branch branch-divisoes"><h3>📚 DIVISÕES DA PATOLOGIA</h3><ul><li><strong>Patologia Geral:</strong> Alterações comuns a todas as células, tecidos, órgãos.</li><li><strong>Patologia Animal (Especial/Sistêmica):</strong> Alterações específicas de enfermidades em sistemas/órgãos/tecidos.</li></ul></div>
         </div>
-    </header>
-	
+        <div class="main-flow-title aula1-flow-title">🔄 FLUXO PRINCIPAL: DESENVOLVIMENTO DA ENFERMIDADE 🧬</div>
+        <div class="pre-flow-info">Níveis de Organização Afetados: Organelas ➡️ Células ➡️ Tecidos ➡️ Órgãos ➡️ Sistemas<br><strong>⬆️ INJÚRIA / AGRESSÃO 💥⬆️</strong></div>
+        <div class="main-flow">
+            <div class="flow-step aula1-step"><h4>1. ETIOLOGIA (Causa) ❓</h4><p>Agentes/Fatores causais (agressão, virulência)</p><div class="etiology-types"><h5>Proveniência:</h5><ul><li><strong>Intrínsecos/Endógenos:</strong><ul><li>Genéticos 🧬</li><li>Imunes 🛡️</li><li>Hormonais 🧪</li></ul></li><li><strong>Extrínsecos/Exógenos:</strong><ul><li>Nutricionais 🥕</li><li>Ag. Físicos 🔥</li><li>Ag. Químicos ☠️</li><li>Infecciosos 🦠</li><li>Anóxia 💨</li></ul></li></ul></div></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>2. PATOGENIA (Mecanismos) ⚙️</h4><p>Como agentes agridem e organismo reage. Surgimento de lesões/disfunções.</p><p><em>Ex: Ag. Etiológico ➡️ Lesão Celular ➡️ Fisiopatologia ➡️ Propedêutica</em></p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>3. ANATOMIA PATOLÓGICA (Lesões) 👁️‍🗨️</h4><p>Alterações morfológicas (macro/micro).</p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>4. FISIOPATOLOGIA (Alt. Funcionais) 📉📈</h4><p>Distúrbios funcionais.</p></div>
+            <div class="arrow aula1-arrow">➡️</div>
+            <div class="flow-step aula1-step"><h4>5. PROPEDÊUTICA (Sinais) 🩺</h4><p>Exame clínico.</p><ul><li><strong>Sinais Clínicos:</strong> Objetivos.</li></ul><p style="text-align:center; margin-top:auto;"><strong>➡️ DIAGNÓSTICO 🎯</strong></p></div>
+        </div>
+    </div>
 
-    <section id="hero">
-        <h1>Iluminando o caminho para uma visão saudável.</h1>
-        <p>Cuidado oftalmológico especializado e humanizado para cães e gatos. Porque cada olhar merece um arco-íris de cores e felicidade.</p>
-        <a href="#contato" class="button">Agende uma Consulta</a>
-    </section>
+    <!-- Conteúdo da Aula II (Mantido) -->
+    <div id="Aula2" class="tab-content">
+        <div class="mindmap-title aula2-title">🔬 Mapa Mental: Lesões e Adaptações Celulares 🧬</div>
+        <div class="central-node aula2-node">AULA II: Lesões Celulares <br> Reversíveis, Irreversíveis e Adaptações</div>
+        <div class="branches-container two-branches">
+             <div class="branch branch-fundamentos"><h3>🌱 FUNDAMENTOS CELULARES</h3><ul><li><strong>Célula Normal:</strong> Funcionamento = <span class="highlight aula2-hl">Homeostase</span>.</li><li>Organelas organizadas, Membrana Celular, Vias Metabólicas, Proteínas de membrana.</li><li><strong>Capacidade de Adaptação:</strong> Limitada. Se ultrapassada ➡️ Lesão.</li></ul></div>
+            <div class="branch branch-estimulos"><h3>🎯 ESTÍMULOS CELULARES (Etiologia da Lesão)</h3><div class="etiology-types"><h5>Fatores Predisponentes <small>(Aumentam susceptibilidade)</small></h5><ul><li><strong>Intrínsecos:</strong> Doenças hereditárias, Espécie/Raça, Gênero, Cor, Imunodeficiências congênitas.</li><li><strong>Extrínsecos:</strong> Fármacos imunossupressores, Estresse.</li></ul><br><h5>Fatores Determinantes <small>(Causam diretamente)</small></h5><ul><li><strong>Intrínsecos:</strong> Reações imunológicas, Envelhecimento, Alt. pressão arterial, Alt. endócrinas, Alt. genéticas/desenvolvimento.</li><li><strong>Extrínsecos:</strong> Ag. Físicos, Químicos, Biológicos, Desequilíbrio Nutricional, Hipóxia/Anóxia.</li></ul></div></div>
+        </div>
+        <div class="main-flow-title aula2-flow-title">🔄 RESPOSTAS CELULARES AOS AGRESSORES</div>
+        <div class="flow-step aula2-step full-width-step" style="background-color: #d1f2eb; border-color: #a3e4d7;"><h4>PONTO DE PARTIDA: CÉLULA NORMAL (Homeostase) 🏠</h4></div>
+        <div class="arrow aula2-arrow arrow-down">⬇️</div>
+        <div class="bifurcated-flow-container">
+            <div class="flow-path"><div class="flow-path-description">Se Estresse ou Aumento de Demanda...</div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em;">⤵️</div><div class="flow-step aula2-step"><h4>ADAPTAÇÃO CELULAR 🛡️</h4><p>Objetivo: Sobrevivência, novo equilíbrio.</p><div class="adaptation-types"><h5>Formas de Adaptação:</h5><ul><li><span class="highlight aula2-hl">Hiperplasia</span></li> <li><span class="highlight aula2-hl">Hipertrofia</span></li><li><span class="highlight aula2-hl">Atrofia</span></li> <li><span class="highlight aula2-hl">Metaplasia</span></li><li><span class="highlight aula2-hl">Displasia</span></li> <li><span class="highlight aula2-hl">Autofagia</span></li></ul></div><div class="path-label-internal">Se incapacidade de adaptação ➡️ (Lesão Celular Intensa)</div></div></div>
+            <div class="flow-or-separator">OU</div>
+            <div class="flow-path"><div class="flow-path-description">Se Estímulos Nocivos...</div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em;">⤵️</div><div class="flow-step aula2-step" style="border-color: #f1c40f;"><h4>LESÃO CELULAR 💥</h4><p>Severidade do estímulo determina o resultado.</p></div><div class="arrow aula2-arrow arrow-down">⬇️</div><div class="main-flow" style="flex-direction:column; align-items:center; width:100%; max-width:450px;"><div class="flow-step aula2-step"><h4 style="color: #2980b9;">LESÃO REVERSÍVEL ⏳</h4><p>(Estímulo Leve/Transitório)</p><div class="lesion-types-list lesion-reversivel"><h5>Tipos Comuns:</h5><ul><li>Deg. Hidrópica</li><li>Deg. Glicogênica</li><li>Deg. Gordurosa</li><li>Corpúsculos de Inclusão</li></ul></div></div><div class="arrow aula2-arrow arrow-down" style="font-size: 1.5em; margin: 5px 0;">OU</div><div class="flow-step aula2-step"><h4 style="color: #c0392b;">LESÃO IRREVERSÍVEL (MORTE) ☠️</h4><p>(Estímulo Intenso/Progressivo)</p><div class="lesion-type-block lesion-irreversivel" style="margin-bottom:10px;"><h6>🍂 APOPTOSE</h6> <p style="font-size:0.85em; text-align:center;">Morte programada.</p></div><div class="lesion-type-block lesion-irreversivel"><h6>💀 NECROSE</h6> <p style="font-size:0.85em; text-align:center; margin-bottom:5px;">Morte acidental.</p><h5 style="font-size:0.9em; text-align:left;">Tipos:</h5><ul style="font-size:0.85em;"><li>Coagulação</li> <li>Liquefação</li> <li>Caseosa</li> <li>Gordurosa</li> <li>Gangrenosa</li></ul></div></div></div></div>
+        </div>
+    </div>
 
-    <section id="sobre">
-    <div class="container">
-        <h2>Nossa Missão e Paixão</h2>
-		<img src="fachada_clinica_2.jpg" alt="Equipe Arco-Iris Vet ou Ambiente da Clínica" class="about-image">
-        <!-- Mantenha seu texto introdutório aqui -->
-        <p>A Arco-Iris Vet nasceu da crescente demanda por atendimento oftalmológico veterinário especializado e da carência de serviços que unissem cuidado humanizado, tecnologia de ponta e uma experiência integrada para tutores e seus pets.</p>
-        <p>Nosso objetivo é oferecer diagnósticos precisos, tratamentos eficazes e um ambiente acolhedor, focando sempre no bem-estar animal e na tranquilidade dos seus tutores. Buscamos ser um diferencial competitivo ao unir diagnósticos avançados, terapias inovadoras e um cuidado que vai além do tratamento.</p>
+    <!-- Conteúdo da Aula III - EXPANDIDO -->
+    <div id="Aula3" class="tab-content">
+        <div class="mindmap-title aula3-title">🧩 Mapa Mental: Degenerações e Acúmulos Intracelulares</div>
+        <div class="central-node aula3-node">
+            AULA III: Degenerações Celulares <br> e Acúmulos Intracelulares 💧🧈🍬🧱
+        </div>
 
-        <!-- Nova Subseção para Fundadoras -->
-        <div class="fundadoras-container">
-            <h3>Conheça Nossas Fundadoras</h3>
-            <div class="fundadoras-grid">
-                <div class="fundadora-card">
-                    <img src="Foto_Camila.jpeg" alt="Foto de Camila Aguiar" class="fundadora-foto">
-                    <h4>Camila Aguiar</h4>
-                    <p>Co-fundadora e Médica-veterinária com foco em clínica médica de pequenos animais, atuando na triagem e acompanhamento clínico com ênfase em oftalmologia.</p>
+        <div class="branches-container two-branches">
+            <div class="branch branch-contexto-lesao">
+                <h3>🔄 CONTEXTO: LESÃO CELULAR REVERSÍVEL</h3>
+                <ul>
+                    <li>Alteração morfológica e funcional por estímulo nocivo transitório/baixa intensidade.</li>
+                    <li>Célula <span class="highlight aula3-hl">CAPAZ</span> de recuperar estrutura e função se agente agressor removido a tempo.</li>
+                    <li>Preservação da integridade da membrana plasmática.</li>
+                    <li>Alterações limitadas ao citoplasma.</li>
+                    <li>Principal manifestação morfológica ➡️ <span class="highlight aula3-hl">DEGENERAÇÕES CELULARES</span>.</li>
+                </ul>
+            </div>
+            <div class="branch branch-degeneracoes-geral">
+                <h3>🔬 DEGENERAÇÕES CELULARES: VISÃO GERAL</h3>
+                <ul>
+                    <li><strong>Definição:</strong> Acúmulo anormal de substâncias nas células.</li>
+                    <li><strong>Substâncias Envolvidas:</strong> Água, lipídios, proteínas, glicogênio, pigmentos, minerais, subst. exógenas.</li>
+                    <li><strong>Afetam 3 Respostas Celulares Básicas:</strong>
+                        <ol style="padding-left: 20px; margin-top:5px;">
+                            <li>Alterações do balanço hidro-eletrolítico (Ex: Deg. Hidrópica).</li>
+                            <li>Sobrecarga de produtos catabólicos (Ex: Glicogênio, Lipídios, Proteínas).</li>
+                            <li>Acúmulo de produtos complexos não degradáveis (Ex: Pigmentos, Minerais, Corpúsculos).</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-flow-title aula3-flow-title">🔎 TIPOS DETALHADOS DE DEGENERAÇÕES E ACÚMULOS</div>
+        <div class="main-flow">
+            <div class="flow-step aula3-step aula3-step-hidropica">
+                <h4 style="color:#2e86c1;">1. DEGENERAÇÃO HIDRÓPICA (Tumefação Celular) 💧</h4>
+                <p><strong>Definição:</strong> Acúmulo de água e eletrólitos ➡️ células tumefeitas, volume aumentado. Lesão reversível <span class="highlight aula3-hl">mais comum</span>.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5>
+                    <ul>
+                        <li>Falha na bomba de Na+/K+-ATPase (ATP dependente) ➡️ Distúrbios hidroeletrolíticos.</li>
+                        <li>Agressão ➡️ ↓ATP ➡️ Falha Bomba Na+/K+ ➡️ Retenção Na+ intracelular ➡️ ↑Pressão osmótica ➡️ Entrada de água ➡️ Distensão RE, formação vacúolos.</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Hipóxia (depleção ATP).</li>
+                        <li>Toxinas (dano direto organelas/membranas).</li>
+                        <li>Radicais livres (danificam lipídios de membranas).</li>
+                        <li>Infecções virais (lesões membrana/organelas).</li>
+                        <li>Distúrbios osmóticos (hipo/hipernatremia, hipocalemia).</li>
+                        <li>Metabólicos (anorexia, hiperglicemia/Diabetes ➡️ depleção ATP).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Quase todos os tecidos; mais comum em órgãos de alta atividade metabólica (fígado, rins, coração, pele, mucosas, túbulos renais, endotélio).
+                    <h5>Aspectos Macroscópicos:</h5> Órgãos aumentados (tumefação), pálidos, pesados, saliência ao corte, protrusão do parênquima.
+                    <h5>Aspectos Microscópicos:</h5> Células tumefeitas (↑ volume), citoplasma claro/granuloso, vacúolos citoplasmáticos, <span class="highlight aula3-hl">núcleo em posição original</span>.
                 </div>
-                <div class="fundadora-card">
-                    <img src="Foto_Adrieli_2.jpeg" alt="Foto de Adrieli" class="fundadora-foto">
-                    <h4>Adrieli Sampaio</h4>
-                    <p>Co-fundadora e Médica-veterinária com atuação voltada à cirurgia em animais de companhia, com especial interesse em procedimentos oftalmológicos.</p>
+            </div>
+            <div class="arrow aula3-arrow">➡️</div>
+            <div class="flow-step aula3-step aula3-step-glicogenica">
+                <h4 style="color:#af601a;">2. DEGENERAÇÃO GLICOGÊNICA 🍬</h4>
+                <p><strong>Definição:</strong> Acúmulo excessivo de glicogênio no citoplasma, especialmente hepatócitos.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5>
+                    <ul>
+                        <li>Glicogênio normalmente armazenado (fígado, músculos).</li>
+                        <li>Acúmulo exagerado por distúrbios hormonais ou metabólicos.</li>
+                        <li>Acúmulo no retículo endoplasmático liso ➡️ citoplasma claro e mal delimitado.</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Uso crônico de corticosteroides (iatrogênico/endógeno).</li>
+                        <li>Síndrome de Cushing (hiperadrenocorticismo).</li>
+                        <li>Diabetes mellitus.</li>
+                        <li>Doenças hepáticas com distúrbio no metabolismo de carboidratos.</li>
+                        <li>Glicogenoses congênitas (raro).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Principalmente hepatócitos.
                 </div>
-                <div class="fundadora-card">
-                    <img src="Foto_Julia_2.jpg" alt="Foto de Julia" class="fundadora-foto">
-                    <h4>Julia Azenha</h4>
-                    <p>Co-fundadora e Médica-veterinária com foco em comunicação e marketing estratégico na área veterinária, responsável pelo relacionamento com tutores e identidade da clínica.</p>
+            </div>
+        </div>
+        <div class="main-flow" style="margin-top:0;"> <!-- Continuação do fluxo -->
+            <div class="flow-step aula3-step aula3-step-gordurosa">
+                <h4 style="color:#d4ac0d;">3. DEGENERAÇÃO GORDUROSA (Esteatose/Lipidose) 🧈</h4>
+                <p><strong>Definição:</strong> Acúmulo anormal de lipídios (mono, di, triglicerídeos) no citoplasma de células parenquimatosas, principalmente hepatócitos.</p>
+                <div class="details-list">
+                    <h5>Mecanismo Fisiopatológico:</h5> Alterações no metabolismo de ácidos graxos:
+                    <ul>
+                        <li>Maior aporte de AG da dieta.</li>
+                        <li>Redução na β-oxidação (lesão mitocondrial por hipóxia/toxinas).</li>
+                        <li>Síntese prejudicada de apoproteínas (ex: aflatoxinas) ➡️ menor secreção de lipoproteínas.</li>
+                        <li>Combinação prejudicada de lipoproteínas.</li>
+                        <li>Deficiência de proteínas/calorias na dieta ➡️ síntese prejudicada de lipoproteínas.</li>
+                        <li>Mobilização aumentada de gordura corporal (anorexia, vacas no final gestação/lactação).</li>
+                    </ul>
+                    <h5>Causas Principais:</h5>
+                    <ul>
+                        <li>Falha nutricional, hipóxia, toxinas, deficiência proteico-calórica.</li>
+                        <li>Diabetes mellitus.</li>
+                        <li>Anorexia (ex: Síndrome da Lipidose Hepática Felina em gatos obesos).</li>
+                    </ul>
+                    <h5>Locais de Ocorrência:</h5> Células parenquimatosas (fígado, coração, rins).
+                    <h5>Aspectos Macroscópicos:</h5> Órgão aumentado, amarelado, macio, friável, textura gordurosa, bordos arredondados, <span class="highlight aula3-hl">flutua no formol</span> (fígado).
+                    <h5>Aspectos Microscópicos:</h5> Vacúolos de tamanhos variáveis, claros (imagem negativa da gordura), <span class="highlight aula3-hl">núcleo deslocado para periferia</span> por grandes vacúolos.
+                </div>
+            </div>
+            <div class="arrow aula3-arrow">➡️</div>
+            <div class="flow-step aula3-step aula3-step-inclusao">
+                <h4 style="color:#512e5f;">4. CORPÚSCULOS DE INCLUSÃO 🧱🦠</h4>
+                <p><strong>Definição:</strong> Acúmulo intracelular anormal de material viral, proteínas alteradas (resíduo de replicação viral) ou outras substâncias.</p>
+                <div class="details-list">
+                    <h5>Locais e Tipos (Exemplos Virais):</h5>
+                    <ul>
+                        <li><strong>Intranucleares:</strong>
+                            <ul><li>DNA Vírus: Hepatite Infecciosa Canina (Adenovírus), Herpesvírus, Parvovírus, Cinomose (SNC).</li></ul>
+                        </li>
+                        <li><strong>Citoplasmáticos:</strong>
+                            <ul><li>RNA Vírus: Raiva (Corpúsculos de Negri), Cinomose (Corpúsculos de Lentz).</li><li>DNA Vírus: Poxvírus.</li></ul>
+                        </li>
+                    </ul>
+                    <h5>Importância:</h5> <span class="highlight aula3-hl">Diagnóstica</span> (identificação do agente ou processo).
+                </div>
+            </div>
+        </div>
+        <div class="main-flow" style="margin-top:0; justify-content: center;"> <!-- Último bloco centralizado -->
+             <div class="flow-step aula3-step aula3-step-outros">
+                <h4 style="color:#1e8449;">5. OUTROS ACÚMULOS E DEGENERAÇÕES 🎨</h4>
+                <p><strong>Breves Descrições:</strong></p>
+                <div class="details-list">
+                    <ul>
+                        <li><strong>Degeneração Hialina:</strong> Acúmulo (intra ou extracelular) de material proteico, homogêneo, eosinofílico, vítreo.</li>
+                        <li><strong>Degeneração Mucóide:</strong> Acúmulo excessivo de mucina (mucopolissacarídeos).</li>
+                        <li><strong>Degeneração Amiloide (Amiloidose):</strong> Deposição de proteína amiloide fibrilar anormal, insolúvel, geralmente extracelular, causando compressão e atrofia celular.</li>
+                        <li><strong>Pigmentos:</strong>
+                            <ul>
+                                <li><span class="highlight aula3-hl">Endógenos:</span> Melanina (pele), Hemossiderina (hemorragias, hemólise), Bilirrubina (icterícia), Lipofuscina (pigmento do envelhecimento).</li>
+                                <li><span class="highlight aula3-hl">Exógenos:</span> Carvão (antracose pulmonar), Tatuagens.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- Conteúdo da Aula V -->
+    <div id="Aula5" class="tab-content">
+        <div class="mindmap-title aula5-title">🍂 Mapa Mental: Apoptose - Morte Celular Programada 🧬</div>
+        <div class="central-node aula5-node">
+            AULA V: Lesão Irreversível <br> APOPTOSE
+        </div>
 
-
-    <section id="servicos">
-        <div class="container">
-            <h2>Nossos Serviços Especializados</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/7104/7104303.png" alt="Ícone Consulta" class="icon">
-                    <h3>Consultas e Emergências</h3>
-                    <p>Atendimento especializado para avaliações de rotina, diagnósticos complexos e emergências oculares.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/9419/9419227.png" alt="Ícone Diagnóstico" class="icon">
-                    <h3>Diagnósticos Avançados</h3>
-                    <p>Equipamentos modernos para exames precisos como ultrassonografia ocular, fundoscopia e tonometria.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/13852/13852157.png" alt="Ícone Cirurgia" class="icon">
-                    <h3>Cirurgias e Terapias a Laser</h3>
-                    <p>Realizamos cirurgias oftálmicas e terapias avançadas, incluindo o uso de laser para tratamentos inovadores.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/12846/12846199.png" alt="Ícone Reabilitação" class="icon">
-                    <h3>Reabilitação e Fisioterapia Ocular</h3>
-                    <p>Programas personalizados para recuperação da função visual e conforto do paciente, com estímulo sensorial.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6774/6774586.png" alt="Ícone Spa" class="icon">
-                    <h3>Spa Ocular e Bem-Estar</h3>
-                    <p>Ambiente relaxante com massagens e banhos terapêuticos, além de sala de convivência para tutores.</p>
-                </div>
-                 <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1049/1049520.png" alt="Ícone App" class="icon">
-                    <h3>Aplicativo Exclusivo</h3>
-                    <p>Agende consultas, acompanhe históricos e receba lembretes importantes diretamente no seu celular.</p>
+        <div class="branches-container two-branches"> <!-- Usando two-branches para os blocos iniciais -->
+            <div class="branch branch-definicao-apoptose">
+                <h3>🎯 DEFINIÇÃO E CARACTERÍSTICAS</h3>
+                <ul>
+                    <li>Morte celular <span class="highlight aula5-hl">PROGRAMADA</span>, controlada, ordenada, essencial para homeostase tecidual.</li>
+                    <li>Fenômeno ativo: célula aciona mecanismos para sua morte.</li>
+                    <li>Atinge células <span class="highlight aula5-hl">INDIVIDUALMENTE</span>.</li>
+                    <li><strong>Geralmente:</strong>
+                        <ul>
+                            <li>Requer energia (ATP).</li>
+                            <li><span class="highlight aula5-hl">NÃO causa inflamação</span>.</li>
+                            <li>Fragmentação do DNA (ordenada) e da célula em corpos apoptóticos.</li>
+                            <li>Membrana plasmática íntegra até fagocitose.</li>
+                            <li>Alterações nucleares: Picnose (condensação), Cariorrexe (fragmentação).</li>
+                            <li>Restos celulares (corpos apoptóticos) rapidamente fagocitados.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="branch branch-comparativo-necrose">
+                <h3>⚖️ APOPTOSE vs. NECROSE (Principais Diferenças)</h3>
+                <div class="details-list" style="font-size:0.85em;">
+                    <h5>Apoptose <span style="color:green;">✓</span></h5>
+                    <ul>
+                        <li>Tipo: Programada, regulada</li>
+                        <li>Energia: Requer ATP</li>
+                        <li>Causa: Fisiológica / Patológica Leve</li>
+                        <li>Membrana: Mantida até o fim</li>
+                        <li>Inflamação: Não</li>
+                        <li>DNA: Fragmentação ordenada</li>
+                        <li>Morfologia: Encolhimento, corpos apoptóticos</li>
+                        <li>Destino Restos: Fagocitados</li>
+                    </ul>
+                    <hr style="margin: 5px 0;">
+                    <h5>Necrose <span style="color:red;">✗</span></h5>
+                    <ul>
+                        <li>Tipo: Acidental, descontrolada</li>
+                        <li>Energia: Não requer ATP (geralmente)</li>
+                        <li>Causa: Lesões graves (isquemia, toxinas)</li>
+                        <li>Membrana: Rompe precocemente</li>
+                        <li>Inflamação: Sim</li>
+                        <li>DNA: Fragmentação irregular</li>
+                        <li>Morfologia: Inchaço, lise celular</li>
+                        <li>Destino Restos: Liberados no tecido</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="diferenciais">
-        <div class="container">
-            <h2>Por que escolher a Arco-Iris Vet?</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/12754/12754762.png" alt="Ícone Tecnologia" class="icon">
-                    <h3>Tecnologia de Ponta</h3>
-                    <p>Investimos em equipamentos de última geração para diagnósticos rápidos e tratamentos eficazes.</p>
+        <div class="main-flow-title aula5-flow-title">🌀 CAUSAS E MECANISMOS DA APOPTOSE</div>
+        
+        <div class="main-flow">
+            <div class="flow-step aula5-step aula5-causas-fisiologicas">
+                <h4 style="color:#1a5276;">CAUSAS FISIOLÓGICAS 🌿</h4>
+                <p>Essenciais para desenvolvimento e homeostase:</p>
+                <div class="details-list">
+                    <ul>
+                        <li><strong>Remoção de células desnecessárias no desenvolvimento embrionário:</strong>
+                            <ul><li>Ex: Regressão do ducto de Müller (feto macho), formação de dígitos.</li></ul>
+                        </li>
+                        <li><strong>Controle de populações celulares:</strong>
+                            <ul><li>Ex: Involução do útero pós-parto, eliminação de linfócitos após resposta imune.</li></ul>
+                        </li>
+                        <li><strong>Eliminação de células envelhecidas ou com mutações leves:</strong>
+                            <ul><li>Evita acúmulo de células potencialmente perigosas.</li></ul>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2138/2138309.png" alt="Ícone Cuidado Humanizado" class="icon">
-                    <h3>Atendimento Humanizado</h3>
-                    <p>Nossa equipe é apaixonada por animais e dedicada a oferecer um cuidado carinhoso e completo.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/449/449452.png" alt="Ícone Conforto" class="icon">
-                    <h3>Ambiente Acolhedor</h3>
-                    <p>Projetamos nossos espaços para reduzir o estresse dos animais e proporcionar uma experiência positiva.</p>
-                </div>
-                <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/15516/15516334.png" alt="Ícone Transporte" class="icon">
-                    <h3>Serviço de Transporte</h3>
-                    <p>Veículos adaptados para o deslocamento seguro e confortável do seu pet até a clínica.</p>
+            </div>
+            <div class="arrow aula5-arrow">➡️</div>
+            <div class="flow-step aula5-step aula5-causas-patologicas">
+                <h4 style="color:#922b21;">CAUSAS PATOLÓGICAS 💥</h4>
+                <p>Resposta a agressões ou doenças:</p>
+                <div class="details-list">
+                    <ul>
+                        <li><strong>Dano ao DNA:</strong>
+                            <ul><li>Ex: Radiação, quimioterápicos, espécies reativas de oxigênio (EROs). Se o dano é irreparável.</li></ul>
+                        </li>
+                        <li><strong>Infecções virais:</strong>
+                            <ul><li>Ex: Linfócitos infectados por FIV, hepatócitos infectados por vírus da hepatite.</li></ul>
+                        </li>
+                        <li><strong>Ativação pelo sistema imune:</strong>
+                            <ul><li>Ex: Linfócitos T citotóxicos eliminando células tumorais ou infectadas por vírus.</li></ul>
+                        </li>
+                        <li><strong>Ausência ou excesso de estímulo hormonal:</strong>
+                            <ul><li>Ex: Atrofia de órgãos por falta de estímulo hormonal (próstata), atrofia glandular por excesso hormonal.</li></ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-	
-	<section id="blog-preview">
-    <div class="container">
-        <h2>Fique por Dentro: Dicas e Novidades</h2>
-        <p style="text-align:center; max-width: 700px; margin: 0 auto 40px auto;">
-            Comprometidos com a educação e o bem-estar, compartilhamos conhecimento para ajudar você a cuidar da visão do seu pet.
-        </p>
-        <div class="card-container">
-            <div class="card blog-card">
-                <!-- IMAGEM AQUI: Uma imagem representativa do tema do artigo -->
-                <img src="https://www.olhoclinico.com.br/wp-content/uploads/2021/04/pexels-samson-katt-5257587-1080x675.jpg" alt="Cachorro olhando atentamente" class="blog-card-image">
-                <div class="blog-card-content">
-                    <h3>Sinais de Alerta: Problemas Oculares no Seu Pet</h3>
-                    <p>Saiba identificar os primeiros sintomas que indicam a necessidade de uma consulta oftalmológica.</p>
-                    <a href="https://www.olhoclinico.com.br/principais-sinais-que-indicam-que-seu-pet-esta-com-problema-de-visao/" class="button button-secondary blog-button">Leia Mais</a>
+
+        <div class="main-flow-title aula5-flow-title" style="margin-top:30px;">⚙️ ETAPAS MORFOLÓGICAS E VIAS MOLECULARES</div>
+        
+        <div class="flow-step aula5-step full-width-step aula5-mecanismos-vias">
+            <h4>SEQUÊNCIA MORFOLÓGICA DA APOPTOSE (VISUAL)</h4>
+            <div class="apoptosis-morphology-flow">
+                <div class="morph-step">Célula Normal</div>
+                <div class="morph-arrow">➡️</div>
+                <div class="morph-step">Retração Celular, <br>Condensação Cromatina</div>
+                <div class="morph-arrow">➡️</div>
+                <div class="morph-step">Formação de <br>Prolongamentos Membrana</div>
+                <div class="morph-arrow">➡️</div>
+                <div class="morph-step">Colapso Núcleo, <br>Fragmentação Celular</div>
+                <div class="morph-arrow">➡️</div>
+                <div class="morph-step"><span class="highlight aula5-hl">Corpos Apoptóticos</span></div>
+                <div class="morph-arrow">➡️</div>
+                <div class="morph-step">Fagocitose <br>(Sem inflamação)</div>
+            </div>
+        </div>
+
+        <div class="main-flow" style="margin-top:15px;">
+            <div class="flow-step aula5-step aula5-mecanismos-vias">
+                <h4>VIA INTRÍNSECA (Mitocondrial)  mitochondria</h4>
+                <p>Induzida por danos internos ou ausência de sinais de sobrevivência.</p>
+                <div class="details-list">
+                    <h5>Estímulos:</h5>
+                    <ul>
+                        <li>Dano ao DNA (irradição, toxinas).</li>
+                        <li>Estresse celular (acúmulo de proteínas mal-enoveladas).</li>
+                        <li>Ausência de fatores de crescimento ou hormônios.</li>
+                    </ul>
+                    <h5>Mecanismo Chave:</h5>
+                    <ol>
+                        <li>Ativação de sensores (família BH3-only).</li>
+                        <li>Ativação de Bax e Bak ➡️ ↑ Permeabilidade da membrana mitocondrial externa.</li>
+                        <li>Liberação de <span class="highlight aula5-hl">Citocromo C</span> e outras proteínas pró-apoptóticas no citosol.</li>
+                        <li>Citocromo C + Apaf-1 ➡️ Formação do <span class="highlight aula5-hl">apoptossomo</span>.</li>
+                        <li>Ativação da <span class="highlight aula5-hl">Caspase-9</span> (iniciadora).</li>
+                        <li>Cascata de ativação de Caspases Efetoras (ex: Caspase-3, -6, -7).</li>
+                    </ol>
                 </div>
             </div>
-            <div class="card blog-card">
-                <!-- IMAGEM AQUI: Uma imagem de um check-up ocular -->
-                <img src="https://www.atendepet.com/wp-content/uploads/2023/08/importancia-dos-exames-preventivos.webp" alt="Veterinário examinando olho de pet" class="blog-card-image">
-                <div class="blog-card-content">
-                    <h3>A Importância do Check-up Oftalmológico Regular</h3>
-                    <p>Prevenção é o melhor remédio. Entenda por que avaliações periódicas são cruciais.</p>
-                    <a href="https://www.atendepet.com/entenda-a-importancia-dos-exames-preventivos-em-caes-e-gatos/" class="button button-secondary blog-button">Leia Mais</a>
+            <div class="arrow aula5-arrow" style="font-size:3em; color: #5dade2;">➕</div>
+            <div class="flow-step aula5-step aula5-mecanismos-vias">
+                <h4>VIA EXTRÍNSECA (Receptores de Morte)  Receptor</h4>
+                <p>Iniciada pela ligação de moléculas a receptores de morte na superfície celular.</p>
+                <div class="details-list">
+                    <h5>Receptores e Ligantes:</h5>
+                    <ul>
+                        <li>Receptor Fas (CD95) + Ligante Fas (FasL).</li>
+                        <li>Receptor TNF-R1 + TNF-α.</li>
+                    </ul>
+                    <h5>Mecanismo Chave:</h5>
+                    <ol>
+                        <li>Ligação do ligante ao receptor ➡️ Trimerização dos receptores.</li>
+                        <li>Recrutamento de proteínas adaptadoras (ex: FADD) via "domínios de morte".</li>
+                        <li>Recrutamento e ativação da <span class="highlight aula5-hl">Caspase-8</span> (e/ou Caspase-10) (iniciadora).</li>
+                        <li>Cascata de ativação de Caspases Efetoras.</li>
+                    </ol>
                 </div>
             </div>
-            <div class="card blog-card">
-                <!-- IMAGEM AQUI: Uma imagem relacionada a tecnologia ou cuidado avançado -->
-                <img src="https://petnofuturo.com.br/wp-content/uploads/2024/06/tecnologiasparapets.jpg" alt="Tecnologia em oftalmologia veterinária" class="blog-card-image">
-                <div class="blog-card-content">
-                    <h3>Nossas Tecnologias: Cuidado Avançado para a Visão</h3>
-                    <p>Conheça os equipamentos e técnicas que utilizamos para diagnósticos e tratamentos precisos.</p>
-                    <a href="https://petnofuturo.com.br/tecnologias-para-pets-inovacoes-que-melhoram-a-vida-dos-animais-de-estimacao/" class="button button-secondary blog-button">Leia Mais</a>
-                </div>
+        </div>
+         <div class="flow-step aula5-step full-width-step aula5-mecanismos-vias" style="margin-top:15px; background-color: #eafaf1; border-color:#abebc6;">
+            <h4>CONVERGÊNCIA E EXECUÇÃO 🎯</h4>
+            <p>Ambas as vias (Intrínseca e Extrínseca) convergem para a ativação das <span class="highlight aula5-hl">CASPASES EFETORAS (Executoras)</span>, como Caspase-3 e -6.</p>
+            <div class="details-list">
+                <h5>Ações das Caspases Efetoras:</h5>
+                <ul>
+                    <li>Clivagem de proteínas do citoesqueleto ➡️ Alterações na forma celular, formação de bolhas.</li>
+                    <li>Degradação da lâmina nuclear ➡️ Condensação da cromatina.</li>
+                    <li>Ativação de DNAses ➡️ Fragmentação do DNA.</li>
+                    <li>Expressão de sinais "eat-me" na superfície celular para fagocitose.</li>
+                </ul>
             </div>
         </div>
     </div>
-	</section>
 
+    <!-- O script permanece o mesmo -->
+    <script>
+        function openTab(evt, tabName, buttonElement) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active", "aula2-active", "aula3-active", "aula4-active", "aula5-active", "aula6-active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            buttonElement.classList.add("active");
+            if (tabName === 'Aula2') {
+                buttonElement.classList.add("aula2-active");
+            } else if (tabName === 'Aula3') {
+                buttonElement.classList.add("aula3-active");
+            } else if (tabName === 'Aula4') { 
+                buttonElement.classList.add("aula4-active");
+            } else if (tabName === 'Aula5') { 
+				buttonElement.classList.add("aula5-active");
+			}
+			 else if (tabName === 'Aula6') { 
+				buttonElement.classList.add("aula6-active");
+			}
 
-
-    <section id="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p style="text-align:center; max-width: 600px; margin: 0 auto 30px auto;">Estamos prontos para cuidar da saúde ocular do seu melhor amigo! Agende uma consulta ou tire suas dúvidas.</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nome do Tutor:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
-                </div>
-                <div class="form-group">
-                    <label for="nome_pet">Nome do Pet:</label>
-                    <input type="text" id="nome_pet" name="nome_pet" placeholder="Nome do seu cão ou gato">
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="button">Enviar Mensagem</button>
-                </div>
-            </form>
-            <div class="contact-info">
-                <p><strong>Endereço:</strong> Rua das Palmeiras Coloridas, 123 - Bairro Vista Alegre - São Carlos, SP</p>
-                <p><strong>Telefone:</strong> (16) 3356-5678 | <strong>WhatsApp:</strong> (16) 98865-6446</p>
-                <p><strong>Email:</strong> <a href="mailto:contato@arcoirisvet.com.br">contato@arcoirisvet.com.br</a></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-    <div class="container">
-        <div class="social-media-links">
-            <p>Siga-nos e acompanhe nossas dicas:</p>
-            <a href="https://instagram.com/arcoirisvet" target="_blank" aria-label="Instagram Arco-Iris Vet"><img src="https://via.placeholder.com/30x30/000000/FFFFFF?Text=IG" alt="Instagram"></a>
-            <a href="https://facebook.com/arcoirisvet" target="_blank" aria-label="Facebook Arco-Iris Vet"><img src="https://via.placeholder.com/30x30/000000/FFFFFF?Text=FB" alt="Facebook"></a>
-            <!-- Adicione mais redes se aplicável -->
-        </div>
-        <p>&copy; <span id="currentYear"></span> Arco-Iris Vet. Todos os direitos reservados.</p>
-        <p>Iluminando o caminho para uma visão saudável. Porque cada olhar merece um arco-íris.</p>
-        <p><em>Este é um site modelo para apresentação acadêmica. Desenvolvido com carinho.</em></p>
-    </div>
-	</footer>
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> {/* TAG CORRIGIDA AQUI */}
-	<script>
-      // Inicialização da AOS primeiro
-	  AOS.init({
-		duration: 800,
-		once: true,
-		offset: 50,
-		easing: 'ease-in-out',
-	  });
-	
-      // Script para o ano atual
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-      // Script para o Menu Hambúrguer
-      const menuToggleButton = document.getElementById('mobile-menu');
-      const mainNav = document.getElementById('main-nav');
-      const navLinks = document.querySelectorAll('#main-nav ul li a');
-
-      menuToggleButton.addEventListener('click', () => {
-          const isExpanded = mainNav.classList.toggle('active');
-          menuToggleButton.classList.toggle('active');
-          menuToggleButton.setAttribute('aria-expanded', isExpanded);
-      });
-
-      navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              if (mainNav.classList.contains('active')) {
-                  mainNav.classList.remove('active');
-                  menuToggleButton.classList.remove('active');
-                  menuToggleButton.setAttribute('aria-expanded', 'false');
-              }
-          });
-      });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementsByClassName("tab-button")[0].click();
+        });
     </script>
+
+</body>
+</html>
+
+    <script>
+        function openTab(evt, tabName, buttonElement) {
+            var i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active", "aula2-active", "aula3-active", "aula4-active", "aula5-active", "aula6-active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            buttonElement.classList.add("active");
+            if (tabName === 'Aula2') {
+                buttonElement.classList.add("aula2-active");
+            } else if (tabName === 'Aula3') {
+                buttonElement.classList.add("aula3-active");
+            }
+        }
+        // Abre a primeira aba por padrão
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementsByClassName("tab-button")[0].click();
+        });
+    </script>
+
 </body>
 </html>
