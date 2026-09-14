@@ -1,0 +1,502 @@
+{
+  "grupo": "A",
+  "nome": "Diptera — Subordem Nematocera",
+  "parasitas": [
+    {
+      "id": 1,
+      "cientifico": "Subfamília Anophelinae",
+      "italico": false,
+      "popular": "Anofelinos, mosquito-prego",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Nematocera",
+        "familia": "Culicidae",
+        "subfamilia": "Anophelinae",
+        "genero": "Anopheles (também Bironella e Chagasia)",
+        "especie": "<em>Anopheles darlingi</em>, usada como exemplo de espécie vetora"
+      },
+      "img": {
+        "arquivo": "anophelinae_lineart.png",
+        "legenda": "Fêmea adulta de <em>Anopheles</em> em posição de repouso, com o corpo inclinado em relação ao substrato; ao lado, ovo com flutuadores laterais e larva paralela à superfície da água.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos",
+          "Antena pilosa na fêmea e plumosa no macho",
+          "Palpos maxilares longos, do tamanho da probóscide",
+          "Probóscide",
+          "Tórax",
+          "Asas longas e estreitas",
+          "Abdômen",
+          "Três pares de pernas",
+          "Ovo com flutuadores laterais",
+          "Larva sem sifão respiratório alongado",
+          "Pupa em forma de vírgula"
+        ]
+      },
+      "morfologia": [
+        "Mosquito de corpo pequeno a médio, com asas longas e estreitas e pernas longas.",
+        "Antenas com 15 a 16 segmentos: plumosas no macho e pilosas na fêmea.",
+        "Aparelho bucal picador-sugador, com probóscide alongada; alimentação solenófaga, pois introduz as peças bucais diretamente no vaso sanguíneo.",
+        "Palpos maxilares da fêmea com comprimento equivalente ao da probóscide, característica que separa Anophelinae de Culicinae.",
+        "Palpos do macho cilíndricos, com dilatação na extremidade.",
+        "A fêmea é hematófaga e o macho alimenta-se de néctar e sucos vegetais."
+      ],
+      "formas": [
+        "Ovo: depositado isoladamente na superfície da água, provido de flutuadores laterais e com baixa resistência à dessecação.",
+        "Larva: aquática, vermiforme e áptera, com cabeça, tórax e abdômen; passa por quatro estádios, alimenta-se de microrganismos e respira por espiráculos, sem sifão respiratório alongado.",
+        "Pupa: aquática, em forma de vírgula, com cefalotórax e abdômen, mobilidade reduzida e sem alimentação.",
+        "Adulto: alado, emerge da pupa por uma fenda em forma de T."
+      ],
+      "hospedeiros": [
+        "Seres humanos, principais hospedeiros no ciclo da malária humana.",
+        "Mamíferos domésticos e silvestres e aves, conforme a espécie de mosquito.",
+        "Apenas a fêmea realiza hematofagia; o macho não parasita."
+      ],
+      "localizacao": [
+        "O adulto é ectoparasito temporário: permanece no ambiente e pousa no hospedeiro apenas durante o repasto sanguíneo, na superfície da pele.",
+        "Ovos, larvas e pupas desenvolvem-se em coleções de água limpa e parada, como lagoas, brejos, margens de rios e alagados."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e holometábolo, com quatro fases: ovo, larva, pupa e adulto.",
+        "A fêmea deposita cerca de 200 ovos por postura, isoladamente, na superfície da água.",
+        "As larvas passam por quatro estádios, que duram de 3 a 20 dias conforme a temperatura.",
+        "A pupa permanece de 1 a 7 dias na água e origina o adulto, que se quitiniza em contato com o ar.",
+        "O acasalamento ocorre cerca de 24 horas após a emergência; a fêmea é anautógena, isto é, depende do sangue para maturar os ovos."
+      ],
+      "transmissao": [
+        "Picada da fêmea hematófaga, com inoculação do agente junto com a saliva durante o repasto sanguíneo.",
+        "Transmissão biológica: o <em>Plasmodium</em> cumpre parte do seu desenvolvimento dentro do mosquito, que atua como hospedeiro definitivo."
+      ],
+      "doenca": [
+        "Malária, transmitida pelo gênero <em>Anopheles</em>, com destaque para <em>Plasmodium vivax</em>.",
+        "Sinais clínicos: febre intermitente com calafrios e sudorese, cefaleia, mialgia, fraqueza, anemia, aumento do baço e do fígado.",
+        "A própria picada provoca ação irritativa e espoliadora, com prurido, pápula local e incômodo ao hospedeiro."
+      ],
+      "diagnostico": [
+        "Identificação do inseto por chaves entomológicas, observando palpos, antenas, asas e a posição de repouso.",
+        "Exame das formas imaturas nos criadouros: ovos com flutuadores e larvas dispostas paralelamente à superfície da água.",
+        "Diagnóstico da doença transmitida: exame microscópico de sangue em gota espessa e esfregaço, testes rápidos, sorologia e técnicas moleculares."
+      ],
+      "controle": [
+        "Eliminação e manejo de criadouros, com drenagem e aterro de coleções de água.",
+        "Controle biológico das larvas com peixes larvófagos, como <em>Phalloceros caudimaculatus</em>, e com <em>Bacillus thuringiensis israelensis</em>.",
+        "Telas em janelas, portas e canis, além do uso de mosquiteiros.",
+        "Repelentes de uso tópico e inseticidas aplicados no horário de atividade do mosquito.",
+        "Preservação de matas e manejo ambiental adequado."
+      ],
+      "zoonose": [
+        "Elevada em saúde pública: os anofelinos são os vetores da malária humana, doença de notificação compulsória no Brasil.",
+        "Atuam como vetores de agentes que circulam entre animais e seres humanos, reforçando a vigilância entomológica conjunta."
+      ],
+      "observacoes": [
+        "A grafia correta da subfamília é <em>Anophelinae</em>; o gênero de maior importância é <em>Anopheles</em>.",
+        "A aula cita ainda os gêneros <em>Bironella</em> e <em>Chagasia</em> dentro da subfamília.",
+        "O nome popular mosquito-prego deriva da posição de repouso, com o corpo formando ângulo com a superfície.",
+        "Diferença prática em relação a Culicinae: na fêmea de Anophelinae o palpo tem o mesmo comprimento da probóscide, enquanto na de Culicinae o palpo é curto, com cerca de um quarto do comprimento."
+      ],
+      "fonte": "Aula 3 — Ordem Diptera, slides 5 a 9 e 13 a 23; Aula 1 — ações espoliadora e de transmissão de patógenos; complementado pelo Livro Didático Vol. 1 — Artrópodes (PEREIRA-JUNIOR, 2023)."
+    },
+
+    {
+      "id": 2,
+      "cientifico": "Subfamília Culicinae",
+      "italico": false,
+      "popular": "Culicíneos, mosquitos, pernilongos, muriçocas",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Nematocera",
+        "familia": "Culicidae",
+        "subfamilia": "Culicinae",
+        "genero": "<em>Aedes</em> (cerca de 900 espécies) e <em>Culex</em> (cerca de 750 espécies)",
+        "especie": "<em>Aedes aegypti</em> e <em>Culex quinquefasciatus</em>, usadas como exemplos"
+      },
+      "img": {
+        "arquivo": "culicinae_lineart.png",
+        "legenda": "Fêmea adulta de <em>Aedes aegypti</em>, com o corpo paralelo ao substrato; ao lado, jangada de ovos de <em>Culex</em> e larva suspensa pelo sifão respiratório.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos",
+          "Antena pilosa na fêmea e plumosa no macho",
+          "Palpo maxilar curto na fêmea",
+          "Probóscide",
+          "Tórax com escamas claras",
+          "Asas",
+          "Abdômen",
+          "Pernas com anéis claros e escuros",
+          "Ovo isolado de <em>Aedes</em>",
+          "Jangada de ovos de <em>Culex</em>",
+          "Larva com sifão respiratório",
+          "Pupa"
+        ]
+      },
+      "morfologia": [
+        "Mosquitos pequenos a médios, de pernas longas, asas estreitas e corpo recoberto por escamas.",
+        "Antenas com 15 a 16 segmentos: plumosas no macho e pilosas na fêmea.",
+        "Fêmea com palpo maxilar curto, correspondente a cerca de um quarto do comprimento da probóscide; no macho o palpo é cilíndrico e equivalente à probóscide.",
+        "Aparelho bucal picador-sugador, de hábito solenófago, pois penetra diretamente os vasos sanguíneos.",
+        "Em repouso mantêm o corpo praticamente paralelo à superfície, ao contrário dos anofelinos.",
+        "Fêmeas hematófagas e anautógenas; machos alimentam-se de néctar e sucos vegetais."
+      ],
+      "formas": [
+        "Ovo: em <em>Aedes</em>, depositado isoladamente em locais úmidos ou na parede dos recipientes, sem flutuadores e com alta resistência à dessecação, podendo permanecer viável por até três anos. Em <em>Culex</em>, os ovos são colocados lado a lado, formando uma jangada na superfície da água.",
+        "Larva: aquática, com quatro estádios, alimentando-se de bactérias, protozoários e algas; respira por sifão respiratório na extremidade do abdômen.",
+        "Pupa: em forma de vírgula, móvel, sem alimentação, respirando por trombas respiratórias; dura de 1 a 7 dias.",
+        "Adulto: alado, emerge da pupa por fenda em forma de T e quitiniza-se no contato com o ar."
+      ],
+      "hospedeiros": [
+        "Seres humanos, cães, equinos, bovinos, aves e demais vertebrados, conforme a espécie e a preferência alimentar.",
+        "O cão é hospedeiro definitivo de <em>Dirofilaria immitis</em>, cuja transmissão depende de culicíneos."
+      ],
+      "localizacao": [
+        "O adulto é ectoparasito temporário, presente na pele do hospedeiro apenas durante o repasto sanguíneo.",
+        "As formas imaturas ocupam coleções de água, frequentemente artificiais: pneus, vasos, calhas, caixas d'água, bebedouros, garrafas e recipientes descartados.",
+        "<em>Culex</em> tolera águas com maior carga de matéria orgânica, incluindo fossas e valas."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e holometábolo: ovo, larva aquática, pupa aquática e adulto alado.",
+        "A eclosão das larvas de <em>Aedes</em> ocorre quando os ovos entram em contato com a água, o que explica a rápida reinfestação após as chuvas.",
+        "O desenvolvimento larval leva de 3 a 20 dias e a fase de pupa de 1 a 7 dias, conforme temperatura e disponibilidade de alimento.",
+        "O acasalamento ocorre cerca de 24 horas após a emergência; <em>Aedes</em> tem hábito predominantemente diurno, enquanto a maioria dos demais culicíneos é crepuscular ou noturna."
+      ],
+      "transmissao": [
+        "Picada da fêmea hematófaga, com inoculação do agente pela saliva.",
+        "Transmissão biológica de vírus e de filarídeos, que se desenvolvem dentro do mosquito antes de se tornarem infectantes."
+      ],
+      "doenca": [
+        "<em>Aedes</em>: vetor dos vírus da dengue, da febre amarela e da Zika.",
+        "<em>Culex</em>: vetor de <em>Wuchereria bancrofti</em>, causadora da filariose linfática, e de <em>Dirofilaria immitis</em>, agente da dirofilariose canina.",
+        "Sinais nas arboviroses: febre alta, cefaleia, dor retro-orbitária, mialgia, exantema e, nas formas graves, manifestações hemorrágicas.",
+        "Sinais na dirofilariose canina: tosse crônica, intolerância ao exercício, dispneia, emagrecimento e sinais de insuficiência cardíaca direita.",
+        "A picada isolada causa pápula pruriginosa, irritação e estresse, com ação espoliadora em infestações intensas."
+      ],
+      "diagnostico": [
+        "Identificação morfológica do adulto pelos palpos, antenas, escamas do tórax e padrão das pernas.",
+        "Reconhecimento das formas imaturas nos criadouros: ovos isolados de <em>Aedes</em> e jangadas de <em>Culex</em>; larvas posicionadas obliquamente por causa do sifão.",
+        "Dirofilariose: pesquisa de microfilárias no sangue por exame direto, Knott modificado, testes de antígeno, sorologia, radiografia e ecocardiografia.",
+        "Arboviroses: sorologia, isolamento viral e técnicas moleculares."
+      ],
+      "controle": [
+        "Eliminação de criadouros artificiais: descartar pneus e recipientes, tampar caixas d'água, limpar calhas, bebedouros e vasos de plantas.",
+        "Controle biológico das larvas com peixes larvófagos e com <em>Bacillus thuringiensis israelensis</em>.",
+        "Telas em janelas, portas e canis, além de mosquiteiros.",
+        "Repelentes e inseticidas aplicados no horário de atividade do mosquito.",
+        "Em cães, uso de produtos repelentes e de quimioprofilaxia contra a dirofilariose, sob prescrição."
+      ],
+      "zoonose": [
+        "Elevada. Os culicíneos transmitem arboviroses de grande impacto em saúde pública, como dengue, febre amarela e Zika.",
+        "A filariose linfática por <em>Wuchereria bancrofti</em> é doença humana transmitida por <em>Culex</em>.",
+        "<em>Dirofilaria immitis</em> tem o cão como reservatório e pode, ocasionalmente, infectar o ser humano, caracterizando potencial zoonótico."
+      ],
+      "observacoes": [
+        "A grafia correta da subfamília é <em>Culicinae</em>.",
+        "Resumo comparativo com Anophelinae: nas duas subfamílias a antena é pilosa na fêmea e plumosa no macho; a diferença está no palpo da fêmea, curto em Culicinae e equivalente à probóscide em Anophelinae.",
+        "Diferença entre os ovos: <em>Anopheles</em> possui flutuadores laterais e baixa resistência à seca; <em>Aedes</em> não possui flutuadores e resiste à dessecação; <em>Culex</em> forma jangadas.",
+        "<em>Aedes</em> é exceção quanto ao hábito, pois atua principalmente durante o dia."
+      ],
+      "fonte": "Aula 3 — Ordem Diptera, slides 5 a 9 e 13 a 23; complementado pelo Livro Didático Vol. 1 — Artrópodes (PEREIRA-JUNIOR, 2023)."
+    },
+
+    {
+      "id": 3,
+      "cientifico": "Lutzomyia longipalpis",
+      "italico": true,
+      "popular": "Mosquito-palha, birigui, tatuquira, orelha-de-veado, cangalhinha",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Nematocera",
+        "familia": "Psychodidae",
+        "subfamilia": "Phlebotominae",
+        "genero": "Lutzomyia",
+        "especie": "<em>Lutzomyia longipalpis</em>"
+      },
+      "img": {
+        "arquivo": "lutzomyia_lineart.png",
+        "legenda": "Flebotomíneo adulto em repouso, com as asas erguidas em V e o corpo recoberto por cerdas; ao lado, detalhe da asa lanceolada com nervuras retas.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos",
+          "Antenas longas com 16 segmentos",
+          "Palpos",
+          "Probóscide curta",
+          "Tórax corcunda",
+          "Cerdas longas do corpo",
+          "Asa lanceolada erguida em V",
+          "Nervuras alares retas",
+          "Abdômen",
+          "Pernas longas e delgadas"
+        ]
+      },
+      "morfologia": [
+        "Inseto muito pequeno, de 2 a 3 mm, corpo delicado, claro e densamente recoberto por cerdas longas, o que lhe confere aspecto de palha.",
+        "Cabeça e abdômen formam ângulo aproximado de 90 graus com o tórax, que é corcunda.",
+        "Asas lanceoladas, mantidas eretas em forma de V durante o repouso, com veias alares irradiando em linha reta da base até a ponta.",
+        "Antenas longas, com 16 segmentos; palpos evidentes e probóscide curta.",
+        "Voo curto e saltitante, silencioso.",
+        "Fêmeas hematófagas e telmófagas: laceram a pele e sugam o sangue acumulado na poça formada."
+      ],
+      "formas": [
+        "Ovo: pequeno, elíptico, depositado no solo úmido; cada fêmea põe de 50 a 100 ovos.",
+        "Larva: terrestre, com quatro estádios, alimenta-se de matéria orgânica em decomposição.",
+        "Pupa: fixa ao substrato, imóvel e sem alimentação.",
+        "Adulto: alado, com hábito noturno e crepuscular."
+      ],
+      "hospedeiros": [
+        "Cão, principal reservatório doméstico da leishmaniose visceral.",
+        "Seres humanos.",
+        "Raposas, marsupiais e outros mamíferos silvestres, que atuam como reservatórios naturais.",
+        "Equinos, aves e roedores podem servir de fonte alimentar."
+      ],
+      "localizacao": [
+        "O adulto é ectoparasito temporário e fica sobre a pele apenas durante o repasto, com preferência por regiões de pelo curto, como focinho, orelhas e abdômen.",
+        "As formas imaturas desenvolvem-se no solo úmido com matéria orgânica: folhiço, raízes, restos vegetais, fezes acumuladas, galinheiros, canis e tocas de animais."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e holometábolo: ovo, quatro estádios larvais, pupa e adulto.",
+        "A fêmea realiza o repasto sanguíneo, necessário à maturação dos ovos, e faz a postura em substrato com umidade próxima de 100 por cento.",
+        "O desenvolvimento completo leva, em média, de 30 a 60 dias, conforme temperatura e umidade.",
+        "Não há fase aquática: o criadouro é terrestre, diferentemente dos culicídeos e dos simulídeos."
+      ],
+      "transmissao": [
+        "Picada da fêmea infectada, que inocula formas promastigotas de <em>Leishmania</em> durante o repasto.",
+        "O inseto adquire o agente ao picar um hospedeiro infectado, sobretudo o cão, e o transmite após o desenvolvimento do protozoário em seu tubo digestivo."
+      ],
+      "doenca": [
+        "Leishmaniose visceral, ou calazar, causada por <em>Leishmania infantum</em>; espécies afins do gênero transmitem também as leishmanioses tegumentares.",
+        "Sinais no cão: emagrecimento progressivo, linfadenomegalia, lesões cutâneas descamativas, alopecia periocular, úlceras nas extremidades, onicogrifose, apatia, epistaxe, lesões oculares, hepatoesplenomegalia, anemia e insuficiência renal.",
+        "Sinais no ser humano: febre prolongada e irregular, fraqueza, emagrecimento, palidez, aumento do baço e do fígado, anemia e imunossupressão.",
+        "A picada isolada provoca pápula pruriginosa e reação inflamatória local."
+      ],
+      "diagnostico": [
+        "Identificação do vetor pelo tamanho reduzido, cerdas abundantes, asas lanceoladas erguidas em V e antenas longas.",
+        "Leishmaniose canina: exame parasitológico de linfonodo, medula óssea ou pele, citologia, testes sorológicos como ELISA e testes rápidos imunocromatográficos, além de PCR.",
+        "Associação obrigatória entre sinais clínicos, histórico e área endêmica."
+      ],
+      "controle": [
+        "Limpeza do ambiente peridomiciliar, com remoção de folhas, restos vegetais, fezes e matéria orgânica acumulada.",
+        "Manutenção dos abrigos secos, arejados e higienizados; destino adequado do lixo.",
+        "Telas de malha fina em canis e residências e uso de mosquiteiros.",
+        "Coleiras impregnadas com deltametrina e demais repelentes de uso veterinário.",
+        "Inseticidas de ação residual aplicados pelos serviços de vigilância.",
+        "Diagnóstico, notificação e manejo dos cães infectados conforme a legislação sanitária vigente."
+      ],
+      "zoonose": [
+        "Muito elevada. A leishmaniose visceral é zoonose de notificação compulsória, com o cão atuando como principal reservatório urbano.",
+        "Enquadra-se como antropozoonose, pois a doença é primária dos animais e pode ser transmitida ao ser humano pelo vetor."
+      ],
+      "observacoes": [
+        "Nas Américas os vetores pertencem ao gênero <em>Lutzomyia</em>; na Europa, ao gênero <em>Phlebotomus</em>.",
+        "A subfamília Psychodinae, da mesma família, abriga <em>Psychoda</em> spp., a mosca dos banheiros, que não é hematófaga e vive em ralos e esgotos.",
+        "A alimentação telmófaga diferencia os flebotomíneos dos culicídeos, que são solenófagos.",
+        "As fêmeas são atraídas pela luz, o que orienta a instalação das armadilhas luminosas de captura."
+      ],
+      "fonte": "Aula 3 — Ordem Diptera, slides 24 a 27; Aula 1 — conceito de antropozoonose; complementado pelo Livro Didático Vol. 1 — Artrópodes (PEREIRA-JUNIOR, 2023)."
+    },
+
+    {
+      "id": 4,
+      "cientifico": "Gênero Culicoides",
+      "italico": false,
+      "popular": "Maruim, mosquito-pólvora, mosquitinho-do-mangue",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Nematocera",
+        "familia": "Ceratopogonidae",
+        "genero": "Culicoides",
+        "especie": "o roteiro solicita o gênero; <em>Culicoides insignis</em> pode ser citada como exemplo de espécie de importância veterinária"
+      },
+      "img": {
+        "arquivo": "culicoides_lineart.png",
+        "legenda": "Adulto de <em>Culicoides</em> em vista dorsal, com o tórax corcunda marcado por manchas escuras e as asas manchadas sobrepostas ao abdômen.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos",
+          "Antenas com 14 a 15 segmentos em contas de rosário",
+          "Peças bucais curtas",
+          "Tórax com corcova dorsal e marcas pretas",
+          "Asas manchadas ou enfuscadas",
+          "Abdômen",
+          "Pernas"
+        ]
+      },
+      "morfologia": [
+        "Dípteros muito pequenos, medindo de 1,5 a 5 mm, o que explica o nome popular mosquito-pólvora.",
+        "Tórax com corcova dorsal evidente e marcado por manchas pretas.",
+        "Asas curtas, largas e manchadas, de aspecto enfuscado, mantidas sobrepostas sobre o abdômen em repouso.",
+        "Antenas longas, com 14 a 15 segmentos, dispostos como contas de rosário.",
+        "Peças bucais curtas, do tipo cortador-sugador; a picada é dolorosa.",
+        "Somente as fêmeas são hematófagas."
+      ],
+      "formas": [
+        "Ovo: depositado em lâmina de água doce ou salgada, em solo encharcado, margens de coleções de água, mangues e terrenos pantanosos.",
+        "Larva: vermiforme, aquática ou semiaquática, desenvolve-se em substrato lodoso rico em matéria orgânica.",
+        "Pupa: curta, permanece no mesmo substrato.",
+        "Adulto: alado, de hábito noturno e crepuscular."
+      ],
+      "hospedeiros": [
+        "Equinos, nos quais provoca a dermatite alérgica sazonal.",
+        "Bovinos, ovinos e caprinos, com destaque para a transmissão do vírus da língua azul.",
+        "Aves e demais vertebrados.",
+        "Seres humanos, especialmente em regiões litorâneas e de mangue."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário: o adulto pousa na pele do hospedeiro apenas para o repasto, com preferência por crina, cernelha, linha dorsal, base da cauda e ventre nos equinos.",
+        "As formas imaturas permanecem no ambiente, em solo úmido, lodo e margens de coleções de água."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e holometábolo: ovo, larva, pupa e adulto.",
+        "A fêmea realiza a postura em substratos úmidos, de água doce ou salgada.",
+        "O desenvolvimento é fortemente influenciado pela umidade, pela temperatura e pela matéria orgânica, com marcada sazonalidade nos meses quentes e chuvosos.",
+        "Os adultos têm voo curto, atividade crepuscular e noturna e concentram-se próximo aos criadouros."
+      ],
+      "transmissao": [
+        "Picada da fêmea hematófaga.",
+        "Transmissão biológica de arbovírus, como o da língua azul, e de filarídeos do gênero <em>Onchocerca</em>.",
+        "A dermatite alérgica não resulta de um agente transmitido, mas de reação de hipersensibilidade aos antígenos da saliva inoculada na picada."
+      ],
+      "doenca": [
+        "Dermatite alérgica sazonal dos equinos, conhecida como coceira de verão, decorrente de hipersensibilidade à saliva do inseto.",
+        "Sinais: prurido intenso, atrito contra objetos, alopecia, escoriações, crostas, espessamento e liquenificação da pele na crina, linha dorsal e base da cauda, inquietação e queda de desempenho.",
+        "Língua azul, em ruminantes, com febre, edema de face e língua, cianose, lesões erosivas na boca, claudicação e queda na produção.",
+        "Oncocercose, pela transmissão de <em>Onchocerca</em> spp., com nódulos e dermatite.",
+        "As picadas múltiplas causam dor, irritação, estresse e espoliação sanguínea."
+      ],
+      "diagnostico": [
+        "Exame clínico associado ao padrão sazonal e à distribuição característica das lesões nos equinos.",
+        "Histórico de permanência dos animais próximo a áreas úmidas, mangues e coleções de água.",
+        "Captura e identificação do inseto pelo tamanho, pelas asas manchadas, pelas antenas em contas de rosário e pelo tórax corcunda.",
+        "Exclusão de outras dermatopatias pruriginosas; nos casos de arbovirose, sorologia e técnicas moleculares."
+      ],
+      "controle": [
+        "Abrigar os animais no início da noite e ao amanhecer, períodos de maior atividade do inseto.",
+        "Telas de malha muito fina nas instalações, pois a malha comum não retém o inseto.",
+        "Repelentes tópicos e mantas de proteção nos equinos sensíveis.",
+        "Drenagem e manejo de áreas alagadas e de acúmulo de matéria orgânica no entorno das instalações.",
+        "Tratamento sintomático das lesões e controle do prurido conforme prescrição veterinária."
+      ],
+      "zoonose": [
+        "O inseto pica o ser humano e provoca lesões pruriginosas e reações de hipersensibilidade, sobretudo em áreas de mangue.",
+        "A maior relevância, contudo, é veterinária, pela dermatite alérgica dos equinos e pela transmissão de arbovírus e filarídeos aos animais de produção."
+      ],
+      "observacoes": [
+        "Em alguns slides da aula o gênero aparece grafado como Culoides; a forma correta é <em>Culicoides</em>.",
+        "A família correta é Ceratopogonidae.",
+        "O nome popular mosquito-pólvora refere-se ao tamanho diminuto e ao aspecto escuro do inseto.",
+        "A picada é desproporcionalmente dolorosa em relação ao tamanho, por causa do aparelho bucal cortador."
+      ],
+      "fonte": "Aula 3 — Ordem Diptera, slides 30 e 31; complementado pelo Livro Didático Vol. 1 — Artrópodes (PEREIRA-JUNIOR, 2023)."
+    },
+
+    {
+      "id": 5,
+      "cientifico": "Gênero Simulium",
+      "italico": false,
+      "popular": "Borrachudo, pium, mosca-preta",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Nematocera",
+        "familia": "Simuliidae",
+        "genero": "Simulium",
+        "especie": "o roteiro solicita o gênero; <em>Simulium pertinax</em> pode ser citada como exemplo de espécie de importância no Brasil"
+      },
+      "img": {
+        "arquivo": "simulium_lineart.png",
+        "legenda": "Adulto de <em>Simulium</em> em vista lateral, com tórax arqueado em corcova; ao lado, larva fixada ao substrato em água corrente e pupa em casulo.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos desenvolvidos",
+          "Antenas curtas com 11 segmentos, sem cerdas",
+          "Peças bucais cortadoras",
+          "Tórax arqueado em corcova",
+          "Asas largas e curtas",
+          "Abdômen",
+          "Pernas curtas e robustas",
+          "Larva fixada pelo disco posterior",
+          "Leques cefálicos filtradores da larva",
+          "Pupa em casulo"
+        ]
+      },
+      "morfologia": [
+        "Dípteros pequenos, de 1 a 5 mm, com corpo robusto e coloração escura.",
+        "Tórax arqueado, em forma de corcova, o que lhes rendeu a designação de moscas-búfalo.",
+        "Asas largas e curtas, transparentes e com nervuras concentradas na borda anterior.",
+        "Antenas curtas, com 11 segmentos, sem cerdas longas, com aspecto de chifre.",
+        "Olhos bem desenvolvidos; hábito diurno e crepuscular.",
+        "Fêmeas hematófagas e telmófagas: cortam a pele com as peças bucais e sugam o sangue da poça formada, produzindo ponto hemorrágico característico."
+      ],
+      "formas": [
+        "Ovo: depositado em massas sobre pedras, folhas e vegetação submersa em água corrente.",
+        "Larva: aquática, fixada ao substrato por um disco de fixação posterior, com leques cefálicos filtradores; exige água corrente e bem oxigenada.",
+        "Pupa: permanece dentro de um casulo preso ao substrato submerso.",
+        "Adulto: alado, emerge da pupa envolto por uma bolha de ar que o leva à superfície."
+      ],
+      "hospedeiros": [
+        "Bovinos, equinos, caprinos e ovinos.",
+        "Aves domésticas e silvestres.",
+        "Seres humanos, frequentemente atacados em áreas rurais e próximas a cachoeiras.",
+        "Somente as fêmeas realizam hematofagia."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário: o adulto pousa na pele do hospedeiro para o repasto, preferindo regiões desprotegidas como orelhas, ventre, úbere, pernas e face.",
+        "As formas imaturas ocupam exclusivamente habitats lóticos, isto é, riachos, córregos, corredeiras e cachoeiras, fixadas a substratos submersos."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e holometábolo: ovo, larva, pupa e adulto.",
+        "Ovos, larvas e pupas desenvolvem-se obrigatoriamente em água corrente e bem oxigenada.",
+        "As larvas permanecem fixas ao substrato e filtram partículas em suspensão.",
+        "O adulto emerge do casulo pupal e pode voar longas distâncias a partir do criadouro, o que dificulta o controle."
+      ],
+      "transmissao": [
+        "Picada da fêmea hematófaga, com laceração da pele e formação de ponto hemorrágico.",
+        "Transmissão biológica de filarídeos do gênero <em>Onchocerca</em> e de protozoários do gênero <em>Leucocytozoon</em>, este de importância em aves."
+      ],
+      "doenca": [
+        "Simulidiose ou dermatite por simulídeos, decorrente das picadas múltiplas.",
+        "Sinais: ponto hemorrágico no local da picada, prurido intenso, edema, pápulas, crostas, inquietação, redução do ganho de peso e da produção leiteira; em ataques maciços pode ocorrer anemia e, em casos extremos, morte por choque anafilático ou por toxemia.",
+        "Oncocercose, pela transmissão de <em>Onchocerca</em> spp.",
+        "Leucocitozoonose em aves, pela transmissão de <em>Leucocytozoon</em> spp.",
+        "Em seres humanos, a aula descreve a síndrome hemorrágica de Altamira, púrpura trombocitopênica associada a reação de hipersensibilidade grave após múltiplas picadas, com 227 casos e 3 óbitos registrados no Pará entre 1972 e 1977."
+      ],
+      "diagnostico": [
+        "Exame clínico das lesões, com reconhecimento do ponto hemorrágico característico.",
+        "Histórico de permanência dos animais próximo a riachos, córregos e cachoeiras, sobretudo nos horários diurno e crepuscular.",
+        "Identificação do adulto pelo tórax corcunda, asas largas e curtas e antenas curtas com 11 segmentos.",
+        "Busca de larvas e pupas fixadas a substratos em água corrente.",
+        "Pesquisa de microfilárias ou de <em>Leucocytozoon</em> em esfregaço sanguíneo, quando indicado."
+      ],
+      "controle": [
+        "Evitar a permanência dos animais próximo a cachoeiras e corredeiras nos horários de maior atividade.",
+        "Recolher os animais aos abrigos nos períodos críticos do dia.",
+        "Repelentes de uso veterinário e telas nas instalações.",
+        "Controle biológico das larvas com <em>Bacillus thuringiensis israelensis</em> aplicado nos cursos d'água, sob orientação técnica e ambiental.",
+        "Manejo da vegetação marginal e preservação de matas ciliares.",
+        "Tratamento sintomático das lesões cutâneas."
+      ],
+      "zoonose": [
+        "Os simulídeos picam o ser humano com frequência, causando dermatite pruriginosa, lesões hemorrágicas e reações de hipersensibilidade, podendo evoluir para quadros graves, como a síndrome hemorrágica de Altamira.",
+        "Participam ainda da transmissão de filarídeos, com importância em saúde pública em determinadas regiões."
+      ],
+      "observacoes": [
+        "A família correta é Simuliidae.",
+        "Os nomes borrachudo e pium variam conforme a região do Brasil.",
+        "A exigência de água corrente distingue os criadouros dos simulídeos dos criadouros de água parada dos culicídeos.",
+        "A alimentação telmófaga explica o ponto hemorrágico e o sangramento prolongado após a picada, diferentemente da picada solenófaga dos mosquitos."
+      ],
+      "fonte": "Aula 3 — Ordem Diptera, slides 32 a 37; complementado pelo Livro Didático Vol. 1 — Artrópodes (PEREIRA-JUNIOR, 2023)."
+    }
+  ]
+}
