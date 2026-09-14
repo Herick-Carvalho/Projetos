@@ -2,45 +2,85 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fichas de Parasitologia Veterinária — Artrópodes</title>
 <meta name="description" content="Fichas dos principais artrópodes de importância médica e veterinária, organizadas conforme o roteiro da disciplina.">
-<link rel="stylesheet" href="assets/css/styles.css?v=1">
+<meta name="theme-color" content="#14453d">
+<link rel="stylesheet" href="assets/css/styles.css?v=7">
 </head>
 <body>
 
 <header class="topbar">
-  <h1>Fichas de Parasitologia Veterinária
-    <small>Artrópodes de importância médica e veterinária</small></h1>
+  <button class="btn-menu" id="btnMenu" type="button" aria-label="Abrir sumário" aria-expanded="false" aria-controls="indice">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <span>Sumário</span>
+  </button>
+
+  <div class="topbar-marca">
+    <h1>Fichas de Parasitologia Veterinária</h1>
+    <small>Artrópodes de importância médica e veterinária</small>
+  </div>
+
   <div class="spacer"></div>
-  <div class="progresso" title="Fichas marcadas como transcritas">
+
+  <div class="progresso" id="topbarProgresso" title="Fichas marcadas como transcritas">
+    <span class="progresso-label">Transcritas:</span>
     <span id="progressoTexto">0 / 0</span>
-    <span class="barra"><span id="progressoBarra"></span></span>
+    <span class="barra" aria-hidden="true"><span id="progressoBarra"></span></span>
   </div>
+
   <div class="btn-group">
-    <button class="btn" id="fonteMenos" title="Reduzir texto">A−</button>
-    <button class="btn" id="fonteMais" title="Ampliar texto">A+</button>
-    <button class="btn" id="btnImprimir">Imprimir</button>
+    <button class="btn btn-fonte" id="fonteMenos" title="Reduzir texto" aria-label="Reduzir texto">A−</button>
+    <button class="btn btn-fonte" id="fonteMais" title="Ampliar texto" aria-label="Ampliar texto">A+</button>
+    <button class="btn btn-imprimir" id="btnImprimir" title="Imprimir fichas">Imprimir</button>
   </div>
+
+  <div class="topbar-progress-line" id="progressoLinha" style="width: 0%"></div>
 </header>
 
+<div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
 <div class="layout">
-  <nav class="indice" id="indice">
-    <div class="busca"><input type="search" id="busca" placeholder="Buscar parasito, ordem ou nome popular"></div>
-    <div id="indiceLista"></div>
+  <nav class="indice" id="indice" aria-label="Sumário dos parasitas">
+    <div class="indice-topo">
+      <div class="indice-titulo-mobile">
+        <span>Sumário dos Artrópodes</span>
+        <button class="btn-fechar" id="btnFecharIndice" type="button" aria-label="Fechar sumário">&times;</button>
+      </div>
+      <div class="busca-wrapper">
+        <svg class="icone-busca" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="busca" placeholder="Buscar parasito, ordem, nome..." aria-label="Buscar parasito, ordem ou nome popular">
+        <button class="btn-limpar-busca" id="btnLimparBusca" title="Limpar busca" aria-label="Limpar busca" style="display:none">&times;</button>
+      </div>
+      <div class="filtros-status" id="filtrosStatus">
+        <button class="filtro-chip ativo" data-filtro="todos" type="button">Todos (<span id="totalFiltroTodos">0</span>)</button>
+        <button class="filtro-chip" data-filtro="completas" type="button">Completas (<span id="totalFiltroCompletas">0</span>)</button>
+        <button class="filtro-chip" data-filtro="transcritas" type="button">Transcritas (<span id="totalFiltroTranscritas">0</span>)</button>
+      </div>
+      <div class="drawer-botoes-acessibilidade">
+        <span class="drawer-fonte-label">Texto:</span>
+        <button class="btn-chip" id="drawerFonteMenos" type="button" aria-label="Reduzir texto">A−</button>
+        <button class="btn-chip" id="drawerFonteMais" type="button" aria-label="Ampliar texto">A+</button>
+      </div>
+    </div>
+    <div id="indiceLista" class="indice-lista"></div>
   </nav>
 
   <main class="fichas" id="fichas">
     <section class="capa" id="capa">
+      <div class="capa-emblema">UNICEP • MEDICINA VETERINÁRIA</div>
       <h2>Principais Artrópodes de Importância Médica e Veterinária</h2>
-      <div class="sub">Trabalho da disciplina de Parasitologia Veterinária</div>
+      <div class="sub">Caderno de Fichas da Disciplina de Parasitologia Veterinária</div>
       <div class="campos">
-        <div><b>Discente:</b> ____________________________________________</div>
-        <div><b>Docente:</b> Prof. Dr. Reiner Silveira de Moraes</div>
-        <div><b>Instituição sede:</b> Centro Universitário Central Paulista (UNICEP), São Carlos</div>
-        <div><b>Mês de entrega:</b> ______________ / 2026</div>
+        <div class="campo-item"><b>Discente:</b> <span>____________________________________________</span></div>
+        <div class="campo-item"><b>Docente:</b> <span>Prof. Dr. Reiner Silveira de Moraes</span></div>
+        <div class="campo-item"><b>Instituição sede:</b> <span>Centro Universitário Central Paulista (UNICEP), São Carlos</span></div>
+        <div class="campo-item"><b>Mês de entrega:</b> <span>______________ / 2026</span></div>
       </div>
       <div class="aviso" id="statusCarga">Carregando as fichas…</div>
+      <div class="capa-atalhos">
+        <button class="btn-iniciar" id="btnIniciarLeitura" type="button">Iniciar Leitura das Fichas ↓</button>
+      </div>
       <div class="rodape">
         Fontes de base: Aulas 1 a 4 da disciplina e o Livro Didático de Parasitologia Veterinária,
         Volume 1 — Artrópodes, organizado por Pereira-Junior (2023).
@@ -49,6 +89,16 @@
   </main>
 </div>
 
-<script src="assets/js/app.js?v=1"></script>
+<div class="fab-container" id="fabContainer" aria-label="Navegação rápida">
+  <button class="fab-btn fab-menu" id="fabMenu" type="button" title="Abrir sumário">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <span>Sumário</span>
+  </button>
+  <button class="fab-btn fab-topo" id="fabTopo" type="button" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</div>
+
+<script src="assets/js/app.js?v=7"></script>
 </body>
 </html>
