@@ -1,0 +1,75 @@
+{
+  "titulo": "Fichas de Parasitologia Veterinária — Artrópodes",
+  "versao": "1.0",
+  "atualizado": "2026-09-14",
+  "grupos": [
+    {
+      "sigla": "A",
+      "nome": "Diptera — Subordem Nematocera",
+      "arquivo": "grupo-a.json"
+    },
+    {
+      "sigla": "B",
+      "nome": "Diptera — Moscas e miíases",
+      "arquivo": "grupo-b.json",
+      "itens": [
+        { "id": 6,  "cientifico": "Musca domestica", "italico": true, "popular": "Mosca doméstica" },
+        { "id": 7,  "cientifico": "Stomoxys calcitrans", "italico": true, "popular": "Mosca-dos-estábulos" },
+        { "id": 8,  "cientifico": "Haematobia irritans", "italico": true, "popular": "Mosca-dos-chifres" },
+        { "id": 9,  "cientifico": "Gênero Tabanus", "italico": false, "popular": "Mutuca" },
+        { "id": 10, "cientifico": "Dermatobia hominis", "italico": true, "popular": "Mosca-do-berne" },
+        { "id": 11, "cientifico": "Gênero Gasterophilus", "italico": false, "popular": "Moscas gástricas dos equinos" },
+        { "id": 12, "cientifico": "Cochliomyia hominivorax", "italico": true, "popular": "Mosca-da-bicheira, varejeira" },
+        { "id": 13, "cientifico": "Oestrus ovis", "italico": true, "popular": "Mosca nasal dos ovinos" }
+      ]
+    },
+    {
+      "sigla": "C",
+      "nome": "Ordem Siphonaptera",
+      "arquivo": "grupo-c.json",
+      "itens": [
+        { "id": 14, "cientifico": "Xenopsylla cheopis", "italico": true, "popular": "Pulga do rato oriental" },
+        { "id": 15, "cientifico": "Ctenocephalides felis", "italico": true, "popular": "Pulga do gato" },
+        { "id": 16, "cientifico": "Tunga penetrans", "italico": true, "popular": "Bicho-de-pé, pulga penetrante" }
+      ]
+    },
+    {
+      "sigla": "D",
+      "nome": "Ordem Phthiraptera",
+      "arquivo": "grupo-d.json",
+      "itens": [
+        { "id": 17, "cientifico": "Lipeurus caponis", "italico": true, "popular": "Piolho da asa das galinhas" }
+      ]
+    },
+    {
+      "sigla": "E",
+      "nome": "Acari — Sarcoptiformes e Trombidiformes",
+      "arquivo": "grupo-e.json",
+      "itens": [
+        { "id": 18, "cientifico": "Sarcoptes scabiei", "italico": true, "popular": "Ácaro da sarna sarcóptica" },
+        { "id": 19, "cientifico": "Notoedres cati", "italico": true, "popular": "Ácaro da sarna notoédrica" },
+        { "id": 20, "cientifico": "Chorioptes bovis", "italico": true, "popular": "Ácaro da sarna corióptica" },
+        { "id": 21, "cientifico": "Otodectes cynotis", "italico": true, "popular": "Ácaro da orelha, sarna otodécica" },
+        { "id": 22, "cientifico": "Gênero Demodex", "italico": false, "popular": "Ácaro demodécico" }
+      ]
+    },
+    {
+      "sigla": "F",
+      "nome": "Ordem Ixodida",
+      "arquivo": "grupo-f.json",
+      "itens": [
+        { "id": 23, "cientifico": "Ixodes ricinus", "italico": true, "popular": "Carrapato das ovelhas, carrapato do rícino" },
+        { "id": 24, "cientifico": "Ixodes canisuga", "italico": true, "popular": "Carrapato do cão britânico" },
+        { "id": 25, "cientifico": "Ixodes holocyclus", "italico": true, "popular": "Carrapato da paralisia australiano" },
+        { "id": 26, "cientifico": "Argas persicus", "italico": true, "popular": "Carrapato das aves domésticas, carrapato-das-galinhas" },
+        { "id": 27, "cientifico": "Amblyomma cajennense", "italico": true, "popular": "Carrapato-cayeno, carrapato-estrela" },
+        { "id": 28, "cientifico": "Amblyomma americanum", "italico": true, "popular": "Carrapato-estrela norte-americano" },
+        { "id": 29, "cientifico": "Rhipicephalus (Boophilus) microplus", "italico": true, "popular": "Carrapato do boi, carrapato tropical dos bovinos" },
+        { "id": 30, "cientifico": "Rhipicephalus sanguineus", "italico": true, "popular": "Carrapato-marrom-do-cão, carrapato dos canis" },
+        { "id": 31, "cientifico": "Haemaphysalis leachi", "italico": true, "popular": "Carrapato-amarelo-do-cão" },
+        { "id": 32, "cientifico": "Dermacentor variabilis", "italico": true, "popular": "Carrapato do cão americano" },
+        { "id": 33, "cientifico": "Dermacentor nitens", "italico": true, "popular": "Carrapato tropical do cavalo" }
+      ]
+    }
+  ]
+}
