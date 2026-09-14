@@ -1,0 +1,14 @@
+{
+  "grupo": "B",
+  "nome": "Diptera — Moscas e miíases",
+  "parasitas": [
+    { "id": 6,  "cientifico": "Musca domestica", "italico": true, "popular": "Mosca doméstica" },
+    { "id": 7,  "cientifico": "Stomoxys calcitrans", "italico": true, "popular": "Mosca-dos-estábulos" },
+    { "id": 8,  "cientifico": "Haematobia irritans", "italico": true, "popular": "Mosca-dos-chifres" },
+    { "id": 9,  "cientifico": "Gênero Tabanus", "italico": false, "popular": "Mutuca" },
+    { "id": 10, "cientifico": "Dermatobia hominis", "italico": true, "popular": "Mosca-do-berne" },
+    { "id": 11, "cientifico": "Gênero Gasterophilus", "italico": false, "popular": "Moscas gástricas dos equinos" },
+    { "id": 12, "cientifico": "Cochliomyia hominivorax", "italico": true, "popular": "Mosca-da-bicheira, varejeira" },
+    { "id": 13, "cientifico": "Oestrus ovis", "italico": true, "popular": "Mosca nasal dos ovinos" }
+  ]
+}

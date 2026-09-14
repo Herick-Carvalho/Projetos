@@ -1,0 +1,9 @@
+{
+  "grupo": "C",
+  "nome": "Ordem Siphonaptera",
+  "parasitas": [
+    { "id": 14, "cientifico": "Xenopsylla cheopis", "italico": true, "popular": "Pulga do rato oriental" },
+    { "id": 15, "cientifico": "Ctenocephalides felis", "italico": true, "popular": "Pulga do gato" },
+    { "id": 16, "cientifico": "Tunga penetrans", "italico": true, "popular": "Bicho-de-pé, pulga penetrante" }
+  ]
+}
