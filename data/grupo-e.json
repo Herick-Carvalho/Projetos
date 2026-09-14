@@ -1,0 +1,11 @@
+{
+  "grupo": "E",
+  "nome": "Acari — Sarcoptiformes e Trombidiformes",
+  "parasitas": [
+    { "id": 18, "cientifico": "Sarcoptes scabiei", "italico": true, "popular": "Ácaro da sarna sarcóptica" },
+    { "id": 19, "cientifico": "Notoedres cati", "italico": true, "popular": "Ácaro da sarna notoédrica" },
+    { "id": 20, "cientifico": "Chorioptes bovis", "italico": true, "popular": "Ácaro da sarna corióptica" },
+    { "id": 21, "cientifico": "Otodectes cynotis", "italico": true, "popular": "Ácaro da orelha, sarna otodécica" },
+    { "id": 22, "cientifico": "Gênero Demodex", "italico": false, "popular": "Ácaro demodécico" }
+  ]
+}

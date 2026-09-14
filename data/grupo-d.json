@@ -1,0 +1,7 @@
+{
+  "grupo": "D",
+  "nome": "Ordem Phthiraptera",
+  "parasitas": [
+    { "id": 17, "cientifico": "Lipeurus caponis", "italico": true, "popular": "Piolho da asa das galinhas" }
+  ]
+}

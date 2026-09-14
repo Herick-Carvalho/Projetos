@@ -1,0 +1,17 @@
+{
+  "grupo": "F",
+  "nome": "Ordem Ixodida",
+  "parasitas": [
+    { "id": 23, "cientifico": "Ixodes ricinus", "italico": true, "popular": "Carrapato das ovelhas, carrapato do rícino" },
+    { "id": 24, "cientifico": "Ixodes canisuga", "italico": true, "popular": "Carrapato do cão britânico" },
+    { "id": 25, "cientifico": "Ixodes holocyclus", "italico": true, "popular": "Carrapato da paralisia australiano" },
+    { "id": 26, "cientifico": "Argas persicus", "italico": true, "popular": "Carrapato das aves domésticas, carrapato-das-galinhas" },
+    { "id": 27, "cientifico": "Amblyomma cajennense", "italico": true, "popular": "Carrapato-cayeno, carrapato-estrela" },
+    { "id": 28, "cientifico": "Amblyomma americanum", "italico": true, "popular": "Carrapato-estrela norte-americano" },
+    { "id": 29, "cientifico": "Rhipicephalus (Boophilus) microplus", "italico": true, "popular": "Carrapato do boi, carrapato tropical dos bovinos" },
+    { "id": 30, "cientifico": "Rhipicephalus sanguineus", "italico": true, "popular": "Carrapato-marrom-do-cão, carrapato dos canis" },
+    { "id": 31, "cientifico": "Haemaphysalis leachi", "italico": true, "popular": "Carrapato-amarelo-do-cão" },
+    { "id": 32, "cientifico": "Dermacentor variabilis", "italico": true, "popular": "Carrapato do cão americano" },
+    { "id": 33, "cientifico": "Dermacentor nitens", "italico": true, "popular": "Carrapato tropical do cavalo" }
+  ]
+}
