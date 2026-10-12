@@ -19,7 +19,7 @@
         "especie": "<em>Musca domestica</em>"
       },
       "img": {
-        "arquivo": "musca_domestica_lineart.png",
+        "arquivo": "musca_domestica_lineart.jpeg",
         "legenda": "Mosca doméstica adulta com quatro faixas torácicas; detalhe das formas imaturas em substrato orgânico.",
         "estruturas": [
           "Cabeça",
@@ -114,7 +114,7 @@
         "especie": "<em>Stomoxys calcitrans</em>"
       },
       "img": {
-        "arquivo": "stomoxys_calcitrans_lineart.png",
+        "arquivo": "stomoxys_calcitrans_lineart.jpeg",
         "legenda": "Mosca-dos-estábulos adulta, reconhecida pela probóscide rígida projetada para a frente; detalhe do ciclo em matéria vegetal úmida.",
         "estruturas": [
           "Cabeça",
@@ -208,7 +208,7 @@
         "especie": "<em>Haematobia irritans</em>"
       },
       "img": {
-        "arquivo": "haematobia_irritans_lineart.png",
+        "arquivo": "haematobia_irritans_lineart.jpeg",
         "legenda": "Mosca-dos-chifres adulta ampliada e em repouso sobre bovino; detalhe do desenvolvimento das larvas em fezes frescas.",
         "estruturas": [
           "Cabeça",
@@ -302,7 +302,7 @@
         "especie": "Gênero com diversas espécies; entre as ilustradas estão <em>Tabanus subsimilis</em> e <em>Tabanus autumnalis</em>."
       },
       "img": {
-        "arquivo": "tabanus_lineart.png",
+        "arquivo": "tabanus_lineart.jpeg",
         "legenda": "Mutuca adulta com olhos compostos grandes; detalhe da postura de ovos na vegetação e da larva em substrato úmido.",
         "estruturas": [
           "Cabeça",
@@ -396,7 +396,7 @@
         "especie": "<em>Dermatobia hominis</em>"
       },
       "img": {
-        "arquivo": "dermatobia_hominis_lineart.png",
+        "arquivo": "dermatobia_hominis_lineart.jpeg",
         "legenda": "Mosca-do-berne adulta e larva subcutânea com espinhos; esquema da fóresia dos ovos em inseto transportador.",
         "estruturas": [
           "Adulto robusto, de aspecto semelhante a uma abelha, azul-escuro",
@@ -498,7 +498,7 @@
         "especie": "<em>Gasterophilus intestinalis</em> e <em>Gasterophilus nasalis</em>"
       },
       "img": {
-        "arquivo": "gasterophilus_lineart.png",
+        "arquivo": "gasterophilus_lineart.jpeg",
         "legenda": "Mosca gástrica adulta e ovos aderidos aos pelos do equino; larva espinhosa fixa à mucosa digestiva.",
         "estruturas": [
           "Adulto peludo, de aspecto semelhante a uma abelha e coloração parda-amarelada",
@@ -585,7 +585,7 @@
         "especie": "<em>Cochliomyia hominivorax</em>"
       },
       "img": {
-        "arquivo": "cochliomyia_hominivorax_lineart.png",
+        "arquivo": "cochliomyia_hominivorax_lineart.jpeg",
         "legenda": "Varejeira adulta e larvas da bicheira em ferida; detalhe da larva com troncos traqueais dorsais escuros.",
         "estruturas": [
           "Cabeça",
@@ -679,7 +679,7 @@
         "especie": "<em>Oestrus ovis</em>"
       },
       "img": {
-        "arquivo": "oestrus_ovis_lineart.png",
+        "arquivo": "oestrus_ovis_lineart.jpeg",
         "legenda": "Mosca nasal adulta e larviposição junto às narinas do ovino; detalhe de larvas na cavidade nasal.",
         "estruturas": [
           "Adulto pardo-pálido, de corpo rechonchudo e piloso",
