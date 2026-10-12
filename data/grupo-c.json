@@ -17,7 +17,7 @@
         "especie": "<em>Xenopsylla cheopis</em>"
       },
       "img": {
-        "arquivo": "xenopsylla_cheopis_lineart.png",
+        "arquivo": "xenopsylla_cheopis_lineart.jpeg",
         "legenda": "Pulga do rato oriental em vista lateral, com cabeça sem ctenídeos, cerda ocular anterior ao olho e crista pleural; ao lado, estágios do ciclo no ambiente e sobre o roedor.",
         "estruturas": [
           "Cabeça sem ctenídeo genal",
@@ -108,7 +108,7 @@
         "especie": "<em>Ctenocephalides felis</em>"
       },
       "img": {
-        "arquivo": "ctenocephalides_felis_lineart.png",
+        "arquivo": "ctenocephalides_felis_lineart.jpeg",
         "legenda": "Pulga do gato em vista lateral, com cabeça alongada, ctenídeos genal e pronotal e pernas posteriores saltatórias; esquema dos estágios imaturos no ambiente e adultos no animal.",
         "estruturas": [
           "Cabeça alongada e projetada anteriormente",
@@ -201,7 +201,7 @@
         "especie": "<em>Tunga penetrans</em>"
       },
       "img": {
-        "arquivo": "tunga_penetrans_lineart.png",
+        "arquivo": "tunga_penetrans_lineart.jpeg",
         "legenda": "Pulga penetrante e seu ciclo: macho e fêmea antes da penetração, fêmea grávida embebida na pele com extremidade posterior exposta e ovos, larvas e pupa no solo.",
         "estruturas": [
           "Cabeça com ângulo frontal agudo",
