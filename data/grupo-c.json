@@ -2,8 +2,280 @@
   "grupo": "C",
   "nome": "Ordem Siphonaptera",
   "parasitas": [
-    { "id": 14, "cientifico": "Xenopsylla cheopis", "italico": true, "popular": "Pulga do rato oriental" },
-    { "id": 15, "cientifico": "Ctenocephalides felis", "italico": true, "popular": "Pulga do gato" },
-    { "id": 16, "cientifico": "Tunga penetrans", "italico": true, "popular": "Bicho-de-pé, pulga penetrante" }
+    {
+      "id": 14,
+      "cientifico": "Xenopsylla cheopis",
+      "italico": true,
+      "popular": "Pulga do rato oriental",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Siphonaptera",
+        "familia": "Pulicidae",
+        "genero": "Xenopsylla",
+        "especie": "<em>Xenopsylla cheopis</em>"
+      },
+      "img": {
+        "arquivo": "xenopsylla_cheopis_lineart.jpeg",
+        "legenda": "Pulga do rato oriental em vista lateral, com cabeça sem ctenídeos, cerda ocular anterior ao olho e crista pleural; ao lado, estágios do ciclo no ambiente e sobre o roedor.",
+        "estruturas": [
+          "Cabeça sem ctenídeo genal",
+          "Margem anterior da cabeça suavemente arredondada",
+          "Olho composto",
+          "Cerda ocular robusta à frente do olho",
+          "Antena curta em recesso atrás do olho",
+          "Fileira de cerdas na margem posterior da cabeça",
+          "Tórax com segmentos evidentes",
+          "Crista pleural na mesopleura",
+          "Abdômen segmentado",
+          "Pernas posteriores adaptadas ao salto",
+          "Ovo, três estádios larvais e pupa no ambiente"
+        ]
+      },
+      "morfologia": [
+        "Pulga pequena, áptera e lateralmente achatada, adaptada a deslocar-se entre os pelos do hospedeiro.",
+        "Coloração âmbar-clara; a margem anterior da cabeça é suavemente arredondada.",
+        "Não possui ctenídeos genais nem pronotais. Atrás dos olhos há antenas curtas alojadas em recessos; nota-se uma cerda ocular robusta à frente do olho e uma fileira de cerdas na margem posterior da cabeça.",
+        "A crista pleural está presente na mesopleura. As pernas posteriores são fortes e adaptadas ao salto.",
+        "Machos e fêmeas alimentam-se de sangue; adultos permanecem no hospedeiro para o repasto, enquanto as fases imaturas desenvolvem-se principalmente no ambiente."
+      ],
+      "formas": [
+        "Ovo: depositado no ambiente; a fêmea pode pôr cerca de 3–25 ovos por dia e, ao longo da vida, aproximadamente 300–1.000 ovos.",
+        "Larva: passa por três estádios, evita a luz e alimenta-se de detritos orgânicos do ambiente. O desenvolvimento larval pode levar cerca de 12–84 dias.",
+        "Pupa: forma-se dentro de um casulo no ambiente; a duração depende das condições de temperatura e umidade.",
+        "Adulto: emerge da pupa e procura um hospedeiro para o repasto sanguíneo. Com hospedeiro disponível, pode sobreviver por até cerca de 100 dias; sem alimentação, pode persistir por até 38 dias em umidade elevada."
+      ],
+      "hospedeiros": [
+        "Roedores, especialmente ratos, são os hospedeiros usuais e importantes para a manutenção da população.",
+        "Primatas e seres humanos também podem ser picados.",
+        "Quando o hospedeiro morre, as pulgas podem abandoná-lo rapidamente e procurar outro animal."
+      ],
+      "localizacao": [
+        "Adultos vivem sobre a pele do hospedeiro e alimentam-se de sangue.",
+        "Ovos, larvas e pupas encontram-se principalmente no ambiente frequentado pelo hospedeiro, em abrigos, ninhos, camas e frestas com matéria orgânica.",
+        "Larvas evitam a luz e permanecem em locais protegidos, onde encontram alimento e umidade adequados."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, larva I, larva II, larva III, pupa e adulto.",
+        "Os ovos caem ou são depositados no ambiente; a eclosão ocorre em média em cerca de cinco dias, podendo variar de 2 a 14 dias conforme a temperatura e a umidade.",
+        "As larvas passam por três estádios e alimentam-se de matéria orgânica. O período larval pode variar aproximadamente de 12 a 84 dias.",
+        "Após pupar, o adulto emerge e busca um hospedeiro. Temperatura e umidade influenciam a duração das fases imaturas."
+      ],
+      "transmissao": [
+        "A pulga adquire agentes ao alimentar-se de um hospedeiro infectado e pode transmiti-los durante repastos subsequentes.",
+        "<em>Xenopsylla cheopis</em> é vetor importante de <em>Yersinia pestis</em>, agente da peste, especialmente em ciclos associados a roedores.",
+        "A mobilidade da pulga entre hospedeiros e o abandono de animais mortos favorecem a dispersão de pulgas infectadas."
+      ],
+      "doenca": [
+        "A peste bubônica é causada por <em>Yersinia pestis</em>. Após a picada de uma pulga infectada, pode ocorrer febre, mal-estar e aumento doloroso de linfonodos, chamados bubões.",
+        "A picada também causa irritação local e prurido; infestações numerosas podem provocar perda sanguínea e incômodo no hospedeiro.",
+        "A peste é uma zoonose associada a ciclos entre roedores e pulgas; pessoas podem ser expostas quando pulgas infectadas passam a picar outros hospedeiros."
+      ],
+      "diagnostico": [
+        "Identificação morfológica do adulto pela ausência de ctenídeos genais e pronotais, pela cerda ocular anterior ao olho e pela crista pleural.",
+        "Inspeção do pelo e da pele do hospedeiro, além do exame de ninhos e abrigos de roedores para procurar pulgas e estágios ambientais.",
+        "Suspeita de peste requer avaliação clínica e confirmação laboratorial de <em>Yersinia pestis</em> em amostras apropriadas, com notificação e medidas de saúde pública conforme a legislação local."
+      ],
+      "controle": [
+        "Controle integrado de roedores e pulgas, priorizando a remoção segura de fontes de alimento e abrigo e a vedação de frestas e locais de nidificação.",
+        "O controle de pulgas em animais deve ser feito com produtos veterinários adequados à espécie e ao ambiente, sob orientação profissional.",
+        "Evitar manipular roedores mortos ou animais suspeitos sem proteção e procurar serviço de saúde diante de febre e linfonodos dolorosos após exposição a pulgas em área de risco.",
+        "Em áreas com peste, medidas de controle vetorial e vigilância devem ser coordenadas pelos serviços de saúde e zoonoses."
+      ],
+      "zoonose": [
+        "Elevada importância em saúde pública por participar da transmissão da peste entre roedores e, ocasionalmente, ao ser humano.",
+        "Cães e gatos podem transportar pulgas infectadas para perto de pessoas; gatos doentes com peste também exigem precauções veterinárias e sanitárias."
+      ],
+      "observacoes": [
+        "A ausência de ctenídeos não é exclusiva de <em>X. cheopis</em>; a identificação deve considerar em conjunto a cabeça, as cerdas e a crista pleural.",
+        "Na peste, a pulga é vetor; os roedores atuam como reservatórios naturais em muitos ciclos epidemiológicos."
+      ],
+      "fonte": "Aula 3 — Ordem Siphonaptera, slides 97–103 (pp. 33–35); CDC, ‘How Plague Spreads’ (cdc.gov/plague/causes/index.html)."
+    },
+    {
+      "id": 15,
+      "cientifico": "Ctenocephalides felis",
+      "italico": true,
+      "popular": "Pulga do gato",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Siphonaptera",
+        "familia": "Pulicidae",
+        "genero": "Ctenocephalides",
+        "especie": "<em>Ctenocephalides felis</em>"
+      },
+      "img": {
+        "arquivo": "ctenocephalides_felis_lineart.jpeg",
+        "legenda": "Pulga do gato em vista lateral, com cabeça alongada, ctenídeos genal e pronotal e pernas posteriores saltatórias; esquema dos estágios imaturos no ambiente e adultos no animal.",
+        "estruturas": [
+          "Cabeça alongada e projetada anteriormente",
+          "Antena curta em recesso da cabeça",
+          "Ctenídeo genal com 7–8 dentes",
+          "Ctenídeo pronotal com cerca de 16 dentes",
+          "Olho composto",
+          "Corpo achatado lateralmente",
+          "Abdômen segmentado",
+          "Terceiro par de pernas longo e adaptado ao salto",
+          "Tíbia posterior com seis fendas portadoras de cerdas",
+          "Ovo, três estádios larvais, casulo pupal e adulto"
+        ]
+      },
+      "morfologia": [
+        "Pulga áptera, de corpo achatado lateralmente e coloração castanho-escura; é um ectoparasita muito comum de gatos e cães.",
+        "As fêmeas medem cerca de 2,5 mm; os machos são menores e podem medir menos de 1 mm.",
+        "A cabeça é alongada e projetada para a frente; as antenas curtas ficam em recessos laterais.",
+        "Possui ctenídeo genal com 7–8 dentes e ctenídeo pronotal com aproximadamente 16 dentes. Os dentes genais têm comprimento semelhante.",
+        "O terceiro par de pernas é bem desenvolvido para o salto; a tíbia posterior apresenta seis fendas com cerdas.",
+        "Somente os adultos são parasitas do hospedeiro; ovos, larvas e pupas desenvolvem-se predominantemente no ambiente."
+      ],
+      "formas": [
+        "Ovo: branco-perolado, ovoide, liso e com aproximadamente 0,5 mm. A fêmea põe ovos após iniciar o repasto sanguíneo; eles caem do animal e acumulam-se nos locais de descanso.",
+        "Larva: passa por três estádios, tem corpo alongado, delgado e creme e aparelho bucal mastigador. Alimenta-se de matéria orgânica e de fezes de pulgas adultas, evita a luz e procura locais úmidos e protegidos.",
+        "Pupa: a larva L3 produz casulo de seda; detritos aderem à superfície e ajudam na camuflagem. O adulto pode permanecer dentro do casulo até receber estímulos de emergência.",
+        "Adulto: emerge, procura um hospedeiro e inicia a alimentação sanguínea pouco depois de alcançá-lo."
+      ],
+      "hospedeiros": [
+        "Gatos e cães são hospedeiros principais; a pulga pode alimentar-se também de outros mamíferos, inclusive seres humanos.",
+        "Adultos vivem sobre o hospedeiro; ovos, larvas e pupas concentram-se no ambiente utilizado pelo animal."
+      ],
+      "localizacao": [
+        "Adultos permanecem na pele e na pelagem do hospedeiro, onde se alimentam de sangue.",
+        "Ovos caem nos locais de descanso; larvas são encontradas em camas, frestas, base de carpetes e camadas superficiais protegidas do solo.",
+        "As formas imaturas são sensíveis à dessecação e dependem de umidade adequada; umidade relativa abaixo de 50% dificulta sua sobrevivência."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, larva I, larva II, larva III, pupa e adulto.",
+        "Adultos começam a alimentar-se logo após alcançar o hospedeiro. A oviposição inicia-se cerca de 24–48 horas após o primeiro repasto sanguíneo.",
+        "A fêmea pode produzir aproximadamente 30–50 ovos por dia; os ovos caem do hospedeiro e acumulam-se nos locais de repouso.",
+        "Os ovos eclodem em cerca de 2 dias a 2 semanas. As larvas desenvolvem-se no ambiente e a L3 forma um casulo pupal camuflado por detritos.",
+        "Vibração, pressão mecânica, calor e presença do hospedeiro podem estimular a emergência do adulto. A duração das fases depende de temperatura e umidade."
+      ],
+      "transmissao": [
+        "A infestação ocorre quando adultos saltam para um hospedeiro e iniciam o repasto sanguíneo; ovos e estágios imaturos espalham-se no ambiente por caírem do pelo.",
+        "A pulga do gato pode atuar como hospedeiro intermediário de <em>Dipylidium caninum</em>; cães e gatos infectam-se ao ingerir pulgas durante a higiene.",
+        "Pulgas infectadas podem participar da transmissão de agentes entre animais; o risco depende do agente, do hospedeiro e da região."
+      ],
+      "doenca": [
+        "A picada pode causar prurido e dermatite alérgica à picada de pulga, com eritema, pápulas, crostas e alopecia, especialmente na região lombossacra e na base da cauda dos cães e gatos sensíveis.",
+        "Infestações intensas podem provocar perda de sangue e anemia, sobretudo em filhotes e animais debilitados.",
+        "A ingestão acidental de pulgas infectadas pode levar à infecção por <em>Dipylidium caninum</em>, cestódeo intestinal de cães e gatos."
+      ],
+      "diagnostico": [
+        "Pentear a pelagem com pente fino e procurar pulgas adultas ou fezes de pulga; detritos avermelhados que umedecem e deixam halo vermelho sugerem sangue digerido.",
+        "A dermatite alérgica é avaliada pelo padrão das lesões, histórico de prurido e evidência de pulgas ou de fezes de pulga.",
+        "Segmentos de <em>Dipylidium caninum</em> nas fezes ou ao redor do ânus podem indicar infecção associada à ingestão de pulgas."
+      ],
+      "controle": [
+        "Tratar todos os animais contactantes com produto antipulgas veterinário adequado à espécie, idade e condição clínica, seguindo rótulo e orientação profissional.",
+        "Aspirar e lavar camas, mantas e locais de repouso; descartar o conteúdo do aspirador de modo seguro.",
+        "Quando indicado, usar reguladores de crescimento ou outros produtos ambientais apropriados, respeitando precauções com animais e pessoas.",
+        "Manter o controle por tempo suficiente para alcançar ovos, larvas, pupas e adultos; tratar apenas o animal pode não eliminar a infestação ambiental.",
+        "Se houver <em>Dipylidium caninum</em>, tratar a cestodíase e controlar pulgas para evitar reinfecção."
+      ],
+      "zoonose": [
+        "Pode picar seres humanos e causar prurido ou reação alérgica; gatos e cães infestados podem introduzir pulgas em ambientes domésticos.",
+        "A ingestão acidental de pulga infectada pode transmitir <em>Dipylidium caninum</em> a pessoas, mais frequentemente crianças; higiene e controle integrado reduzem esse risco."
+      ],
+      "observacoes": [
+        "A maior parte da população — ovos, larvas e pupas — encontra-se no ambiente, não sobre o animal.",
+        "O adulto pode emergir do casulo após estímulo do hospedeiro; por isso, uma infestação pode reaparecer após a limpeza ou o tratamento inicial.",
+        "A distinção morfológica de <em>Ctenocephalides canis</em> inclui formato da cabeça, primeiro dente genal e número de fendas com cerdas na tíbia posterior."
+      ],
+      "fonte": "Aula 3 — Ordem Siphonaptera, slides 105–117 (pp. 35–39); Merck Veterinary Manual, ‘Flea control in dogs and cats’ (merckvetmanual.com)."
+    },
+    {
+      "id": 16,
+      "cientifico": "Tunga penetrans",
+      "italico": true,
+      "popular": "Bicho-de-pé, pulga penetrante, pulga-da-areia",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Siphonaptera",
+        "familia": "Tungidae",
+        "genero": "Tunga",
+        "especie": "<em>Tunga penetrans</em>"
+      },
+      "img": {
+        "arquivo": "tunga_penetrans_lineart.jpeg",
+        "legenda": "Pulga penetrante e seu ciclo: macho e fêmea antes da penetração, fêmea grávida embebida na pele com extremidade posterior exposta e ovos, larvas e pupa no solo.",
+        "estruturas": [
+          "Cabeça com ângulo frontal agudo",
+          "Tórax castanho-avermelhado",
+          "Fêmea não ingurgitada, com aproximadamente 1 mm",
+          "Fêmea grávida aumentada e parcialmente embebida na pele",
+          "Extremidade posterior da fêmea exposta à superfície",
+          "Macho menor, livre e móvel",
+          "Ovos liberados no ambiente",
+          "Larvas e pupa no solo protegido"
+        ]
+      },
+      "morfologia": [
+        "Pulga muito pequena antes do repasto; o macho mede cerca de 0,5 mm e a fêmea não ingurgitada aproximadamente 1 mm.",
+        "A cabeça apresenta ângulo frontal agudo e o tórax tem coloração castanho-avermelhada.",
+        "A fêmea fecundada penetra a epiderme; à medida que aumenta de volume, permanece parcialmente embebida na pele, com a extremidade posterior exposta.",
+        "A fêmea pode atingir até cerca de 7 mm quando grávida. O macho é livre e móvel e não penetra na pele do hospedeiro."
+      ],
+      "formas": [
+        "Ovo: eliminado pela fêmea grávida a partir da lesão e depositado no ambiente.",
+        "Larva: eclode em cerca de 3–4 dias e passa por dois estádios, alimentando-se de detritos orgânicos no solo.",
+        "Pupa: desenvolve-se em casulo no ambiente, frequentemente recoberto por areia e detritos; larva e pupa completam o desenvolvimento em aproximadamente 3–4 semanas.",
+        "Adulto: machos e fêmeas alimentam-se de sangue; após o acasalamento, a fêmea penetra a pele e aumenta de tamanho durante a produção de ovos."
+      ],
+      "hospedeiros": [
+        "Seres humanos e diversos mamíferos domésticos e silvestres podem ser hospedeiros.",
+        "Entre os hospedeiros mencionados estão suínos, bovinos, ovinos, equinos, asininos, ratos, camundongos e cães.",
+        "A fêmea fecundada penetra a pele do hospedeiro; o macho permanece livre no ambiente ou sobre o hospedeiro sem penetrar."
+      ],
+      "localizacao": [
+        "Fêmeas fecundadas penetram a pele, com predileção pelos pés e por áreas em contato com o solo, como espaços interdigitais, região periungueal, planta e calcanhar.",
+        "A extremidade posterior da fêmea permanece exposta, permitindo respiração e liberação dos ovos.",
+        "Ovos, larvas e pupas desenvolvem-se em solo seco ou arenoso, sombreado e protegido, frequentemente em locais de repouso de pessoas e animais."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, dois estádios larvais, pupa e adulto de vida livre.",
+        "Machos e fêmeas alimentam-se de sangue; após o acasalamento, somente a fêmea fecundada penetra a epiderme.",
+        "A fêmea aumenta progressivamente de tamanho e libera ovos para o ambiente. Os ovos eclodem em cerca de 3–4 dias.",
+        "As larvas desenvolvem-se no solo e passam por dois estádios antes da pupação em casulo; os estágios larval e pupal duram aproximadamente 3–4 semanas.",
+        "O adulto emerge, alimenta-se e procura um hospedeiro. Os slides indicam ciclo completo de cerca de 17 dias em condições favoráveis."
+      ],
+      "transmissao": [
+        "A fêmea fecundada de vida livre penetra ativamente a pele do hospedeiro; não é transmitida diretamente de pessoa para pessoa.",
+        "A exposição ocorre pelo contato com solo ou pisos contaminados por formas infectantes e adultos, particularmente em áreas tropicais e subtropicais.",
+        "Animais infestados podem servir como reservatórios e contribuir para a contaminação do ambiente."
+      ],
+      "doenca": [
+        "Tungíase é a infestação cutânea pela fêmea penetrante. A lesão pode começar como ponto pruriginoso e evoluir para nódulo esbranquiçado com ponto escuro central.",
+        "Provoca inflamação, dor e prurido; lesões nos pés podem dificultar a marcha e o apoio.",
+        "Escoriação ou extração inadequada favorece infecção bacteriana secundária; casos intensos podem causar úlceras, abscessos e alterações ungueais.",
+        "Em animais, lesões nos cascos, patas e pele podem causar dor, claudicação e redução do bem-estar."
+      ],
+      "diagnostico": [
+        "Inspeção das lesões, frequentemente nos pés, observando nódulo ou halo esbranquiçado com ponto escuro central correspondente à extremidade posterior da fêmea.",
+        "A inspeção da pele e dos espaços interdigitais ajuda a identificar outras lesões ou infestação múltipla.",
+        "A avaliação clínica deve considerar infecção secundária, intensidade da dor e dificuldade de locomoção."
+      ],
+      "controle": [
+        "Usar calçados e evitar contato direto com solo potencialmente infestado; manter pisos e áreas de repouso limpos e, quando possível, pavimentados ou vedados.",
+        "Tratar pessoas e animais infestados e manejar o ambiente no âmbito de uma abordagem integrada de saúde humana e animal.",
+        "A remoção da pulga deve ser feita por profissional capacitado, com técnica asséptica; evitar perfurar ou espremer a lesão em casa.",
+        "Lavar os pés regularmente, cuidar de feridas e verificar a vacinação antitetânica quando houver lesões ou extração.",
+        "Controlar reservatórios animais e reduzir a presença de pulgas no solo, seguindo orientação veterinária e de saúde pública."
+      ],
+      "zoonose": [
+        "Tungíase é uma zoonose: afeta seres humanos e animais, e diferentes mamíferos podem atuar como reservatórios.",
+        "A transmissão está associada ao ambiente contaminado e à penetração ativa da fêmea, não ao contato direto entre pessoas."
+      ],
+      "observacoes": [
+        "A espécie pertence à família Tungidae, distinta de Pulicidae, embora ambas estejam na ordem Siphonaptera.",
+        "Apenas a fêmea fecundada penetra a pele; o macho é menor, móvel e não penetra.",
+        "A maior parte do ciclo ocorre no ambiente; controlar somente as lesões ou os animais pode não eliminar a infestação local."
+      ],
+      "fonte": "Aula 3 — Ordem Siphonaptera, slides 126–128 (pp. 42–43); CDC DPDx, ‘Tungiasis’ (cdc.gov/dpdx/tungiasis); OMS, ‘Tungiasis’ (who.int/news-room/fact-sheets/detail/tungiasis)."
+    }
   ]
 }
