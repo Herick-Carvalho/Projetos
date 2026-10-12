@@ -2,13 +2,756 @@
   "grupo": "B",
   "nome": "Diptera — Moscas e miíases",
   "parasitas": [
-    { "id": 6,  "cientifico": "Musca domestica", "italico": true, "popular": "Mosca doméstica" },
-    { "id": 7,  "cientifico": "Stomoxys calcitrans", "italico": true, "popular": "Mosca-dos-estábulos" },
-    { "id": 8,  "cientifico": "Haematobia irritans", "italico": true, "popular": "Mosca-dos-chifres" },
-    { "id": 9,  "cientifico": "Gênero Tabanus", "italico": false, "popular": "Mutuca" },
-    { "id": 10, "cientifico": "Dermatobia hominis", "italico": true, "popular": "Mosca-do-berne" },
-    { "id": 11, "cientifico": "Gênero Gasterophilus", "italico": false, "popular": "Moscas gástricas dos equinos" },
-    { "id": 12, "cientifico": "Cochliomyia hominivorax", "italico": true, "popular": "Mosca-da-bicheira, varejeira" },
-    { "id": 13, "cientifico": "Oestrus ovis", "italico": true, "popular": "Mosca nasal dos ovinos" }
+    {
+      "id": 6,
+      "cientifico": "Musca domestica",
+      "italico": true,
+      "popular": "Mosca doméstica",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "infraordem": "Muscomorpha",
+        "familia": "Muscidae",
+        "genero": "Musca",
+        "especie": "<em>Musca domestica</em>"
+      },
+      "img": {
+        "arquivo": "musca_domestica_lineart.png",
+        "legenda": "Mosca doméstica adulta com quatro faixas torácicas; detalhe das formas imaturas em substrato orgânico.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos grandes, quase contíguos no macho",
+          "Antenas curtas com arista plumosa",
+          "Palpos maxilares",
+          "Probóscide lambedora-sugadora terminada em labelas",
+          "Tórax cinzento com quatro faixas longitudinais escuras",
+          "Abdômen com mancha mediana escura",
+          "Asas translúcidas",
+          "Halteres",
+          "Três pares de pernas",
+          "Ovo alongado e esbranquiçado",
+          "Larva ápoda, vermiforme e afilada na extremidade anterior",
+          "Pupário ovalado e castanho"
+        ]
+      },
+      "morfologia": [
+        "Mosca de porte médio; o tórax varia de cinza-amarelado a cinza-escuro e apresenta quatro estrias longitudinais pretas.",
+        "O abdômen é amarelado. A nervura longitudinal M1+2 da asa é curvada, um caráter útil na identificação entomológica.",
+        "O aparelho bucal é lambedor-sugador, com labelas que absorvem alimento líquido ou previamente dissolvido; não perfura a pele e não suga sangue.",
+        "Adultos alimentam-se de carboidratos, proteínas e aminoácidos; proteínas são importantes para a maturação dos folículos ovarianos da fêmea.",
+        "Possui um par de asas funcionais e um par de halteres, que auxiliam no equilíbrio durante o voo."
+      ],
+      "formas": [
+        "Ovo: claro, alongado e depositado em matéria orgânica úmida, como esterco e resíduos em fermentação.",
+        "Larva: passa por três estádios (L1–L3) e alimenta-se do substrato orgânico; o desenvolvimento larval leva aproximadamente 3–7 dias em condições favoráveis.",
+        "Pupa: a larva madura contrai-se e o tegumento endurece e escurece, formando o pupário; a fase pupal dura cerca de 4–6 dias.",
+        "Adulto: alado, de vida livre, com longevidade média de 25–52 dias para a fêmea. O ciclo completo pode durar 10–14 dias em condições favoráveis."
+      ],
+      "hospedeiros": [
+        "Espécie sinantrópica associada a habitações, instalações pecuárias e locais com esterco ou resíduos orgânicos.",
+        "Não mantém parasitismo obrigatório no hospedeiro; adultos pousam em pessoas e animais, e as larvas desenvolvem-se no ambiente.",
+        "Larvas podem, ocasionalmente, causar miíase facultativa quando se desenvolvem em feridas ou matéria orgânica ingerida."
+      ],
+      "localizacao": [
+        "Os adultos circulam entre fezes, esterco, lixo, alimentos e superfícies; não permanecem fixos no corpo do hospedeiro.",
+        "As formas imaturas desenvolvem-se em matéria orgânica úmida e em fermentação, incluindo esterco e resíduos de alimentos."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, três estádios larvais, pupa dentro do pupário e adulto.",
+        "A fêmea inicia a postura cerca de 5–8 dias após a fecundação, colocando aproximadamente 120–150 ovos por postura e 400–900 ovos ao longo da vida.",
+        "O período de incubação é de cerca de 8–24 horas; L1–L3 desenvolvem-se em aproximadamente 3–7 dias e a fase pupal dura 4–6 dias.",
+        "O ciclo completo pode ocorrer em 10–14 dias sob condições favoráveis. A maturidade sexual do adulto ocorre em cerca de 18 horas; a fêmea torna-se receptiva por volta de 36 horas e vive aproximadamente 25–52 dias."
+      ],
+      "transmissao": [
+        "Transmissão mecânica e passiva: patógenos aderidos às patas, ao corpo e às labelas são levados de fezes, lixo e carcaças até alimentos, feridas e mucosas.",
+        "Ao alimentar-se, pode regurgitar conteúdo digestivo sobre o substrato, contribuindo para a contaminação de alimentos e superfícies."
+      ],
+      "doenca": [
+        "Sua importância é principalmente sanitária e decorre do transporte mecânico de microrganismos entre fezes, resíduos, alimentos e instalações.",
+        "Grandes populações causam incômodo e podem reduzir o tempo de alimentação e o desempenho dos animais.",
+        "Raramente, larvas podem produzir miíase facultativa em feridas contaminadas ou após ingestão acidental."
+      ],
+      "diagnostico": [
+        "Identificação direta do adulto pelas faixas torácicas, pelo padrão do abdômen e pela probóscide com labelas.",
+        "Larvas encontradas em criadouros podem ser examinadas pela morfologia e pelos espiráculos posteriores.",
+        "Inspeção dos criadouros próximos às instalações como indicador da fonte da infestação."
+      ],
+      "controle": [
+        "Saneamento ambiental: coleta frequente de lixo, remoção e destinação adequada do esterco e dos restos orgânicos.",
+        "Telas em janelas, portas e cozinhas; portas com molas em instalações de animais.",
+        "Uso de armadilhas adesivas e luminosas de captura.",
+        "Inseticidas, iscas e controle biológico podem complementar o saneamento, conforme avaliação técnica e as regras de uso do produto."
+      ],
+      "zoonose": [
+        "Tem importância em saúde pública por transportar mecanicamente agentes entre fezes, lixo e alimentos.",
+        "Não é hematófaga; o risco decorre da contaminação mecânica de alimentos e superfícies."
+      ],
+      "observacoes": [
+        "Distingue-se de <em>Stomoxys calcitrans</em>, que possui probóscide rígida, projetada para a frente e adaptada à hematofagia.",
+        "As labelas do aparelho bucal lambedor-sugador permitem ingerir líquidos e partículas alimentares dissolvidas."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 40–44 (pp. 14–15); Merck Veterinary Manual, ‘Filth-breeding flies of animals’ (merckvetmanual.com/integumentary-system/flies/filth-breeding-flies-of-animals)."
+    },
+
+    {
+      "id": 7,
+      "cientifico": "Stomoxys calcitrans",
+      "italico": true,
+      "popular": "Mosca-dos-estábulos, mosca-da-bodega",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "infraordem": "Muscomorpha",
+        "familia": "Muscidae",
+        "subfamilia": "Muscinae",
+        "genero": "Stomoxys",
+        "especie": "<em>Stomoxys calcitrans</em>"
+      },
+      "img": {
+        "arquivo": "stomoxys_calcitrans_lineart.png",
+        "legenda": "Mosca-dos-estábulos adulta, reconhecida pela probóscide rígida projetada para a frente; detalhe do ciclo em matéria vegetal úmida.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos",
+          "Probóscide longa, reta e rígida, projetada para a frente",
+          "Palpos maxilares curtos e clavados",
+          "Tórax com quatro faixas longitudinais escuras",
+          "Abdômen cinzento mosqueado",
+          "Asas translúcidas",
+          "Pernas com garras e almofadinhas",
+          "Ovo alongado",
+          "Larva ápoda",
+          "Pupário"
+        ]
+      },
+      "morfologia": [
+        "Mosca hematófaga de aparência semelhante à mosca doméstica, reconhecida pela probóscide rígida, pontiaguda e projetada para a frente.",
+        "A probóscide perfura a pele; a picada é dolorosa e costuma causar sangramento e irritação.",
+        "Machos e fêmeas alimentam-se de sangue. O repasto é breve, em torno de 3–4 minutos, e pode ser interrompido pela defesa do hospedeiro.",
+        "As moscas procuram regiões menos alcançadas pela cauda, lambedura ou fricção do animal; em bovinos e equinos atacam com frequência pernas e abdômen."
+      ],
+      "formas": [
+        "Ovo: depositado em matéria orgânica vegetal em decomposição, misturada a esterco, urina ou fezes; são cerca de 20–50 ovos por postura.",
+        "Larva: desenvolve-se em resíduos úmidos e fermentados, como feno, silagem, ração e cama de animais estabulados.",
+        "Pupa: ocorre no substrato do criadouro, antes da emergência do adulto.",
+        "Adulto: ambos os sexos são hematófagos; o período médio de vida indicado nos slides é de 17–29 dias."
+      ],
+      "hospedeiros": [
+        "Bovinos, equinos, ovinos e caprinos são hospedeiros de importância veterinária.",
+        "A mosca pode picar outros animais de sangue quente e seres humanos nas proximidades dos criadouros."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário: o adulto vive no ambiente e pousa no hospedeiro apenas durante o repasto, preferindo pernas, ventre e linha ventral, de pele fina.",
+        "Os criadouros são restos de palha e feno úmidos fermentados, silagem, grama cortada acumulada e esterco misturado a restos vegetais.",
+        "Descansa em paredes, cercas e tetos próximos aos animais, o que orienta a aplicação de inseticidas de contato."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, larva, pupa e adulto; as formas imaturas desenvolvem-se na matéria orgânica vegetal em fermentação.",
+        "A fêmea deposita cerca de 20–50 ovos por postura, com aproximadamente 60–800 ovos no total.",
+        "A duração do ciclo completo varia com a temperatura e a umidade; pode levar cerca de 3–7 semanas, com período de incubação de 5–10 dias.",
+        "O acúmulo de cama, feno, ração ou silagem úmidos e misturados a excretas favorece a formação de criadouros."
+      ],
+      "transmissao": [
+        "Pode atuar como vetor mecânico de <em>Trypanosoma evansi</em>, agente da surra, ao transportar o parasito entre hospedeiros durante repastos interrompidos.",
+        "Atua como hospedeiro intermediário de <em>Habronema microstoma</em>; o nematoide relaciona-se à habronemose gástrica e cutânea dos equinos.",
+        "A transmissão mecânica de outros agentes, como os da anemia infecciosa equina ou do carbúnculo hemático, depende da região e deve ser considerada segundo o contexto epidemiológico."
+      ],
+      "doenca": [
+        "As picadas dolorosas, a irritação e a perda de sangue provocam estresse e podem reduzir o peso e a produção leiteira, sobretudo em infestações intensas.",
+        "É hospedeiro intermediário de <em>Habronema microstoma</em>, associado à habronemose gástrica e cutânea dos equinos.",
+        "Pode transmitir mecanicamente <em>Trypanosoma evansi</em>, agente da surra."
+      ],
+      "diagnostico": [
+        "Identificação do adulto pela probóscide reta e rígida projetada para a frente, pelo tórax listrado e pelo abdômen mosqueado.",
+        "Inspeção dos criadouros de palha e feno úmidos próximos às instalações.",
+        "Avaliação das lesões de picada nos animais e do comportamento de inquietação nos horários de atividade."
+      ],
+      "controle": [
+        "Remoção periódica de palha e feno úmidos fermentados, com secagem ou descarte do material.",
+        "Manejo do esterco e de restos de silagem, evitando acúmulo de matéria orgânica fermentável.",
+        "Telas nas instalações e aplicação de inseticidas de contato em paredes e tetos, onde as moscas descansam.",
+        "Inseticidas de uso animal, como pulverizações e pour-on, sob orientação e com rotação de princípios ativos.",
+        "Armazenar palha e feno em locais cobertos e ventilados, o que reduz a fermentação do material."
+      ],
+      "zoonose": [
+        "Pode picar pessoas e causar dor e irritação, especialmente em ambientes rurais e instalações pecuárias.",
+        "A relevância zoonótica relaciona-se à possibilidade de transmissão mecânica de agentes; o principal impacto descrito é veterinário."
+      ],
+      "observacoes": [
+        "O nome popular vem da associação intensa com estábulos e baias, onde encontram-se palha e feno fermentados.",
+        "A probóscide reta e sempre projetada, juntamente com o hábito picador, é que impede a confusão com a mosca doméstica.",
+        "A interrupção frequente dos repastos favorece a transmissão mecânica entre hospedeiros."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 45–50 (pp. 15–17); Merck Veterinary Manual, ‘Stable flies’ (merckvetmanual.com/integumentary-system/flies/stable-flies)."
+    },
+
+    {
+      "id": 8,
+      "cientifico": "Haematobia irritans",
+      "italico": true,
+      "popular": "Mosca-dos-chifres",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "infraordem": "Muscomorpha",
+        "familia": "Muscidae",
+        "genero": "Haematobia (Lyperosia em classificações antigas)",
+        "especie": "<em>Haematobia irritans</em>"
+      },
+      "img": {
+        "arquivo": "haematobia_irritans_lineart.png",
+        "legenda": "Mosca-dos-chifres adulta ampliada e em repouso sobre bovino; detalhe do desenvolvimento das larvas em fezes frescas.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos",
+          "Probóscide curta e rígida, projetada para a frente",
+          "Tórax escuro",
+          "Abdômen curto e arredondado",
+          "Asas translúcidas",
+          "Pernas curtas",
+          "Ovo alongado e avermelhado",
+          "Larva no esterco bovino",
+          "Pupário no solo"
+        ]
+      },
+      "morfologia": [
+        "Mosca pequena, de aproximadamente 3–5 mm; possui coloração escura e palpos longos.",
+        "A probóscide é perfurante, e adultos de ambos os sexos alimentam-se de sangue.",
+        "Os adultos permanecem sobre o hospedeiro durante a maior parte do tempo, afastando-se para a postura nas fezes frescas.",
+        "O bovino é o hospedeiro preferencial; as moscas agrupam-se na base dos chifres e em outras áreas do dorso e das laterais do corpo."
+      ],
+      "formas": [
+        "Ovo: depositado em fezes frescas de bovinos; cada postura contém cerca de 11–13 ovos, e a fêmea pode produzir aproximadamente 100–200 ovos no total.",
+        "Larva: eclode em cerca de 20–24 horas, penetra no bolo fecal e passa por duas mudas até L3, em aproximadamente 3–12 dias.",
+        "Pupa: desenvolve-se nas partes inferiores da massa fecal ou no solo próximo; dura em torno de 2–8 dias.",
+        "Adulto: procura um hospedeiro e inicia a hematofagia cerca de 2–3 horas após a emergência."
+      ],
+      "hospedeiros": [
+        "Bovinos são os hospedeiros preferenciais e principais para a manutenção do ciclo.",
+        "Ocasionalmente, a mosca também pode alimentar-se de equinos, ovinos, caprinos e animais silvestres.",
+        "A espécie humana não é considerada hospedeiro habitual."
+      ],
+      "localizacao": [
+        "Adultos vivem sobre o bovino e afastam-se sobretudo para ovipor em fezes frescas.",
+        "Podem concentrar-se junto à base dos chifres, no dorso e nas laterais, de acordo com a temperatura e a resposta do hospedeiro.",
+        "O desenvolvimento imaturo ocorre no bolo fecal e no solo imediatamente adjacente."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, larva, pupa e adulto. A fêmea ovipõe em fezes bovinas frescas.",
+        "O intervalo entre postura e emergência depende da temperatura: cerca de 8–12 dias em épocas quentes e úmidas, podendo estender-se a 30–45 dias em períodos frios.",
+        "As larvas desenvolvem-se no bolo fecal; a pupa ocorre em suas partes inferiores ou no solo próximo.",
+        "O aumento da temperatura acelera o ciclo e favorece o crescimento populacional."
+      ],
+      "transmissao": [
+        "A espécie está associada à transmissão de anaplasmose bovina.",
+        "Atua como hospedeiro intermediário de <em>Stephanofilaria stilesi</em>, nematoide que parasita a pele de bovinos, e pode participar do ciclo de <em>Habronema</em> spp. em equinos.",
+        "A importância e o mecanismo de transmissão variam conforme o agente envolvido."
+      ],
+      "doenca": [
+        "Perda de condição e queda de produção: redução de ganho de peso e de produção leiteira, que pode ser significativa quando a infestação é intensa.",
+        "Ação espoliatória direta: a experiência dolorosa ocasiona inquietação, declínio do pastejo e busca de sombra para aliviar os agregados de moscas.",
+        "Alopecia e lesões de pele nas regiões de maior agregação, sobretudo em cernelha e dorso.",
+        "Dermatite filarial ventral, caracterizada por placas hiperqueratósicas no ventre, quando associada a <em>Stephanofilaria stilesi</em>."
+      ],
+      "diagnostico": [
+        "Contagem direta das moscas em um dos lados do animal, estimando-se a carga total por dobro do valor obtido.",
+        "Identificação morfológica do adulto pelo tamanho reduzido, cor parda-escura e probóscide projetada.",
+        "Inspeção das fezes frescas em pastagens sombreadas na busca de ovos e larvas."
+      ],
+      "controle": [
+        "Controle químico por aspersão, imersão ou brincos impregnados, respeitando a bula e a orientação veterinária.",
+        "Controle biológico com besouros coprófagos, como <em>Onthophagus gazella</em>, que reduzem a persistência dos bolos fecais e o desenvolvimento de larvas.",
+        "Monitoramento das cargas parasitárias e alternância criteriosa de estratégias de controle ajudam a reduzir a seleção de resistência."
+      ],
+      "zoonose": [
+        "Baixa: quase estritamente restrita aos bovinos, não representando risco relevante para o homem ou para outros animais domésticos.",
+        "A relevância sanitária da espécie é econômica e produtiva, e não zoonótica."
+      ],
+      "observacoes": [
+        "O nome comum deriva da preferência inicial das moscas pela base dos chifres, embora ocorram em todo o dorso do bovino.",
+        "Classificada antes como <em>Lyperosia irritans</em>, nome encontrado em alguns livros clássicos.",
+        "A permanência constante sobre o hospedeiro a diferencia das demais moscas muscoídes, que pousam apenas para se alimentar.",
+        "O ciclo curto e a postura diária nas fezes frescas explicam a dificuldade do controle apenas com inseticidas, exigendo manejo integrado."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 51–56 (pp. 17–19); Merck Veterinary Manual, ‘Horn flies of cattle’ (merckvetmanual.com/integumentary-system/flies/horn-flies-of-cattle)."
+    },
+
+    {
+      "id": 9,
+      "cientifico": "Gênero Tabanus",
+      "italico": false,
+      "popular": "Mutuca, mosca-cavalo, tabanídeo",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "infraordem": "Tabanomorpha",
+        "familia": "Tabanidae",
+        "genero": "<em>Tabanus</em>",
+        "especie": "Gênero com diversas espécies; entre as ilustradas estão <em>Tabanus subsimilis</em> e <em>Tabanus autumnalis</em>."
+      },
+      "img": {
+        "arquivo": "tabanus_lineart.png",
+        "legenda": "Mutuca adulta com olhos compostos grandes; detalhe da postura de ovos na vegetação e da larva em substrato úmido.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos grandes e iridescentes",
+          "Antenas com o terceiro artículo dividido em anéis",
+          "Palpos maxilares robustos",
+          "Aparelho bucal cortador-sugador",
+          "Tórax amplo",
+          "Asas largas, com a terceira nervura longitudinal bifurcada",
+          "Abdômen curto e largo",
+          "Pernas robustas",
+          "Massa de ovos piramidal sobre vegetação",
+          "Larva vermiforme no lodo, com pseudópodes cerdosos",
+          "Pupa no solo"
+        ]
+      },
+      "morfologia": [
+        "Mutucas são dípteros robustos, com corpo de aproximadamente 6–33 mm e sem cerdas evidentes.",
+        "A cabeça é grande e levemente côncava, com olhos compostos muito desenvolvidos; nos machos, os olhos são holópticos (contíguos), enquanto nas fêmeas são dicópticos (separados).",
+        "Os palpos têm dois segmentos e a probóscide é robusta e rígida. As fêmeas possuem mandíbulas e maxilas adaptadas para cortar a pele e ingerir sangue.",
+        "Em <em>Tabanus</em>, os olhos podem ser de cor uniforme ou apresentar faixas horizontais. A terceira nervura longitudinal da asa bifurca-se."
+      ],
+      "formas": [
+        "Ovo: as fêmeas depositam massas de aproximadamente 200–1.000 ovos em ambientes aquáticos ou semiaquáticos, como pântanos e troncos úmidos.",
+        "Larva: desenvolve-se em cerca de 8–9 estádios ao longo de 10–42 semanas. Larvas de <em>Tabanus</em> são carnívoras; em outros tabanídeos, a alimentação pode incluir matéria orgânica.",
+        "Pupa: fase terrestre com duração aproximada de 1–3 semanas.",
+        "Adulto: vive cerca de 1–2 meses; apenas a fêmea é hematófaga. O ciclo total varia de aproximadamente 2 meses a 2 anos, segundo espécie e ambiente."
+      ],
+      "hospedeiros": [
+        "Bovinos e equinos são alvos frequentes; também podem ser atacados outros mamíferos e seres humanos.",
+        "A fêmea procura hospedeiros principalmente por sinais visuais e pelo dióxido de carbono; o macho não realiza hematofagia."
+      ],
+      "localizacao": [
+        "A fêmea adulta pousa temporariamente na pele para alimentar-se; as picadas são frequentes em animais expostos durante o dia.",
+        "Ovos e larvas ocorrem perto de água aberta; as larvas ocupam substratos aquáticos ou semiaquáticos, muitas vezes enterradas no lodo."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, larva, pupa e adulto; as fases imaturas são associadas a ambientes aquáticos ou semiaquáticos.",
+        "A fêmea põe massas de aproximadamente 200–1.000 ovos próximas à água.",
+        "O período embrionário pode variar de 10 dias a 8 meses; o estágio larval, com 8–9 mudas, dura aproximadamente 10–42 semanas.",
+        "A pupa dura cerca de 1–3 semanas. O desenvolvimento total pode ocupar de 2 meses a 2 anos, conforme espécie e condições ambientais."
+      ],
+      "transmissao": [
+        "Picada dolorosa da fêmea, com laceração da pele e formação de poça sanguínea, em alimentação telmófaga.",
+        "Transmissão mecânica favorecida pela interrupção do repasto: a mosca abandona o animal antes de completar a alimentação, podendo transferir sangue contaminado ao hospedeiro seguinte.",
+        "Tabanídeos podem transmitir mecanicamente agentes como os da surra, da anemia infecciosa equina, da anaplasmose e do carbúnculo hemático; a importância varia entre espécies e regiões."
+      ],
+      "doenca": [
+        "Tabanidose: dor intensa na picada, ponto hemorrágico, prurido, inquietação e agregação dos animais em busca de proteção.",
+        "Perdas produtivas: queda do consumo alimentar, do ganho de peso e da produção leiteira, com estresse e anemia em ataques maciços.",
+        "Feridas hemorrágicas que se tornam portas de entrada para miíases e infecções bacterianas secundárias."
+      ],
+      "diagnostico": [
+        "Reconhecimento do adulto pelo tamanho grande, pela cabeça ampla, pelos olhos compostos e pela probóscide robusta; as fêmeas produzem picada dolorosa e hemorrágica.",
+        "Observação do padrão de ataque, diurno e mais intenso próximo a margens de água e brejos.",
+        "Busca de massas de ovos sobre a vegetação próxima aos criadouros e de larvas no lodo das margens.",
+        "Rastreamento das doenças transmitidas, como a anaplasmose e a anemia infecciosa equina, quando os casos se concentram em áreas de ataque intenso."
+      ],
+      "controle": [
+        "Eliminar ou manejar habitats de criação larval, especialmente terrenos mal drenados próximos às instalações.",
+        "Aplicar medidas de controle químico em estábulos e animais conforme orientação técnica e rótulo do produto.",
+        "Usar fitas escuras adesivas como armadilhas nos estábulos para reduzir a presença de adultos."
+      ],
+      "zoonose": [
+        "Ataca com frequência o homem, com picadas muito dolorosas e reações locais intensas.",
+        "A importância para pessoas decorre principalmente das picadas dolorosas; tabanídeos podem transmitir mecanicamente agentes em algumas regiões."
+      ],
+      "observacoes": [
+        "A família Tabanidae inclui ainda os gêneros <em>Chrysops</em>, a mosca-do-cervo, e <em>Pangonia</em>, com hábitos semelhantes aos de <em>Tabanus</em>.",
+        "A interrupção do repasto é o fundamento biológico da transmissão mecânica: ao contrário da mosca-dos-estábulos, a mutuca abandona o animal com frequência antes de completar a refeição.",
+        "As larvas são predadoras de pequenos animais no lodo, não se alimentando de sangue; a hematofagia é exclusiva da fêmea adulta.",
+        "A massa de ovos tem forma piramidal característica, facilmente identificada na vegetação aquática."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 57–63 (pp. 19–22); Merck Veterinary Manual, ‘Horse flies and deer flies’ (merckvetmanual.com/integumentary-system/flies/horse-flies-and-deer-flies)."
+    },
+
+    {
+      "id": 10,
+      "cientifico": "Dermatobia hominis",
+      "italico": true,
+      "popular": "Mosca-do-berne, berne, mosca-varejeira-do-berne",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "familia": "Oestridae (Cuterebridae nos slides da disciplina)",
+        "subfamilia": "Cuterebrinae",
+        "genero": "Dermatobia",
+        "especie": "<em>Dermatobia hominis</em>"
+      },
+      "img": {
+        "arquivo": "dermatobia_hominis_lineart.png",
+        "legenda": "Mosca-do-berne adulta e larva subcutânea com espinhos; esquema da fóresia dos ovos em inseto transportador.",
+        "estruturas": [
+          "Adulto robusto, de aspecto semelhante a uma abelha, azul-escuro",
+          "Cabeça com face larga",
+          "Aparelho bucal atrofiado",
+          "Tórax amplo e peludo",
+          "Asas grandes e translúcidas",
+          "Abdômen azulado metálico",
+          "Ovos aderidos ao inseto transportador",
+          "Larva L3 creme, com fileiras de espinhos retrorsos",
+          "Furúnculo cutâneo com poro respiratório",
+          "Espiráculos posteriores da larva",
+          "Pupa no solo"
+        ]
+      },
+      "morfologia": [
+        "Adulto robusto, com cerca de 12–17 mm; cabeça e antenas amareladas, tórax castanho-escuro com brilho metálico, asas castanho-claras e pernas amarelas.",
+        "O aparelho bucal é rudimentar e o adulto não se alimenta; a atividade ocorre principalmente durante o dia.",
+        "A fêmea captura um artrópode hematófago em voo e fixa ovos ao transportador; são cerca de 30–40 ovos por transportador e 800–1.000 ao longo da vida.",
+        "A larva L3 mede aproximadamente 18–24 mm e apresenta corpo segmentado com fileiras de espinhos voltados para trás e espiráculos posteriores visíveis.",
+        "A larva mantém no tegumento do hospedeiro um furúnculo cutâneo com um poro respiratório central, por onde expõe os espiráculos.",
+        "A cabeça da larva é atrofiada e munida de ganchos bucais que fixam o parasito ao fundo da lesão."
+      ],
+      "formas": [
+        "Ovo: não é depositado diretamente no hospedeiro; a fêmea adere cerca de 30–40 ovos ao corpo de um artrópode hematófago, prática denominada fóresia.",
+        "Larva: três estádios subcutâneos; a L1 penetra a pele quando o inseto transportador se alimenta, a L2 alarga a lesão e a L3 completa o desenvolvimento, o que leva de 5 a 10 semanas.",
+        "Pupa: a L3 madura abandona o furúnculo, cai ao solo e enterra-se para pupar, por 2 a 3 semanas.",
+        "Adulto: não se alimenta; vive cerca de 3–19 dias e dedica-se à reprodução."
+      ],
+      "hospedeiros": [
+        "Bovinos, hospedeiros de grande importância econômica devido à perda de qualidade do couro e à redução da produção leiteira.",
+        "Ovinos, caprinos, equinos, suínos e cães, com infestações variáveis.",
+        "Seres humanos podem ser hospedeiros acidentais em áreas de ocorrência.",
+        "Mamíferos silvestres, que mantêm o parasito em ciclos naturais."
+      ],
+      "localizacao": [
+        "Miíase furunculóide subcutânea: a larva desenvolve-se na pele do hospedeiro, formando um nódulo com poro respiratório.",
+        "Bovinos e cães são hospedeiros comuns; outros mamíferos, inclusive seres humanos, também podem ser parasitados.",
+        "A larva permanece na pele até completar o desenvolvimento e, então, abandona o hospedeiro para pupar no solo."
+      ],
+      "ciclo": [
+        "A fêmea captura em voo um artrópode hematófago, como mosquito ou carrapato, e deposita sobre ele uma massa de ovos; esse transporte é denominado fóresia.",
+        "Quando o inseto transportador inicia o repasto, a mudança de temperatura estimula a eclosão. As larvas alcançam a pele e penetram pela picada do transportador ou por folículos pilosos.",
+        "A larva desenvolve-se no tecido subcutâneo durante aproximadamente 35–70 dias em bovinos e cães, passando por três estádios.",
+        "A L3 madura abandona o hospedeiro, cai ao solo e forma a pupa; a fase pupal dura cerca de 21–35 dias.",
+        "Em condições favoráveis, o ciclo completo leva aproximadamente 120 dias. A fêmea põe 30–40 ovos por transportador, até um total estimado de 800–1.000 ovos."
+      ],
+      "transmissao": [
+        "Mecanismo de fóresia: os ovos são transportados por outro artrópode hematófago até o hospedeiro, onde eclodem quando ele inicia o repasto.",
+        "O artrópode transportador carrega os ovos até o hospedeiro; ele não inocula a larva como um agente infeccioso transmitido pela saliva.",
+        "A infestação ocorre quando o transportador com ovos realiza o repasto sobre o hospedeiro; não é necessário haver uma ferida prévia."
+      ],
+      "doenca": [
+        "Dermatobiose ou miíase furunculóide, popularmente berne, caracteriza-se pelo desenvolvimento subcutâneo da larva.",
+        "Lesão típica: nódulo furunculóide de 1 a 3 cm, endurecido, com poro central por onde sai exsudato sorosanguinolento e onde se percebem os espiráculos da larva.",
+        "Prurido e dor local, inquietação, perda de condição, anorexia em infestações múltiplas, especialmente em bezerros recentes.",
+        "Na pecuária, as larvas depreciam o couro e contribuem para perdas na produção leiteira.",
+        "No ser humano, o berne comum ocorre em pele descoberta, causando nódulo doloroso e real risco de erro diagnóstico com furúnculo bacteriano ou carcinoma."
+      ],
+      "diagnostico": [
+        "Exame clínico direto: nódulo furunculóide com poro central, por onde se observam os espiráculos posteriores brancos da larva.",
+        "A palpação do nódulo pode evidenciar a consistência endurecida e a larva em desenvolvimento no interior da lesão.",
+        "Anamnese de permanência em área endêmica, sobretudo em clima quente e úmido, e nos meses de maior atividade.",
+        "No ser humano, o diagnóstico diferencial deve afastar furúnculo estafilocócico e cístico, principalmente em nódulos de evolução prolongada e sem resposta antibiótica."
+      ],
+      "controle": [
+        "O controle efetivo concentra-se no tratamento das larvas que estão no animal, conforme protocolo veterinário.",
+        "Ivermectina e doramectina são opções de antiparasitários de uso veterinário; selecionar produto e dose com orientação profissional.",
+        "O controle de artrópodes transportadores e medidas de proteção individual podem reduzir a exposição aos ovos.",
+        "Em pessoas, a extração deve ser realizada por profissional de saúde."
+      ],
+      "zoonose": [
+        "Pode parasitar seres humanos e outros mamíferos; casos humanos ocorrem em áreas de distribuição da espécie.",
+        "Não há transmissão direta entre pessoas: a infestação depende da picada do inseto transportador nas áreas de atividade do adulto.",
+        "A doença humana tem distribuição ampla nas Américas, da América Central ao norte da Argentina, incluindo todo o território brasileiro nas áreas rurais quentes."
+      ],
+      "observacoes": [
+        "O transporte de ovos por artrópodes hematófagos é denominado fóresia; mosquitos e carrapatos podem atuar como transportadores.",
+        "A mosca adulta tem aparelho bucal rudimentar e não se alimenta.",
+        "Um mesmo hospedeiro pode abrigar vários bernes em estádios de desenvolvimento distintos, após contato com diferentes insetos transportadores infestados.",
+        "A denominação antiga da família, Cuterebridae, foi sinonimizada com Oestridae na classificação atual."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 75–78 (pp. 26–27); UF/IFAS Extension, ‘Human Bot Fly’ (ask.ifas.ufl.edu/publication/IN775)."
+    },
+
+    {
+      "id": 11,
+      "cientifico": "Gênero Gasterophilus",
+      "italico": false,
+      "popular": "Moscas gástricas dos equinos",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "familia": "Gasterophilidae",
+        "genero": "Gasterophilus",
+        "especie": "<em>Gasterophilus intestinalis</em> e <em>Gasterophilus nasalis</em>"
+      },
+      "img": {
+        "arquivo": "gasterophilus_lineart.png",
+        "legenda": "Mosca gástrica adulta e ovos aderidos aos pelos do equino; larva espinhosa fixa à mucosa digestiva.",
+        "estruturas": [
+          "Adulto peludo, de aspecto semelhante a uma abelha e coloração parda-amarelada",
+          "Aparelho bucal atrofiado",
+          "Asas translúcidas",
+          "Ovos aderidos aos pelos, amarelo-creme e alongados",
+          "Ovos aderidos à pelagem do equino",
+          "Larva L1 na mucosa bucal",
+          "Larva L3 fixa à mucosa gástrica, com fileiras de espinhos e ganchos bucais",
+          "Pupa no solo"
+        ]
+      },
+      "morfologia": [
+        "As espécies de <em>Gasterophilus</em> são moscas parasitas dos equídeos; as mais destacadas são <em>G. nasalis</em> e <em>G. intestinalis</em>.",
+        "As larvas apresentam ganchos orais em forma de foice, usados para fixação durante a migração e no trato digestório.",
+        "As larvas de <em>G. nasalis</em> apresentam uma fileira de espinhos por segmento; as de <em>G. intestinalis</em>, duas fileiras."
+      ],
+      "formas": [
+        "Ovo: aderido aos pelos do equino; as fêmeas ovipõem durante voos rápidos ao redor do hospedeiro.",
+        "Larva L1: após a incubação do ovo, penetra a mucosa bucal e migra pelos tecidos durante cerca de 2–6 semanas.",
+        "Larvas L2 e L3: são deglutidas e desenvolvem-se no estômago e/ou duodeno, conforme a espécie.",
+        "Larva madura: desprende-se da mucosa e é eliminada com as fezes; no solo transforma-se em pupa e depois emerge o adulto."
+      ],
+      "hospedeiros": [
+        "Equinos são os hospedeiros de importância veterinária para <em>Gasterophilus nasalis</em> e <em>G. intestinalis</em>.",
+        "Os ovos aderidos à pelagem facilitam a exposição durante a higiene e a lambedura do próprio animal."
+      ],
+      "localizacao": [
+        "As larvas jovens penetram e migram pela mucosa bucal durante aproximadamente 2–6 semanas.",
+        "Larvas mais desenvolvidas localizam-se no estômago e/ou no duodeno, conforme a espécie.",
+        "As moscas adultas são de vida livre e aproximam-se do equino para a oviposição."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, três estádios larvais, pupa no solo e adulto.",
+        "Após incubação de cerca de 7–10 dias, os ovos eclodem; a L1 penetra a mucosa bucal e migra por 2–6 semanas.",
+        "As larvas mudam para L2, são deglutidas e completam o desenvolvimento no estômago e/ou no duodeno; a L3 é eliminada nas fezes.",
+        "A larva no solo forma uma pupa, da qual emerge o adulto, reiniciando o ciclo."
+      ],
+      "transmissao": [
+        "A infestação começa quando ovos aderidos aos pelos eclodem e as larvas penetram a mucosa bucal do equino.",
+        "As larvas migram pela mucosa oral, são deglutidas e alcançam o estômago e/ou o duodeno."
+      ],
+      "doenca": [
+        "Gasterofilose ou miíase por <em>Gasterophilus</em>: a fase oral pode provocar inflamação local, salivação, movimentos de cabeça e dificuldade de mastigação.",
+        "As larvas gástricas são muitas vezes toleradas, mas podem causar erosões e ulcerações da mucosa.",
+        "Complicações graves, como perfuração gástrica ou impactação esofágica, são raras."
+      ],
+      "diagnostico": [
+        "Inspeção da pelagem para localizar ovos aderidos, útil como indicação de exposição do animal ou do grupo.",
+        "Inspeção da cavidade oral pode revelar larvas jovens; a gastroscopia permite observar larvas aderidas ao estômago e ao duodeno.",
+        "Larvas maduras podem ser observadas nas fezes ao deixarem o hospedeiro; exames de ovos fecais não diagnosticam esta miíase."
+      ],
+      "controle": [
+        "Remoção mecânica dos ovos aderidos aos pelos, com raspagem ou escovação frequente das regiões de postura.",
+        "Tratamento antiparasitário com ivermectina ou moxidectina pode reduzir as larvas; escolher o produto e o momento com orientação veterinária.",
+        "A higiene das baias e a remoção do esterco ajudam a reduzir o desenvolvimento pupal no ambiente."
+      ],
+      "zoonose": [
+        "<em>Gasterophilus</em> spp. não apresentam risco zoonótico reconhecido.",
+        "Sua importância é veterinária e está relacionada à miíase oral e digestiva dos equídeos."
+      ],
+      "observacoes": [
+        "As espécies destacadas nos materiais são <em>G. nasalis</em> e <em>G. intestinalis</em>; número de fileiras de espinhos larvais ajuda a distingui-las.",
+        "O estágio larval parasita a mucosa oral e o trato digestório dos equídeos; ovo, pupa e adulto são encontrados fora do hospedeiro."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 82–84 (pp. 27–28); Merck Veterinary Manual, ‘Gastrointestinal parasites of minor clinical importance in horses — Gasterophilus spp.’ (merckvetmanual.com/digestive-system/gastrointestinal-parasites-of-horses/gastrointestinal-parasites-of-minor-clinical-importance-in-horses)."
+    },
+
+    {
+      "id": 12,
+      "cientifico": "Cochliomyia hominivorax",
+      "italico": true,
+      "popular": "Mosca-da-bicheira, varejeira, mosca-da-miíase primária",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "infraordem": "Muscomorpha",
+        "familia": "Calliphoridae",
+        "subfamilia": "Chrysomyinae",
+        "genero": "Cochliomyia",
+        "especie": "<em>Cochliomyia hominivorax</em>"
+      },
+      "img": {
+        "arquivo": "cochliomyia_hominivorax_lineart.png",
+        "legenda": "Varejeira adulta e larvas da bicheira em ferida; detalhe da larva com troncos traqueais dorsais escuros.",
+        "estruturas": [
+          "Cabeça",
+          "Olhos compostos avermelhados",
+          "Tórax com três faixas longitudinais escuras",
+          "Abdômen verde-azulado metálico",
+          "Asas translúcidas",
+          "Pernas escuras",
+          "Massa de ovos em camadas sobre a borda da ferida",
+          "Larva L3 com fileiras de espinhos e troncos traqueais dorsais escuros",
+          "Espiráculos posteriores",
+          "Pupário castanho no solo"
+        ]
+      },
+      "morfologia": [
+        "Mosca da família Calliphoridae, de coloração metálica azul ou azul-esverdeada.",
+        "Os olhos são vermelho-amarelados e a cabeça é amarelada.",
+        "O mesonoto apresenta três faixas longitudinais escurecidas, característica útil para reconhecer o adulto.",
+        "A fêmea é atraída por ferimentos recentes e deposita ovos nas bordas da lesão. As larvas alimentam-se de tecido vivo e provocam miíase traumática grave."
+      ],
+      "formas": [
+        "Ovo: a fêmea põe massas de cerca de 200–300 ovos nas bordas de feridas ou ferimentos recentes.",
+        "Larva: eclode e penetra a ferida; desenvolve-se em tecido vivo e passa por três estádios larvais.",
+        "Pupa: a larva madura abandona o hospedeiro e pupará no solo.",
+        "Adulto: completa o ciclo; em condições ambientais distintas, o ciclo total pode durar aproximadamente 21–60 dias."
+      ],
+      "hospedeiros": [
+        "Animais de sangue quente, especialmente bovinos, ovinos, equinos, cães e suínos.",
+        "Outros mamíferos, inclusive seres humanos, podem ser infestados; aves também podem ser hospedeiras."
+      ],
+      "localizacao": [
+        "Miíase traumática: os ovos são depositados diretamente sobre feridas ou ferimentos recentes; também podem ser colocados em mucosas e orifícios naturais.",
+        "As larvas invadem e consomem tecido vivo, ampliando a lesão em profundidade e extensão.",
+        "Feridas de manejo, lesões acidentais e o umbigo de recém-nascidos são portas de entrada importantes."
+      ],
+      "ciclo": [
+        "Ciclo holometábolo: ovo, três estádios larvais parasitários, pupa no solo e adulto.",
+        "A fêmea deposita cerca de 200–300 ovos em feridas recentes. Após a eclosão, as larvas alimentam-se de tecido vivo e ampliam a lesão.",
+        "As larvas maduras deixam o hospedeiro, caem ao solo e pupam; o adulto emerge para reproduzir-se.",
+        "A duração total do ciclo indicada nos materiais é de aproximadamente 21–60 dias."
+      ],
+      "transmissao": [
+        "A fêmea deposita os ovos diretamente nas bordas de feridas ou ferimentos recentes; não há vetor intermediário.",
+        "A eclosão e a penetração das larvas na lesão iniciam a infestação."
+      ],
+      "doenca": [
+        "Miíase traumática grave, conhecida como bicheira ou miíase primária; as larvas invadem tecido vivo e aumentam a extensão e a profundidade da ferida.",
+        "As lesões podem causar dor, hemorragia, exsudato e infecção secundária; sem tratamento, infestações extensas podem ser fatais.",
+        "Em animais de produção, a bicheira compromete o bem-estar e pode causar perdas econômicas; feridas umbilicais em neonatos exigem atenção imediata.",
+        "Seres humanos também podem ser infestados quando há feridas expostas em áreas de ocorrência."
+      ],
+      "diagnostico": [
+        "Inspeção da ferida e identificação das larvas creme com espinhos voltados para trás, removidas para exame.",
+        "Larvas removidas da lesão podem ser enviadas para identificação entomológica e confirmação laboratorial da espécie.",
+        "Diferenciação com as miíases secundárias: a varejeira secundária só coloniza tecido necrótico, enquanto a bicheira invade o tecido vivo."
+      ],
+      "controle": [
+        "Tratamento imediato de todas as feridas, com curativos oclusivos e larvicidas tópicos específicos.",
+        "Prevenção das miíases de manejo: adiamento de marcação, descorna e castrações para os períodos de menor atividade das moscas e cura das feridas antes da exposição.",
+        "Cuidado imediato com o cordão umbilical de recém-nascidos nas estações de maior risco.",
+        "Vermífugos e macrocíclicos lactônicos de uso animal auxiliam no controle das larvas já instaladas.",
+        "Técnica do inseto estéril: criação massal, esterilização dos machos e liberação sistemática, método responsável pela erradicação da espécie na América do Norte, na maior parte da América Central e em alguns países das Américas.",
+        "Vigilância permanente: por se tratar de praga de importância econômica e sanitária, a ocorrência de miíase por <em>C. hominivorax</em> deve ser notificada aos serviços veterinários, contribuindo para os programas continentais de erradicação."
+      ],
+      "zoonose": [
+        "Seres humanos podem ser hospedeiros acidentais quando feridas ou mucosas ficam expostas à oviposição.",
+        "A miíase humana pode ser grave; a espécie também afeta animais domésticos e de produção."
+      ],
+      "observacoes": [
+        "O gênero inclui a varejeira secundária <em>Cochliomyia macellaria</em>, que só se desenvolve em tecido necrótico e é frequentemente confundida com a bicheira verdadeira.",
+        "<em>Cochliomyia hominivorax</em> é agente de miíase obrigatória: suas larvas alimentam-se de tecido vivo. <em>C. macellaria</em> está associada principalmente a tecido necrótico.",
+        "A técnica do inseto estéril baseia-se no cruzamento único da fêmea: os machos estéreis liberados competem com os selvagens e a população colapsa.",
+        "Vários países americanos organizam-se em programas com barreiras biológicas, como a mantida na América Central, para impedir a reintrodução da praga."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 88–91 (p. 29); CDC DPDx, ‘New World Screwworm Myiasis’ (cdc.gov/dpdx/newworldscrewwormmyiasis)."
+    },
+
+    {
+      "id": 13,
+      "cientifico": "Oestrus ovis",
+      "italico": true,
+      "popular": "Mosca nasal dos ovinos, oestro",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Diptera",
+        "subordem": "Brachycera",
+        "familia": "Oestridae",
+        "genero": "Oestrus",
+        "especie": "<em>Oestrus ovis</em>"
+      },
+      "img": {
+        "arquivo": "oestrus_ovis_lineart.png",
+        "legenda": "Mosca nasal adulta e larviposição junto às narinas do ovino; detalhe de larvas na cavidade nasal.",
+        "estruturas": [
+          "Adulto pardo-pálido, de corpo rechonchudo e piloso",
+          "Cara achatada e larga",
+          "Aparelho bucal atrofiado",
+          "Asas translúcidas",
+          "Abdômen com manchas escuras irregulares",
+          "Larva L1 branco, com ganchos bucais e espinhos segmentares",
+          "Larva L3 no seio nasal do ovino",
+          "Espiráculos posteriores da L3",
+          "Pupário no solo"
+        ]
+      },
+      "morfologia": [
+        "Mosca robusta, de aproximadamente 10–12 mm, coloração acinzentada e pelos curtos castanhos.",
+        "A cabeça é avantajada e amarelada; o aparelho bucal é atrofiado e o adulto não se alimenta.",
+        "As larvas apresentam pequenos espinhos em fileira na face ventral e faixas transversais escuras na face dorsal.",
+        "A L3 pode alcançar cerca de 2,5–3,0 cm e apresenta ganchos orais que auxiliam a fixação à mucosa."
+      ],
+      "formas": [
+        "Larvas: fêmeas ovovivíparas depositam L1 vivas durante o voo sobre as narinas de ovinos e caprinos.",
+        "L1: penetra nas passagens nasais, fixa-se à mucosa com auxílio dos ganchos orais e alimenta-se de muco; pode permanecer nessa fase por 2–9 meses.",
+        "L2: migra para os seios frontais e muda para L3.",
+        "L3: retorna aos condutos nasais, onde permanece cerca de 25–35 dias; depois é expelida pela descarga nasal ou por espirros e pupará no solo.",
+        "Pupa: desenvolve-se no solo por aproximadamente 3–6 semanas. O adulto emerge e não se alimenta."
+      ],
+      "hospedeiros": [
+        "Ovinos e caprinos são hospedeiros das larvas nasais.",
+        "A fêmea realiza a larviposição durante o voo, diretamente sobre as narinas dos animais."
+      ],
+      "localizacao": [
+        "Larvas desenvolvem-se nas passagens e condutos nasais e nos seios frontais de ovinos e caprinos.",
+        "Após a maturação, as larvas retornam aos condutos nasais e são expulsas com a secreção nasal ou por espirros."
+      ],
+      "ciclo": [
+          "Fêmeas ovovivíparas realizam larviposição durante o voo sobre as narinas; cada emissão pode conter cerca de 25 larvas, e o total pode chegar a 500 larvas por fêmea ao longo da vida.",
+        "As larvas penetram nos condutos nasais, fixam-se à mucosa, alimentam-se de muco e migram dos condutos para os seios frontais durante o desenvolvimento.",
+        "Após a muda para L3 e o retorno aos condutos nasais, as larvas maduras são eliminadas pelas narinas e pupam no solo.",
+        "A fase pupal dura aproximadamente 3–6 semanas; o adulto emerge e não se alimenta."
+      ],
+      "transmissao": [
+        "Larviposição direta em voo sobre as narinas do ovino, sem qualquer estádio livre no ambiente de risco.",
+        "Não há vetor intermediário: a larva infectante é depositada diretamente sobre o hospedeiro."
+      ],
+      "doenca": [
+        "Oestrose ou miíase nasal: irritação dos condutos nasais, espirros e secreção inicialmente clara e mucosa, que pode tornar-se mucopurulenta e apresentar estrias de sangue.",
+        "A migração larval pode reduzir o tempo de pastejo e causar perda de condição corporal.",
+        "Larvas retidas nos seios podem morrer e calcificar-se ou favorecer sinusite séptica.",
+        "A reação defensiva do rebanho pode incluir manter a cabeça baixa, sacudir a cabeça, estampar os pés e agrupar-se quando as moscas tentam depositar larvas."
+      ],
+      "diagnostico": [
+        "Diagnóstico clínico do rebanho: espirros, corrimento nasal e reações defensivas durante as tentativas de larviposição.",
+        "Rinoscopia ou endoscopia nasal podem permitir a visualização das larvas; larvas expelidas também podem ser examinadas.",
+        "A morfologia larval inclui ganchos orais e fileiras de espinhos ventrais, com faixas transversais escuras na face dorsal."
+      ],
+      "controle": [
+        "Vermifugação estratégica do rebanho com macrocíclicos lactônicos, como ivermectina e doramectina, conforme orientação veterinária e época de maior risco, para eliminar larvas nas cavidades nasais.",
+        "Aplicação de endectocidas de longa ação nas épocas de maior pressão de larviposição.",
+        "Manejo das pastagens para reduzir a população de pupas no solo, com pastejo alternado e evasão das áreas de maior concentração de adultos.",
+        "Tratamento sintomático dos animais acometidos e uso de anti-inflamatórios conforme prescrição veterinária.",
+        "Tratamento oftalmológico imediato e remoção das larvas nos casos acidentais humanos."
+      ],
+      "zoonose": [
+        "A espécie é primariamente parasita nasal de ovinos e caprinos; o interesse sanitário é predominantemente veterinário.",
+        "A importância da espécie está relacionada à miíase nasal e ao efeito sobre a alimentação e a condição corporal dos rebanhos."
+      ],
+      "observacoes": [
+        "A larviposição em voo, sem pouso, é uma adaptação notável, uma vez que os ovinos fogem da mosca e dificultariam qualquer postura demorada.",
+        "Como não há estádio de ovo livre no ambiente, o controle das larvas no hospedeiro e das pupas no solo ajuda a interromper o ciclo local.",
+        "A identificação dos imaturos considera os espinhos ventrais e as faixas escuras transversais dorsais."
+      ],
+      "fonte": "Aula 3 — Diptera, slides 68–71 (pp. 23–25); Merck Veterinary Manual, ‘Sheep nasal bot myiasis’ (merckvetmanual.com/respiratory-system/respiratory-diseases-of-sheep-and-goats/sheep-nasal-bot-myiasis)."
+    }
   ]
 }
