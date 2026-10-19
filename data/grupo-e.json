@@ -2,10 +2,449 @@
   "grupo": "E",
   "nome": "Acari — Sarcoptiformes e Trombidiformes",
   "parasitas": [
-    { "id": 18, "cientifico": "Sarcoptes scabiei", "italico": true, "popular": "Ácaro da sarna sarcóptica" },
-    { "id": 19, "cientifico": "Notoedres cati", "italico": true, "popular": "Ácaro da sarna notoédrica" },
-    { "id": 20, "cientifico": "Chorioptes bovis", "italico": true, "popular": "Ácaro da sarna corióptica" },
-    { "id": 21, "cientifico": "Otodectes cynotis", "italico": true, "popular": "Ácaro da orelha, sarna otodécica" },
-    { "id": 22, "cientifico": "Gênero Demodex", "italico": false, "popular": "Ácaro demodécico" }
+    {
+      "id": 18,
+      "cientifico": "Sarcoptes scabiei",
+      "italico": true,
+      "popular": "Ácaro da sarna sarcóptica, escabiose",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Acariformes",
+        "ordem": "Sarcoptiformes",
+        "subordem": "Astigmata",
+        "familia": "Sarcoptidae",
+        "genero": "Sarcoptes",
+        "especie": "<em>Sarcoptes scabiei</em>, com variedades adaptadas a cada hospedeiro (var. <em>canis</em>, var. <em>suis</em>, var. <em>bovis</em>, var. <em>hominis</em>)"
+      },
+      "img": {
+        "arquivo": "sarcoptes_scabiei_lineart.jpeg",
+        "legenda": "Fêmea adulta de <em>Sarcoptes scabiei</em> em vista dorsal, com corpo globoso e pernas curtas; ao lado, corte da pele mostrando a galeria escavada na epiderme com ovos e fezes.",
+        "estruturas": [
+          "Gnatossoma curto e largo, de aspecto arredondado",
+          "Corpo globoso, achatado ventralmente e convexo dorsalmente",
+          "Cristas transversais na superfície dorsal",
+          "Escamas triangulares na região central do dorso",
+          "Cerdas dorsais fortes, semelhantes a espinhos",
+          "Pares de pernas I e II com pré-tarsos longos e pedicelos não segmentados",
+          "Pares de pernas III e IV curtos, sem ultrapassar a margem do corpo",
+          "Cerdas longas terminais nas pernas III e IV da fêmea",
+          "Ânus terminal, levemente dorsal",
+          "Galeria na epiderme com ovos e fezes"
+        ]
+      },
+      "morfologia": [
+        "Ácaro microscópico, de corpo globoso, achatado ventralmente e convexo dorsalmente, sem olhos e sem estigmas respiratórios.",
+        "Fêmeas medem cerca de 0,3–0,6 mm de comprimento por 0,25–0,4 mm de largura; machos são menores, com até 0,3 mm.",
+        "Gnatossoma curto e largo. Quatro pares de pernas curtas; os pares III e IV geralmente não ultrapassam o contorno do corpo, e há maior distância entre o segundo e o terceiro pares.",
+        "Os pares I e II apresentam garras no empódio e pulvilos em forma de ventosa sobre pré-tarsos longos e pedunculados (pedicelos não segmentados). Na fêmea, os pares III e IV terminam em cerdas longas; no macho, isso ocorre no par III.",
+        "A superfície dorsal tem cristas transversais, escamas triangulares na região central e cerdas fortes semelhantes a espinhos. O ânus é terminal, levemente deslocado para o dorso."
+      ],
+      "formas": [
+        "Ovo: oval, com cerca de metade do comprimento do adulto, depositado individualmente nas ramificações da galeria.",
+        "Larva: hexápode, com três pares de pernas; eclode cerca de 3–4 dias após a postura.",
+        "Ninfas: protoninfa e tritoninfa, já octópodes, abrigadas em folículos pilosos e pequenas bolsas na pele.",
+        "Adultos: macho e fêmea; a fêmea fecundada escava a galeria definitiva na epiderme."
+      ],
+      "hospedeiros": [
+        "Cães, suínos, bovinos, equinos, ovinos, caprinos, coelhos e animais silvestres, como raposas.",
+        "Seres humanos, nos quais causa a escabiose.",
+        "As variedades são relativamente específicas de cada hospedeiro, mas podem infestar outras espécies de modo transitório."
+      ],
+      "localizacao": [
+        "Ácaro escavador: vive em galerias na camada córnea da epiderme, paralelas à superfície da pele.",
+        "Em cães, as lesões começam geralmente nas margens das orelhas, cotovelos, jarretes, tórax e abdômen ventral, podendo generalizar-se.",
+        "Em bovinos, iniciam-se na cabeça, pescoço e ombros; em suínos, frequentemente na cabeça e nas orelhas."
+      ],
+      "ciclo": [
+        "Ciclo direto e monoxeno: ovo, larva, protoninfa, tritoninfa e adulto; todo o ciclo ocorre no hospedeiro.",
+        "O acasalamento ocorre na superfície da pele. A fêmea fecundada escava uma galeria permanente com as quelíceras e as garras das pernas anteriores, avançando até cerca de 5 mm por dia; o túnel pode atingir 1 cm.",
+        "Cada galeria contém uma única fêmea, além de ovos e fezes. A fêmea põe de 1 a 3 ovos por dia durante cerca de dois meses.",
+        "As larvas eclodem em 3–4 dias; a maioria migra para a superfície e se abriga nos folículos pilosos. Após 2–3 dias mudam para protoninfa, depois para tritoninfa e, por fim, para adulto.",
+        "O ciclo completo leva aproximadamente 2–3 semanas."
+      ],
+      "transmissao": [
+        "Contato direto com animais infestados, principal forma de transmissão.",
+        "Contato indireto por camas, escovas, mantas e instalações contaminadas, pois o ácaro sobrevive por pouco tempo fora do hospedeiro."
+      ],
+      "doenca": [
+        "Sarna sarcóptica ou escabiose, altamente contagiosa.",
+        "Prurido intenso, decorrente de hipersensibilidade aos produtos do ácaro, com pápulas, crostas amareladas espessas, eritema, escoriações e alopecia.",
+        "Na forma crônica, a pele espessa-se e forma dobras, com seborreia, linfadenomegalia e emagrecimento; infecções bacterianas e fúngicas secundárias são frequentes.",
+        "Em animais de produção, causa queda no ganho de peso e na produção, além de desvalorização do couro."
+      ],
+      "diagnostico": [
+        "Histórico de prurido intenso de início súbito, contato com outros animais e possível acometimento de pessoas da casa.",
+        "Raspados cutâneos múltiplos e superficiais, preferindo margens das orelhas, cotovelos e jarretes sem escoriação, para encontrar ácaros, ovos ou fezes ao microscópio.",
+        "Raspados negativos não excluem a doença; a sorologia (ELISA) e a resposta ao tratamento ajudam a confirmar o diagnóstico."
+      ],
+      "controle": [
+        "Tratar o animal acometido e todos os contactantes com acaricidas de uso veterinário, como lactonas macrocíclicas ou isoxazolinas, conforme a espécie, a idade e a orientação profissional.",
+        "Em raças sensíveis a avermectinas, escolher o princípio ativo com cautela.",
+        "Isolar os animais infestados durante o tratamento e higienizar camas, objetos e instalações.",
+        "Tratar as infecções secundárias e avaliar pessoas com lesões compatíveis."
+      ],
+      "zoonose": [
+        "Sim. Pessoas em contato com animais infestados podem desenvolver dermatite papular pruriginosa, geralmente transitória e autolimitada, pois a variedade animal não completa bem o ciclo no ser humano.",
+        "A escabiose humana propriamente dita é causada pela variedade <em>hominis</em> e transmitida entre pessoas."
+      ],
+      "observacoes": [
+        "Diferenças em relação a <em>Notoedres cati</em>: <em>Sarcoptes</em> é maior, tem cristas transversais, escamas triangulares, espinhos dorsais e ânus terminal; geralmente há uma fêmea por galeria.",
+        "Fêmeas e ninfas presentes nos túneis tornam o raspado profundo, em várias áreas, importante para encontrar o ácaro."
+      ],
+      "fonte": "Aula 2 — Ordens Sarcoptiformes e Trombidiformes, slides 5–14 (pp. 3–7); Merck Veterinary Manual, ‘Mange in dogs and cats’ e ‘Mange in cattle’ (merckvetmanual.com/integumentary-system/mange)."
+    },
+    {
+      "id": 19,
+      "cientifico": "Notoedres cati",
+      "italico": true,
+      "popular": "Ácaro da sarna notoédrica, sarna da cabeça dos gatos",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Acariformes",
+        "ordem": "Sarcoptiformes",
+        "subordem": "Astigmata",
+        "familia": "Sarcoptidae",
+        "genero": "Notoedres",
+        "especie": "<em>Notoedres cati</em> (sinônimo: <em>Notoedres cuniculi</em>)"
+      },
+      "img": {
+        "arquivo": "notoedres_cati_lineart.jpeg",
+        "legenda": "Fêmea adulta de <em>Notoedres cati</em> em vista dorsal, com corpo circular, estriações concêntricas e ânus dorsal; ao lado, fêmeas agrupadas em túneis na epiderme.",
+        "estruturas": [
+          "Rostro curto e quadrado",
+          "Corpo circular",
+          "Estriações dorsais concêntricas, como impressão digital",
+          "Escamas dorsais arredondadas, dispostas transversalmente",
+          "Ausência de espinhos dorsais",
+          "Pernas curtas",
+          "Pedicelos longos e não articulados nas pernas I e II",
+          "Ânus nitidamente dorsal",
+          "Túneis superficiais com ovos e fêmeas agrupadas"
+        ]
+      },
+      "morfologia": [
+        "Ácaro escavador semelhante a <em>Sarcoptes</em>, porém menor: fêmeas com cerca de 225 µm e machos com cerca de 150 µm.",
+        "Corpo circular, pernas curtas e rostro curto e quadrado.",
+        "Pedicelos longos e não articulados; as fêmeas apresentam ventosas nos pares de pernas I e II.",
+        "Dorso com estriações concêntricas, semelhantes às linhas de uma impressão digital, e escamas arredondadas dispostas transversalmente; não há espinhos.",
+        "Abertura anal nitidamente dorsal, diferentemente de <em>Sarcoptes</em>."
+      ],
+      "formas": [
+        "Ovo: depositado pela fêmea dentro dos túneis na epiderme.",
+        "Larva: hexápode, eclode em 3–5 dias e migra para a superfície da pele.",
+        "Ninfas: desenvolvem-se em pequenas bolsas de muda escavadas nas camadas superficiais da epiderme.",
+        "Adultos: machos emergem das bolsas de muda e procuram as fêmeas; as fêmeas fecundadas escavam novos túneis."
+      ],
+      "hospedeiros": [
+        "Gatos são os hospedeiros principais; coelhos também são acometidos.",
+        "Pode infestar cães, felinos silvestres, raposas, outros canídeos, civetas e seres humanos."
+      ],
+      "localizacao": [
+        "Ácaro escavador das camadas superiores da epiderme; as fêmeas costumam ficar agrupadas.",
+        "As lesões começam na borda das orelhas e se estendem à face, cabeça e pescoço, podendo atingir as patas e o períneo e, depois, generalizar-se."
+      ],
+      "ciclo": [
+        "Ciclo direto e monoxeno, semelhante ao de <em>Sarcoptes</em>: ovo, larva, protoninfa, tritoninfa e adulto, todos no hospedeiro.",
+        "Após a fecundação, a fêmea escava túneis nas camadas superiores da epiderme, alimentando-se do líquido que extravasa dos tecidos, e deposita os ovos dentro deles.",
+        "Os ovos eclodem em 3–5 dias. As larvas vão à superfície e escavam bolsas de muda, onde passam às fases de ninfa.",
+        "O desenvolvimento de ovo a adulto leva 6–10 dias. Os machos procuram as fêmeas na pele ou em outras bolsas de muda e, após o acasalamento, as fêmeas iniciam novas galerias."
+      ],
+      "transmissao": [
+        "Contato direto entre gatos e com outros animais infestados.",
+        "Contato indireto por objetos e ambientes compartilhados, com menor importância."
+      ],
+      "doenca": [
+        "Sarna notoédrica, altamente contagiosa e muito pruriginosa.",
+        "Crostas acinzentadas a amareladas, alopecia e espessamento da pele, inicialmente na borda das orelhas, face e pescoço.",
+        "As escoriações por prurido favorecem infecções secundárias; casos não tratados podem generalizar-se e levar a debilidade."
+      ],
+      "diagnostico": [
+        "Distribuição típica das lesões na cabeça e nas orelhas, associada a prurido intenso.",
+        "Raspado cutâneo: os ácaros costumam ser encontrados com facilidade, ao contrário do que ocorre na sarna sarcóptica.",
+        "Identificação pela morfologia: tamanho menor, estriações concêntricas e ânus dorsal."
+      ],
+      "controle": [
+        "Tratar o gato acometido e todos os contactantes com acaricida de uso veterinário apropriado para felinos, como selamectina ou moxidectina tópicas, sob orientação profissional.",
+        "Evitar produtos tóxicos para gatos, como permetrina em concentração de uso canino.",
+        "Isolar animais infestados, higienizar camas e utensílios e tratar infecções secundárias."
+      ],
+      "zoonose": [
+        "Sim. Pode infestar pessoas de modo oportunista, causando dermatite pruriginosa transitória em quem manipula gatos acometidos."
+      ],
+      "observacoes": [
+        "Diferenças em relação a <em>Sarcoptes</em>: tamanho menor, estriações concêntricas, escamas arredondadas, ausência de espinhos, ânus nitidamente dorsal e fêmeas frequentemente agrupadas.",
+        "O nome também aparece grafado como <em>Notoedris cati</em>; a grafia aceita é <em>Notoedres cati</em>."
+      ],
+      "fonte": "Aula 2 — Ordens Sarcoptiformes e Trombidiformes, slides 15–22 (pp. 8–11); Merck Veterinary Manual, ‘Mange in dogs and cats’ (merckvetmanual.com/integumentary-system/mange/mange-in-dogs-and-cats)."
+    },
+    {
+      "id": 20,
+      "cientifico": "Chorioptes bovis",
+      "italico": true,
+      "popular": "Ácaro da sarna corióptica, sarna das patas e da cauda",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Acariformes",
+        "ordem": "Sarcoptiformes",
+        "subordem": "Astigmata",
+        "familia": "Psoroptidae",
+        "genero": "Chorioptes",
+        "especie": "<em>Chorioptes bovis</em> (sinônimos: <em>C. caprae</em>, <em>C. cuniculi</em>, <em>C. equi</em>, <em>C. ovis</em>, <em>C. japonensis</em>)"
+      },
+      "img": {
+        "arquivo": "chorioptes_bovis_lineart.jpeg",
+        "legenda": "Fêmea e macho adultos de <em>Chorioptes bovis</em> em vista ventral; o macho tem o quarto par de pernas muito curto e lobos posteriores desenvolvidos.",
+        "estruturas": [
+          "Corpo oval",
+          "Gnatossoma arredondado",
+          "Pré-tarsos curtos e pedunculados com pulvilos em forma de taça",
+          "Fêmea: tarso III com par de cerdas terminais longas, em forma de chicote",
+          "Fêmea: quarto par de pernas com tarso longo e delgado",
+          "Primeiro e segundo pares de pernas mais robustos",
+          "Macho: quarto par de pernas extremamente curto",
+          "Macho: lobos posteriores bem desenvolvidos",
+          "Ovos aderidos à pele"
+        ]
+      },
+      "morfologia": [
+        "Ácaro não escavador, de corpo oval, que vive na superfície da pele.",
+        "Aparelho bucal adaptado para mastigar restos de pele e detritos da superfície cutânea.",
+        "Fêmea: pernas I, II e IV com pré-tarsos curtos e pedunculados; a perna III termina em um par de cerdas longas, semelhantes a chicotes. Os pares I e II são mais robustos, e o quarto par tem tarso longo e delgado.",
+        "Macho: todas as pernas com pré-tarsos curtos, pedunculados e pulvilos; o quarto par é extremamente curto e não ultrapassa a margem do corpo. Os lobos posteriores são bem desenvolvidos."
+      ],
+      "formas": [
+        "Ovo: depositado à taxa de cerca de um por dia e aderido à pele do hospedeiro; cada fêmea produz aproximadamente 15–20 ovos.",
+        "Larva: hexápode, com três pares de pernas.",
+        "Ninfas: protoninfa e tritoninfa, octópodes.",
+        "Adultos: octópodes; as fêmeas vivem cerca de 2–3 semanas."
+      ],
+      "hospedeiros": [
+        "Bovinos, ovinos, caprinos, equinos, coelhos, camelos, lhamas e alpacas.",
+        "A espécie não é estritamente específica e circula entre ruminantes domésticos e equinos."
+      ],
+      "localizacao": [
+        "Superfície da pele, sem escavar galerias.",
+        "Pernas, pés, região da quartela, base da cauda, úbere, escroto e períneo; em equinos, sobretudo nos membros com muitos pelos."
+      ],
+      "ciclo": [
+        "Ciclo direto e monoxeno: ovo, larva hexápode, protoninfa, tritoninfa e adulto octópode, todos no hospedeiro.",
+        "A fêmea deposita cerca de um ovo por dia, aderido à pele, totalizando 15–20 ovos.",
+        "O ciclo completo dura aproximadamente três semanas.",
+        "Os ácaros podem sobreviver até três semanas fora do hospedeiro, o que dá importância ao ambiente na manutenção da sarna."
+      ],
+      "transmissao": [
+        "Contato direto entre animais.",
+        "Cama, alojamentos, objetos e superfícies contaminados, já que o ácaro sobrevive até três semanas no ambiente."
+      ],
+      "doenca": [
+        "Sarna corióptica, a forma de sarna mais comum em bovinos e geralmente menos grave que a sarcóptica e a psoróptica.",
+        "Muitos animais são portadores subclínicos. Quando há doença, surge dermatite exsudativa e descamativa, com prurido leve, pápulas, crostas e úlceras.",
+        "As lesões começam na quartela e sobem pelos membros até úbere, escroto, cauda e períneo; ocorrem mais no fim do inverno e regridem no verão.",
+        "Em equinos, causa inquietação, batidas de patas e lesões nos membros."
+      ],
+      "diagnostico": [
+        "Distribuição típica das lesões em membros, base da cauda e úbere, com sazonalidade de inverno.",
+        "Raspado superficial da pele ou coleta de crostas para identificar os ácaros ao microscópio.",
+        "Diferenciação morfológica de <em>Chorioptes texanus</em> pelas cerdas opistossomais: em <em>C. bovis</em>, a cerda ae é muito longa e as cerdas l4 e d5 são curtas e espatuladas."
+      ],
+      "controle": [
+        "Tratar todos os animais do lote com acaricidas registrados, como lactonas macrocíclicas pour-on ou injetáveis, ou banhos de calda sulfocálcica, respeitando o período de carência para leite e carne.",
+        "Repetir o tratamento conforme o produto, já que ovos podem não ser atingidos.",
+        "Limpar e trocar a cama, higienizar instalações e objetos e evitar o reagrupamento com animais infestados."
+      ],
+      "zoonose": [
+        "Sem importância zoonótica relevante; a infestação permanece restrita aos animais."
+      ],
+      "observacoes": [
+        "Diferentemente de <em>Sarcoptes</em>, não escava galerias e sobrevive mais tempo no ambiente.",
+        "<em>Chorioptes texanus</em> é muito semelhante e diferencia-se pelo comprimento e formato das cerdas opistossomais."
+      ],
+      "fonte": "Aula 2 — Ordens Sarcoptiformes e Trombidiformes, slides 33–40 (pp. 17–20); Merck Veterinary Manual, ‘Mange in cattle’ (merckvetmanual.com/integumentary-system/mange/mange-in-cattle)."
+    },
+    {
+      "id": 21,
+      "cientifico": "Otodectes cynotis",
+      "italico": true,
+      "popular": "Ácaro da orelha, sarna otodécica",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Acariformes",
+        "ordem": "Sarcoptiformes",
+        "subordem": "Astigmata",
+        "familia": "Psoroptidae",
+        "genero": "Otodectes",
+        "especie": "<em>Otodectes cynotis</em>"
+      },
+      "img": {
+        "arquivo": "otodectes_cynotis_lineart.jpeg",
+        "legenda": "Fêmea e macho de <em>Otodectes cynotis</em> em vista ventral, com corpo oval e pernas longas que ultrapassam a margem do corpo; ao lado, conduto auditivo com cerúmen escuro e ácaros.",
+        "estruturas": [
+          "Corpo oval",
+          "Gnatossoma",
+          "Pernas longas, projetadas além das margens do corpo",
+          "Pré-tarsos curtos com pulvilos",
+          "Fêmea: pulvilos nas pernas I e II",
+          "Fêmea: cerdas terminais longas nas pernas III e IV",
+          "Fêmea: quarto par de pernas muito pequeno",
+          "Macho: pulvilos nas quatro pernas e quarto par desenvolvido",
+          "Macho: processos posteriores pequenos"
+        ]
+      },
+      "morfologia": [
+        "Ácaro não escavador, de corpo oval e pernas longas, que se projetam além das margens do corpo.",
+        "Fêmea: pulvilos nas pernas I e II, cerdas terminais longas nas pernas III e IV e quarto par de pernas muito pequeno; abertura genital transversal.",
+        "Macho: pulvilos nas pernas I, II, III e IV, quarto par desenvolvido e processos posteriores pequenos.",
+        "Alimenta-se de detritos epidérmicos e de fluidos teciduais da superfície do conduto auditivo."
+      ],
+      "formas": [
+        "Ovo: depositado no conduto auditivo, aderido ao cerúmen e à superfície da pele.",
+        "Larva: hexápode.",
+        "Ninfas: protoninfa e deutoninfa (tritoninfa), octópodes.",
+        "Adultos: octópodes; os ácaros podem ser vistos como pontos brancos móveis no cerúmen."
+      ],
+      "hospedeiros": [
+        "Gatos e cães são os hospedeiros principais.",
+        "Furões e raposas também podem ser parasitados."
+      ],
+      "localizacao": [
+        "Conduto auditivo externo, nas porções vertical e horizontal.",
+        "Ocasionalmente, pode ser encontrado na pele da cabeça, do pescoço e da base da cauda."
+      ],
+      "ciclo": [
+        "Ciclo direto e monoxeno, inteiramente no hospedeiro: ovo, larva hexápode, protoninfa, deutoninfa e adulto.",
+        "O desenvolvimento de ovo a adulto leva cerca de três semanas.",
+        "Os ácaros vivem na superfície do conduto auditivo, sem escavar galerias."
+      ],
+      "transmissao": [
+        "Contato direto entre animais, sendo muito comum entre filhotes, da mãe para a ninhada e em gatis e canis.",
+        "Pode ocorrer transmissão entre gatos, cães e furões que convivem."
+      ],
+      "doenca": [
+        "Sarna otodécica ou otite parasitária, causa comum de otite externa, sobretudo em gatos.",
+        "Sinais: balançar de cabeça, coçar contínuo das orelhas, orelha caída e prurido de intensidade variável.",
+        "Acúmulo de cerúmen castanho-escuro, semelhante a borra de café; nos casos graves, otite supurativa e possível perfuração da membrana timpânica.",
+        "O ato de coçar pode causar escoriações ao redor das orelhas e otohematoma."
+      ],
+      "diagnostico": [
+        "Otoscopia, com observação de ácaros brancos e móveis no conduto auditivo.",
+        "Coleta de cerúmen com swab e exame ao microscópio, em óleo mineral, para identificar ácaros e ovos.",
+        "Avaliação da integridade da membrana timpânica antes do tratamento local."
+      ],
+      "controle": [
+        "Limpar o conduto com ceruminolítico adequado como parte do tratamento.",
+        "Usar acaricida otológico ou sistêmico de uso veterinário, como selamectina ou moxidectina tópicas, conforme orientação profissional.",
+        "Tratar todos os animais que convivem com o acometido, mesmo sem sinais, e repetir o tratamento conforme o produto.",
+        "Tratar otites bacterianas ou fúngicas secundárias."
+      ],
+      "zoonose": [
+        "Raramente pode causar dermatite pruriginosa transitória em pessoas que convivem com animais muito infestados; não se estabelece no ser humano."
+      ],
+      "observacoes": [
+        "Distingue-se de <em>Sarcoptes</em> e <em>Notoedres</em> por não escavar galerias e por ter pernas que ultrapassam o contorno do corpo.",
+        "Pertence à mesma família de <em>Psoroptes</em> e <em>Chorioptes</em> (Psoroptidae)."
+      ],
+      "fonte": "Aula 2 — Ordens Sarcoptiformes e Trombidiformes, slides 41–42 (p. 21); Merck Veterinary Manual, ‘Mange in dogs and cats — Otodectic mange’ (merckvetmanual.com/integumentary-system/mange/mange-in-dogs-and-cats)."
+    },
+    {
+      "id": 22,
+      "cientifico": "Gênero Demodex",
+      "italico": false,
+      "popular": "Ácaro demodécico, ácaro do folículo piloso",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Acariformes",
+        "ordem": "Trombidiformes",
+        "subordem": "Prostigmata",
+        "familia": "Demodicidae",
+        "genero": "<em>Demodex</em>",
+        "especie": "o roteiro solicita o gênero; exemplos: <em>Demodex canis</em> (cão), <em>D. cati</em> e <em>D. gatoi</em> (gato), <em>D. bovis</em> (bovino)"
+      },
+      "img": {
+        "arquivo": "demodex_lineart.jpeg",
+        "legenda": "Adulto de <em>Demodex</em> em vista ventral, com corpo alongado em forma de charuto e quatro pares de pernas curtas na região anterior; ao lado, ácaros no folículo piloso com a cabeça voltada para o interior.",
+        "estruturas": [
+          "Gnatossoma curto, na extremidade anterior",
+          "Podossoma com quatro pares de pernas curtas e robustas",
+          "Pernas concentradas na região anterior do corpo",
+          "Garras pequenas e rombas nas pernas",
+          "Opistossoma alongado, estriado transversalmente",
+          "Ausência de cerdas no corpo e nas pernas",
+          "Ovo fusiforme",
+          "Ácaros no folículo piloso e na glândula sebácea"
+        ]
+      },
+      "morfologia": [
+        "Ácaros pequenos e alongados, com corpo em forma de charuto, medindo cerca de 0,1–0,4 mm.",
+        "Corpo alongado e estreito, com o opistossoma estriado transversalmente.",
+        "Adultos com quatro pares de pernas curtas e robustas, concentradas na região anterior do corpo e terminadas em garras pequenas e rombas.",
+        "Não há cerdas nas pernas nem na superfície do corpo; essa forma é uma adaptação à vida dentro do folículo piloso."
+      ],
+      "formas": [
+        "Ovo: fusiforme, depositado dentro do folículo piloso; cada fêmea põe cerca de 20–24 ovos.",
+        "Larva: hexápode, com pernas terminadas em uma única garra tridenteada.",
+        "Ninfas: protoninfa e deutoninfa, com o número de pernas aumentando até quatro pares.",
+        "Adultos: octópodes, que vivem no folículo piloso e nas glândulas sebáceas."
+      ],
+      "hospedeiros": [
+        "Cada espécie é altamente específica do seu hospedeiro: <em>D. canis</em> no cão, <em>D. cati</em> e <em>D. gatoi</em> no gato, <em>D. bovis</em> no bovino, além de espécies próprias de suínos, equinos, caprinos e do ser humano.",
+        "Em pequeno número, fazem parte da fauna normal da pele e se comportam como comensais."
+      ],
+      "localizacao": [
+        "Folículos pilosos e glândulas sebáceas, com grande número de ácaros em um mesmo folículo, frequentemente com a cabeça voltada para o interior da estrutura.",
+        "<em>Demodex gatoi</em> é exceção, pois vive na camada córnea da epiderme.",
+        "No cão, a forma localizada costuma acometer lábios, região periocular e membros anteriores."
+      ],
+      "ciclo": [
+        "Ciclo direto e monoxeno, inteiramente no hospedeiro: ovo, larva, protoninfa, deutoninfa e adulto.",
+        "A fêmea deposita cerca de 20–24 ovos fusiformes no folículo; deles eclodem larvas hexápodes, que mudam até a forma adulta octópode.",
+        "O ciclo completo leva aproximadamente 3–4 semanas, sem fases no ambiente; fora do hospedeiro, o ácaro sobrevive pouco."
+      ],
+      "transmissao": [
+        "Da mãe para os filhotes, por contato direto durante a amamentação, nos primeiros dias de vida.",
+        "Em adultos, a demodicose canina não é considerada contagiosa; <em>D. gatoi</em>, nos gatos, é uma exceção contagiosa."
+      ],
+      "doenca": [
+        "Demodicose, demodiciose ou sarna demodécica, que ocorre quando os ácaros se multiplicam excessivamente, geralmente por falha imunológica do hospedeiro.",
+        "Forma localizada: poucas áreas bem delimitadas de alopecia, eritema e descamação, com pouco ou nenhum prurido; em cães jovens, costuma regredir espontaneamente.",
+        "Forma generalizada: alopecia extensa, eritema, pápulas, seborreia oleosa, hiperpigmentação, crostas, pododermatite e piodermite secundária, podendo haver febre e linfadenomegalia.",
+        "A forma juvenil generalizada tem predisposição hereditária; a forma do adulto costuma estar associada a doenças imunossupressoras, como neoplasias e endocrinopatias. Em bovinos, causa nódulos foliculares e danos ao couro."
+      ],
+      "diagnostico": [
+        "Raspado cutâneo profundo, espremendo a pele até sangrar levemente, para retirar ácaros dos folículos.",
+        "Tricograma: arrancar pelos e examiná-los ao microscópio em óleo mineral.",
+        "Encontrar muitos ácaros adultos, ovos e formas imaturas confirma a doença; um ácaro isolado pode ser achado normal.",
+        "Em adultos com doença generalizada, investigar a causa de base da imunossupressão."
+      ],
+      "controle": [
+        "A forma localizada geralmente regride sem tratamento; a generalizada requer acaricida sistêmico, como isoxazolinas ou lactonas macrocíclicas, com orientação veterinária.",
+        "Manter o tratamento até a cura clínica e pelo menos dois raspados negativos consecutivos, com intervalo de um mês.",
+        "Não usar corticosteroides em animais com demodicose e tratar as infecções bacterianas secundárias.",
+        "Não utilizar para reprodução cães que tiveram demodicose juvenil generalizada e tratar doenças de base nos adultos."
+      ],
+      "zoonose": [
+        "Não é zoonose: as espécies de <em>Demodex</em> são específicas de cada hospedeiro e não são transmitidas dos animais para o ser humano.",
+        "O ser humano tem espécies próprias, como <em>Demodex folliculorum</em>."
+      ],
+      "observacoes": [
+        "É o único ácaro do grupo pertencente à ordem Trombidiformes (subordem Prostigmata); os demais pertencem aos Sarcoptiformes.",
+        "A presença do ácaro não basta para definir doença; a demodicose depende sobretudo do estado imunológico do hospedeiro."
+      ],
+      "fonte": "Aula 2 — Ordens Sarcoptiformes e Trombidiformes, slides 49–55 (pp. 25–28); Merck Veterinary Manual, ‘Mange in dogs and cats — Canine and feline demodicosis’ e ‘Mange in cattle’ (merckvetmanual.com/integumentary-system/mange)."
+    }
   ]
 }

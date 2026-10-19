@@ -10,7 +10,7 @@
    5. Busca instantânea, filtros por status e controle de transcrição.
    ============================================================ */
 
-const VERSAO = "8";
+const VERSAO = "9";
 const BASE_DADOS = "data/";
 const BASE_IMG = "assets/img/";
 
