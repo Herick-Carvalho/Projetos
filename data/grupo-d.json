@@ -2,6 +2,96 @@
   "grupo": "D",
   "nome": "Ordem Phthiraptera",
   "parasitas": [
-    { "id": 17, "cientifico": "Lipeurus caponis", "italico": true, "popular": "Piolho da asa das galinhas" }
+    {
+      "id": 17,
+      "cientifico": "Lipeurus caponis",
+      "italico": true,
+      "popular": "Piolho da asa das galinhas",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Insecta",
+        "ordem": "Phthiraptera",
+        "subordem": "Ischnocera (piolhos mastigadores, antigo grupo Mallophaga)",
+        "familia": "Philopteridae",
+        "genero": "Lipeurus",
+        "especie": "<em>Lipeurus caponis</em>"
+      },
+      "img": {
+        "arquivo": "lipeurus_caponis_lineart.jpeg",
+        "legenda": "Adulto de <em>Lipeurus caponis</em> em vista dorsal, com corpo alongado e delgado; ao lado, pena primária da asa com piolhos entre as barbas e ovos (lêndeas) aderidos, e ninfas de tamanhos crescentes.",
+        "estruturas": [
+          "Cabeça arredondada na porção anterior",
+          "Antenas curtas e filiformes",
+          "Aparelho bucal mastigador, na face ventral da cabeça",
+          "Tórax curto",
+          "Três pares de pernas finas",
+          "Duas garras tarsais em cada perna",
+          "Abdômen longo, estreito e segmentado",
+          "Margens laterais escurecidas do abdômen",
+          "Ovos (lêndeas) aderidos às barbas da pena",
+          "Ninfas semelhantes ao adulto, porém menores"
+        ]
+      },
+      "morfologia": [
+        "Inseto pequeno, áptero e achatado dorsoventralmente, adaptado a deslocar-se entre as barbas das penas.",
+        "Corpo alongado e delgado, característica que facilita sua permanência entre as barbas das penas da asa.",
+        "Cabeça arredondada na porção anterior, com antenas curtas e aparelho bucal mastigador voltado para a face ventral.",
+        "Pernas finas, cada uma terminada em duas garras tarsais, usadas para fixar-se às penas.",
+        "Piolho mastigador: alimenta-se de fragmentos de penas e de descamações da pele, sem sugar sangue."
+      ],
+      "formas": [
+        "Ovo (lêndea): pequeno, ovalado e esbranquiçado, colado às barbas das penas pela fêmea.",
+        "Ninfa: eclode do ovo já semelhante ao adulto, porém menor e mais clara; passa por três estádios ninfais.",
+        "Adulto: macho e fêmea vivem permanentemente sobre a ave, alimentando-se e reproduzindo-se entre as penas."
+      ],
+      "hospedeiros": [
+        "Galinhas domésticas são os hospedeiros habituais.",
+        "Outras aves galiformes mantidas em contato próximo podem ser infestadas.",
+        "O ser humano pode albergar o piolho temporariamente durante o manejo das aves, sem que a infestação se estabeleça."
+      ],
+      "localizacao": [
+        "Ectoparasito permanente: vive sobre as penas, sobretudo nas penas primárias das asas, entre as barbas.",
+        "Todas as fases ocorrem no próprio hospedeiro; não há fases de desenvolvimento no ambiente."
+      ],
+      "ciclo": [
+        "Ciclo direto, monoxeno e hemimetábolo: ovo, três estádios de ninfa e adulto, sem fase de pupa.",
+        "A fêmea cola os ovos às barbas das penas; das lêndeas eclodem ninfas que, após mudas sucessivas, tornam-se adultas.",
+        "O ciclo completo dura cerca de três semanas e ocorre inteiramente sobre a ave.",
+        "Fora do hospedeiro, o piolho sobrevive por pouco tempo, cerca de uma semana."
+      ],
+      "transmissao": [
+        "Contato direto entre aves, especialmente em criações adensadas, ninhos e poleiros compartilhados.",
+        "Introdução de aves infestadas no plantel e uso de equipamentos contaminados, como caixas de transporte e bandejas de ovos."
+      ],
+      "doenca": [
+        "Pediculose aviária ou ftiríase: infestação por piolhos mastigadores.",
+        "Sinais: irritação, inquietação, bicadas frequentes nas próprias penas, penas danificadas e aspecto descuidado da plumagem.",
+        "Em infestações intensas, pode haver perda de condição corporal, queda na postura e redução do ganho de peso.",
+        "As espécies menos patogênicas para aves adultas, como <em>L. caponis</em>, ainda podem ser graves em pintinhos e aves debilitadas."
+      ],
+      "diagnostico": [
+        "Inspeção das aves, abrindo as asas e examinando as penas primárias, sobretudo a face ventral, à procura de piolhos e lêndeas.",
+        "Uso de lupa para observar o corpo alongado e delgado, a cabeça arredondada e as duas garras tarsais.",
+        "Diferenciação de outros piolhos de galinhas pela localização: <em>Menacanthus stramineus</em> na pele do corpo, <em>Menopon gallinae</em> na haste das penas e <em>Goniocotes gallinae</em> na penugem."
+      ],
+      "controle": [
+        "Inspeção periódica das aves e separação dos animais infestados.",
+        "Tratamento com inseticida de uso veterinário registrado para aves, seguindo a bula e o período de carência para ovos e carne.",
+        "Repetir o tratamento após cerca de 10 dias, pois os inseticidas geralmente não destroem os ovos.",
+        "Quarentena de aves introduzidas, limpeza de caixas, ninhos e equipamentos e oferta de banho de areia, que auxilia na redução da infestação.",
+        "Como não há fases ambientais, o controle concentra-se nas aves e no contato entre elas."
+      ],
+      "zoonose": [
+        "Baixa importância zoonótica: o piolho é específico de aves e não se estabelece no ser humano.",
+        "Pessoas que manejam aves infestadas podem ter contato temporário com os piolhos, com incômodo passageiro."
+      ],
+      "observacoes": [
+        "A ordem Phthiraptera reúne piolhos mastigadores, como <em>Lipeurus</em>, e piolhos sugadores, como <em>Haematopinus</em> e <em>Linognathus</em>.",
+        "O nome popular piolho da asa refere-se à preferência pelas penas das asas.",
+        "Todo o ciclo ocorre no hospedeiro, o que torna a inspeção e o tratamento das aves a base do controle."
+      ],
+      "fonte": "Aula 3 — Ordem Phthiraptera, slides 135 e 146 (pp. 45 e 49); Merck Veterinary Manual, ‘Lice of poultry’ (merckvetmanual.com/poultry/arthropods-in-poultry/lice-of-poultry)."
+    }
   ]
 }
