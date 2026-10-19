@@ -2,16 +2,923 @@
   "grupo": "F",
   "nome": "Ordem Ixodida",
   "parasitas": [
-    { "id": 23, "cientifico": "Ixodes ricinus", "italico": true, "popular": "Carrapato das ovelhas, carrapato do rícino" },
-    { "id": 24, "cientifico": "Ixodes canisuga", "italico": true, "popular": "Carrapato do cão britânico" },
-    { "id": 25, "cientifico": "Ixodes holocyclus", "italico": true, "popular": "Carrapato da paralisia australiano" },
-    { "id": 26, "cientifico": "Argas persicus", "italico": true, "popular": "Carrapato das aves domésticas, carrapato-das-galinhas" },
-    { "id": 27, "cientifico": "Amblyomma cajennense", "italico": true, "popular": "Carrapato-cayeno, carrapato-estrela" },
-    { "id": 28, "cientifico": "Amblyomma americanum", "italico": true, "popular": "Carrapato-estrela norte-americano" },
-    { "id": 29, "cientifico": "Rhipicephalus (Boophilus) microplus", "italico": true, "popular": "Carrapato do boi, carrapato tropical dos bovinos" },
-    { "id": 30, "cientifico": "Rhipicephalus sanguineus", "italico": true, "popular": "Carrapato-marrom-do-cão, carrapato dos canis" },
-    { "id": 31, "cientifico": "Haemaphysalis leachi", "italico": true, "popular": "Carrapato-amarelo-do-cão" },
-    { "id": 32, "cientifico": "Dermacentor variabilis", "italico": true, "popular": "Carrapato do cão americano" },
-    { "id": 33, "cientifico": "Dermacentor nitens", "italico": true, "popular": "Carrapato tropical do cavalo" }
+    {
+      "id": 23,
+      "cientifico": "Ixodes ricinus",
+      "italico": true,
+      "popular": "Carrapato das ovelhas, carrapato do rícino",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Ixodes",
+        "especie": "<em>Ixodes ricinus</em>"
+      },
+      "img": {
+        "arquivo": "ixodes_ricinus_lineart.jpeg",
+        "legenda": "Fêmea de <em>Ixodes ricinus</em> em vista dorsal, sem ornamentação, olhos ou festões; ao lado, fêmea ingurgitada em forma de fava, larva com três pares de pernas e detalhe da coxa I com espinho interno.",
+        "estruturas": [
+          "Capítulo (gnatossoma) com palpos longos",
+          "Hipóstoma",
+          "Escudo dorsal não ornamentado, cobrindo a metade anterior da fêmea",
+          "Ausência de olhos e de festões",
+          "Sulco anal contornando o ânus pela frente",
+          "Coxa I com espinho no ângulo posterior interno, sobrepondo a coxa II",
+          "Tarsos afunilados",
+          "Quatro pares de pernas no adulto e na ninfa",
+          "Fêmea ingurgitada em forma de fava",
+          "Larva com três pares de pernas"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro (Ixodidae) sem ornamentação, olhos ou festões; o escudo cobre todo o dorso no macho e apenas a parte anterior na fêmea.",
+        "Fêmea de coloração cinza-clara; ingurgitada, atinge até 1 cm, assume formato de fava e as pernas deixam de ser vistas dorsalmente.",
+        "Macho com cerca de 2–3 mm, menor que a fêmea, com repastos pequenos e os quatro pares de pernas visíveis dorsalmente.",
+        "Caracteres de identificação: tarsos afunilados e espinho no ângulo posterior interno da coxa I, que geralmente se sobrepõe à coxa II; o sulco anal contorna o ânus pela frente, como em todo o gênero <em>Ixodes</em>."
+      ],
+      "formas": [
+        "Ovo: postos no solo, aos milhares, durante cerca de 30 dias.",
+        "Larva: menor que 1 mm, amarelada, com três pares de pernas; chamada de carrapato-semente ou carrapato-pimenta.",
+        "Ninfa: semelhante ao adulto, menor que 2 mm, com quatro pares de pernas.",
+        "Adultos: macho pequeno; fêmea que se alimenta uma única vez em grande repasto antes da postura."
+      ],
+      "hospedeiros": [
+        "Larvas: aves, coelhos, esquilos e outros pequenos vertebrados.",
+        "Ninfas: pequenos e médios vertebrados.",
+        "Adultos: ovinos, bovinos, cervos e outros grandes herbívoros; cães e equinos também podem ser parasitados.",
+        "Todas as fases, sobretudo ninfas e adultos, picam o ser humano."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário: fixa-se à pele apenas durante os repastos e passa a maior parte da vida no ambiente.",
+        "Habita pastagens úmidas e frescas com arbustos, bosques e matas; as formas não alimentadas aguardam o hospedeiro na vegetação.",
+        "Distribuição principalmente europeia."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno (três hospedeiros) com duração de cerca de três anos: um estágio se alimenta por ano — larva no 1º, ninfa no 2º e adulto no 3º.",
+        "A larva faz emboscada na vegetação, alimenta-se por 3–5 dias, aumenta 10–20 vezes o peso, cai e muda para ninfa.",
+        "A ninfa repete a emboscada, alimenta-se por 3–5 dias, cai ao solo e muda para adulto.",
+        "Os adultos se alimentam por 8–10 dias; o acasalamento ocorre no hospedeiro. A fêmea faz um grande repasto de cerca de 14 dias, cai ao solo, põe milhares de ovos por aproximadamente 30 dias e morre.",
+        "Em três anos, o carrapato se alimenta apenas 15–20 dias; as formas não alimentadas sobrevivem meses e podem entrar em diapausa, conforme a temperatura e a umidade."
+      ],
+      "transmissao": [
+        "A infestação ocorre quando o hospedeiro passa pela vegetação onde larvas, ninfas ou adultos aguardam em emboscada.",
+        "Durante o repasto, transmite agentes como <em>Borrelia burgdorferi</em> sensu lato (doença de Lyme), <em>Anaplasma phagocytophilum</em>, <em>Babesia divergens</em> e os vírus do louping ill e da encefalite transmitida por carrapatos."
+      ],
+      "doenca": [
+        "A picada causa irritação, reação inflamatória local e espoliação sanguínea; infestações intensas podem levar à anemia.",
+        "Febre do carrapato (anaplasmose granulocítica) em ovinos e bovinos, com febre, queda de produção e imunossupressão.",
+        "Babesiose bovina por <em>Babesia divergens</em>, com febre, anemia hemolítica e hemoglobinúria.",
+        "Louping ill em ovinos, encefalomielite com tremores e incoordenação; borreliose de Lyme em cães, com claudicação e febre."
+      ],
+      "diagnostico": [
+        "Inspeção do animal e identificação do carrapato: ausência de olhos e festões, sulco anal anterior ao ânus, tarsos afunilados e espinho na coxa I.",
+        "Doenças associadas: esfregaço sanguíneo, sorologia e PCR conforme o agente suspeito."
+      ],
+      "controle": [
+        "Acaricidas de uso veterinário em banhos, pour-on ou coleiras, conforme a espécie animal e a orientação profissional.",
+        "Manejo de pastagens: roçar a vegetação e evitar áreas de mata e arbustos nos períodos de maior atividade.",
+        "Inspeção frequente dos animais e remoção cuidadosa dos carrapatos fixados.",
+        "Como a maior parte da vida ocorre no ambiente, o controle deve combinar tratamento dos animais e manejo do ambiente."
+      ],
+      "zoonose": [
+        "Elevada: pica pessoas e transmite agentes da doença de Lyme, da anaplasmose granulocítica humana e da encefalite transmitida por carrapatos."
+      ],
+      "observacoes": [
+        "Diferencia-se de <em>Ixodes canisuga</em> pelos tarsos afunilados e pela presença do espinho na coxa I.",
+        "O longo ciclo, com poucos dias de alimentação por ano, explica sua persistência no ambiente."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 3–11 (pp. 2–6); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 24,
+      "cientifico": "Ixodes canisuga",
+      "italico": true,
+      "popular": "Carrapato do cão britânico",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Ixodes",
+        "especie": "<em>Ixodes canisuga</em>"
+      },
+      "img": {
+        "arquivo": "ixodes_canisuga_lineart.jpeg",
+        "legenda": "Fêmea de <em>Ixodes canisuga</em> em vista dorsal, sem ornamentação, olhos ou festões e com palpos longos; ao lado, comparação dos tarsos curvos e da coxa I sem espinho.",
+        "estruturas": [
+          "Capítulo com palpos longos",
+          "Escudo não ornamentado",
+          "Ausência de olhos",
+          "Ausência de festões",
+          "Tarsos curvos",
+          "Coxa I sem espinho",
+          "Quatro pares de pernas no adulto"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro não ornamentado, sem olhos e sem festões, com palpos longos.",
+        "Fêmea com até 10 mm quando ingurgitada; macho com 2–3 mm.",
+        "Diferencia-se de <em>I. ricinus</em> pelos tarsos curvos e pela ausência de espinho na coxa I."
+      ],
+      "formas": [
+        "Ovo: cerca de 400 por fêmea, postos no interior da toca.",
+        "Larva: hexápode, com três pares de pernas.",
+        "Ninfa: octópode, semelhante ao adulto.",
+        "Adultos: os machos raramente são encontrados sobre o hospedeiro, pois o acasalamento ocorre na toca."
+      ],
+      "hospedeiros": [
+        "Cães e raposas, seus hospedeiros mais característicos.",
+        "Outros mamíferos que usam tocas e abrigos, como texugos."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário de hábito nidícola: vive dentro ou perto de tocas, ninhos e canis, sem procurar hospedeiros na vegetação aberta.",
+        "No animal, fixa-se à pele durante o repasto."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno com duração de cerca de três anos: larva no 1º ano, ninfa no 2º e adulto no 3º.",
+        "O ciclo é adaptado a tocas e covis; cada estágio se alimenta no hospedeiro que ocupa o abrigo e retorna ao ambiente para mudar.",
+        "O acasalamento acontece na toca, e a fêmea produz cerca de 400 ovos."
+      ],
+      "transmissao": [
+        "A infestação ocorre quando o animal usa tocas, canis ou abrigos onde os carrapatos vivem.",
+        "Em canis com infestação estabelecida, a reinfestação é contínua."
+      ],
+      "doenca": [
+        "Irritação, reação local na picada e espoliação sanguínea; infestações maciças em canis podem causar anemia, sobretudo em filhotes.",
+        "Seu papel como vetor de agentes patogênicos é considerado menor que o de <em>I. ricinus</em>."
+      ],
+      "diagnostico": [
+        "Inspeção do animal e do canil, examinando frestas e camas.",
+        "Identificação morfológica: sem olhos e festões, tarsos curvos e coxa I sem espinho."
+      ],
+      "controle": [
+        "Tratar os cães com acaricidas de uso veterinário e, ao mesmo tempo, higienizar canis, camas e abrigos.",
+        "Vedar frestas e manter os alojamentos limpos e secos.",
+        "Inspecionar regularmente os animais que frequentam tocas ou canis infestados."
+      ],
+      "zoonose": [
+        "Baixa: por viver em tocas e canis, o contato com pessoas é pouco frequente."
+      ],
+      "observacoes": [
+        "O hábito nidícola explica por que os machos quase não aparecem nos animais.",
+        "A comparação com <em>I. ricinus</em> (tarsos e coxa I) é a principal chave de identificação."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 12–15 (pp. 6–8); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 25,
+      "cientifico": "Ixodes holocyclus",
+      "italico": true,
+      "popular": "Carrapato da paralisia australiano",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Ixodes",
+        "especie": "<em>Ixodes holocyclus</em>"
+      },
+      "img": {
+        "arquivo": "ixodes_holocyclus_lineart.jpeg",
+        "legenda": "Fêmea de <em>Ixodes holocyclus</em> em vistas dorsal e ventral, com corpo oval, palpos longos e delgados, pernas I e IV mais escuras e sulco anal formando um círculo completo.",
+        "estruturas": [
+          "Palpos longos e delgados",
+          "Primeiro artículo do palpo bulboso",
+          "Base do capítulo com margem posterior ondulada",
+          "Escudo mais largo que longo, com pontuações pequenas e densas",
+          "Sulco marginal contínuo",
+          "Sulco anal formando um círculo completo",
+          "Pernas I e IV mais escuras que II e III",
+          "Corpo oval, achatado e amarelado"
+        ]
+      },
+      "morfologia": [
+        "Fêmea não alimentada com 2–4 mm; ingurgitada, atinge até 14 mm. Corpo oval, achatado e amarelado.",
+        "Palpos longos e delgados, com o primeiro artículo bulboso; base do capítulo com margem posterior ondulada e ausência de cornua.",
+        "Escudo mais largo que longo, com pontuações pequenas e densas e quilhas laterais; sulcos cervicais curtos.",
+        "Chaves de identificação: sulco anal formando um círculo completo (daí holocyclus), sulco marginal contínuo e pernas I e IV mais escuras que as II e III."
+      ],
+      "formas": [
+        "Ovo: postos aos milhares no solo.",
+        "Larva: hexápode, mais abundante no fim do verão.",
+        "Ninfa: octópode, mais comum no inverno.",
+        "Adultos: mais abundantes na primavera e no início do verão; a fêmea faz um único grande repasto."
+      ],
+      "hospedeiros": [
+        "Hospedeiros naturais: bandicoots, cangurus, gambás e outros marsupiais e aves.",
+        "Cães, gatos, bovinos e equinos são parasitados com frequência; seres humanos ocasionalmente."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário; nos cães e gatos, fixa-se preferencialmente na cabeça, no pescoço e na parte anterior do corpo.",
+        "Ocorre nas regiões úmidas da costa leste da Austrália, em matas e florestas temperadas."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno de cerca de três anos: larva no 1º ano, ninfa no 2º e adulto no 3º.",
+        "O acasalamento ocorre no hospedeiro; a fêmea faz um grande repasto e põe milhares de ovos no solo.",
+        "Em todo o ciclo, o tempo total de alimentação é de apenas 26–28 dias."
+      ],
+      "transmissao": [
+        "A paralisia é causada pela toxina presente na saliva da fêmea durante o repasto, e não por um agente infeccioso.",
+        "Pode transmitir <em>Rickettsia australis</em>, agente do tifo do carrapato de Queensland, ao ser humano."
+      ],
+      "doenca": [
+        "Paralisia por carrapato: a neurotoxina salivar (holociclotoxina) causa paralisia motora flácida ascendente, começando pelos membros posteriores.",
+        "Sinais em cães e gatos: alteração da voz, vômito ou regurgitação, fraqueza dos membros, dificuldade respiratória e, sem tratamento, morte por insuficiência respiratória.",
+        "Uma única fêmea pode ser suficiente para causar a doença; os sinais costumam surgir alguns dias após a fixação."
+      ],
+      "diagnostico": [
+        "Histórico de exposição em área endêmica e sinais de paralisia ascendente.",
+        "Busca cuidadosa do carrapato em todo o corpo, sobretudo na cabeça e no pescoço.",
+        "Identificação pelo sulco anal em círculo completo e pelas pernas I e IV mais escuras."
+      ],
+      "controle": [
+        "Remover todos os carrapatos encontrados e procurar atendimento veterinário: o tratamento da paralisia inclui soro antitoxina e suporte respiratório.",
+        "Uso preventivo de acaricidas de ação prolongada, como isoxazolinas, em cães e gatos de áreas endêmicas.",
+        "Inspeção diária dos animais durante a estação de risco."
+      ],
+      "zoonose": [
+        "Sim: pode causar paralisia e reações alérgicas graves em pessoas e transmitir <em>Rickettsia australis</em>."
+      ],
+      "observacoes": [
+        "É considerado o carrapato de maior importância médica da Austrália.",
+        "O nome holocyclus, círculo completo, refere-se ao formato do sulco anal."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 16–22 (pp. 8–11); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 26,
+      "cientifico": "Argas persicus",
+      "italico": true,
+      "popular": "Carrapato das aves domésticas, carrapato-das-galinhas",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Argasidae",
+        "genero": "Argas",
+        "especie": "<em>Argas persicus</em>"
+      },
+      "img": {
+        "arquivo": "argas_persicus_lineart.jpeg",
+        "legenda": "Adulto de <em>Argas persicus</em> em vista dorsal, sem escudo, com tegumento coriáceo e margem formada por placas quadrangulares; em vista ventral, capítulo inserido na face ventral.",
+        "estruturas": [
+          "Corpo oval e achatado",
+          "Tegumento coriáceo, sem escudo",
+          "Margem lateral formada por placas quadrangulares (células)",
+          "Capítulo na face ventral, invisível dorsalmente no adulto",
+          "Hipóstoma com ponta denteada",
+          "Quatro pares de pernas"
+        ]
+      },
+      "morfologia": [
+        "Carrapato mole (Argasidae): não tem escudo; o tegumento é coriáceo e flexível.",
+        "Adultos não alimentados têm coloração amarelo-clara a castanho-avermelhada e tornam-se azul-ardósia após o repasto.",
+        "A margem do corpo é formada por placas irregulares quadrangulares, chamadas células.",
+        "Nos adultos e ninfas, o capítulo fica na face ventral e não é visto de cima; a ponta do hipóstoma é denteada."
+      ],
+      "formas": [
+        "Ovo: postos em fendas dos galinheiros, em lotes de 25–100; cada postura é precedida de um repasto.",
+        "Larva: hexápode; permanece fixada à ave por vários dias.",
+        "Ninfas: dois ou três estágios, cada um precedido de repasto.",
+        "Adultos: alimentam-se várias vezes, cerca de uma vez por mês, sempre à noite."
+      ],
+      "hospedeiros": [
+        "Galinhas, perus, patos, pombos e outras aves domésticas e silvestres.",
+        "Pode picar pessoas que entram em galinheiros infestados."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário de hábito noturno: ninfas e adultos alimentam-se à noite e, durante o dia, escondem-se em fendas, rachaduras e frestas da estrutura dos galinheiros.",
+        "A larva permanece fixada à pele da ave, frequentemente sob as asas, por vários dias.",
+        "Distribuição mundial, sobretudo em regiões tropicais e quentes."
+      ],
+      "ciclo": [
+        "Ciclo com vários hospedeiros: ovo no ambiente, larva que se alimenta na ave por alguns dias e retorna ao ambiente para mudar.",
+        "Seguem-se dois ou três estágios de ninfa, cada um intercalado por um repasto sanguíneo noturno.",
+        "Os adultos acasalam no abrigo e se alimentam cerca de uma vez por mês; cada postura de 25–100 ovos é precedida de um repasto.",
+        "As formas não alimentadas sobrevivem longos períodos nas frestas, o que mantém o galinheiro infestado."
+      ],
+      "transmissao": [
+        "As aves são infestadas no galinheiro, durante a noite, por carrapatos que saem das frestas.",
+        "Transmite <em>Borrelia anserina</em> (espiroquetose aviária) e <em>Aegyptianella pullorum</em>."
+      ],
+      "doenca": [
+        "Espoliação sanguínea com anemia, fraqueza, perda de peso e queda na postura; infestações maciças podem matar aves.",
+        "Espiroquetose aviária, com febre, apatia, diarreia esverdeada e mortalidade elevada.",
+        "Paralisia por carrapato em aves, causada pela saliva das larvas."
+      ],
+      "diagnostico": [
+        "Como adultos e ninfas não ficam nas aves durante o dia, examinar fendas, poleiros e ninhos com lanterna, ou inspecionar as aves à noite.",
+        "Encontrar larvas fixadas sob as asas das aves.",
+        "Identificação: ausência de escudo, margem com placas quadrangulares e capítulo ventral; esfregaço sanguíneo para espiroquetas."
+      ],
+      "controle": [
+        "Tratar o galinheiro, aplicando acaricida registrado nas fendas, poleiros e ninhos, e repetir conforme o produto.",
+        "Vedar frestas e rachaduras e preferir estruturas de fácil limpeza.",
+        "Quarentena e inspeção de aves introduzidas; respeitar a carência dos produtos para ovos e carne."
+      ],
+      "zoonose": [
+        "Baixa: pode picar pessoas e causar irritação local, mas não é vetor relevante de doenças humanas."
+      ],
+      "observacoes": [
+        "É o único carrapato mole (Argasidae) do grupo; os demais são carrapatos duros (Ixodidae).",
+        "Ao contrário dos ixodídeos, alimenta-se rapidamente, várias vezes, e põe ovos em pequenos lotes."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 67–72 (pp. 34–36); Merck Veterinary Manual, ‘Argasid ticks’ (merckvetmanual.com/integumentary-system/ticks/argasid-ticks)."
+    },
+    {
+      "id": 27,
+      "cientifico": "Amblyomma cajennense",
+      "italico": true,
+      "popular": "Carrapato-cayeno, carrapato-estrela",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Amblyomma",
+        "especie": "<em>Amblyomma cajennense</em> (complexo); no Brasil: <em>A. cajennense</em> sensu stricto e <em>A. sculptum</em>"
+      },
+      "img": {
+        "arquivo": "amblyomma_cajennense_lineart.jpeg",
+        "legenda": "Fêmeas de <em>Amblyomma cajennense</em> em vista dorsal, com duas variações do padrão de ornamentação do escudo; carrapatos grandes, com olhos, 11 festões e palpos e hipóstoma longos.",
+        "estruturas": [
+          "Palpos alongados",
+          "Hipóstoma longo, com dentição 3/3",
+          "Escudo ornamentado, com pontuações evidentes",
+          "Olhos",
+          "Onze festões na margem posterior",
+          "Sulco marginal completo",
+          "Coxa I com dois espinhos",
+          "Pernas com faixas claras"
+        ]
+      },
+      "morfologia": [
+        "Carrapato grande e ornamentado, com escudo de padrão ornamentado e pontuações evidentes.",
+        "Possui olhos, 11 festões e sulco marginal completo.",
+        "Palpos alongados e hipóstoma longo, com dentição 3/3; a coxa I tem dois espinhos.",
+        "O aparelho bucal longo permite fixação profunda, o que torna a remoção difícil e favorece feridas."
+      ],
+      "formas": [
+        "Ovo: milhares por fêmea, postos no solo.",
+        "Larva: hexápode; em grandes grupos, é chamada de micuim e incomoda muito as pessoas.",
+        "Ninfa: octópode, chamada de vermelhinho.",
+        "Adultos: macho e fêmea ornamentados."
+      ],
+      "hospedeiros": [
+        "Baixa especificidade: parasita diversos mamíferos.",
+        "Importância veterinária principalmente em equinos; também bovinos, cães, capivaras e antas.",
+        "Todos os estágios picam o ser humano."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário; nos animais, fixa-se principalmente na região ventral, entre os membros, nas orelhas e no períneo.",
+        "No Brasil, <em>A. cajennense</em> sensu stricto ocorre sobretudo na Amazônia, e <em>A. sculptum</em> predomina no Cerrado e na Mata Atlântica, em pastagens sujas e matas ciliares."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno: larva, ninfa e adulto alimentam-se cada um em um hospedeiro e caem ao solo para mudar ou pôr ovos.",
+        "No Sudeste brasileiro, costuma completar uma geração por ano, com predomínio de larvas no outono, ninfas no inverno e adultos na primavera e no verão.",
+        "A fêmea ingurgitada cai ao solo, põe milhares de ovos e morre."
+      ],
+      "transmissao": [
+        "A infestação ocorre em pastagens e áreas de mata onde as formas de vida livre aguardam o hospedeiro.",
+        "Transmite <em>Rickettsia rickettsii</em>, agente da febre maculosa brasileira; <em>A. sculptum</em> é o principal vetor no Sudeste do Brasil."
+      ],
+      "doenca": [
+        "Espoliação sanguínea, anemia, perda de peso e queda de desempenho em equinos e bovinos com infestações densas.",
+        "As picadas, com aparelho bucal longo, causam feridas que podem infectar e servir de porta de entrada para miíases.",
+        "Nas pessoas, as larvas causam dermatite muito pruriginosa; a febre maculosa brasileira é grave, com febre alta, manchas na pele e risco de morte."
+      ],
+      "diagnostico": [
+        "Inspeção dos animais e identificação: carrapato grande e ornamentado, com olhos, 11 festões e palpos longos.",
+        "Em pessoas com febre após picada em área de risco, a suspeita de febre maculosa exige atendimento médico imediato."
+      ],
+      "controle": [
+        "Banhos ou pour-on com acaricidas nos equinos e bovinos, em calendário estratégico conforme a fase predominante no ano.",
+        "Roçar e manejar pastagens, controlar o acesso dos animais a matas ciliares e áreas com capivaras.",
+        "Para pessoas: roupas claras e compridas, repelentes e inspeção do corpo após visitar áreas de risco."
+      ],
+      "zoonose": [
+        "Muito elevada: pica intensamente o ser humano e transmite a febre maculosa brasileira, doença de notificação compulsória."
+      ],
+      "observacoes": [
+        "O antigo <em>A. cajennense</em> é hoje um complexo de espécies; no Brasil, as principais são <em>A. cajennense</em> sensu stricto e <em>A. sculptum</em>.",
+        "Equinos e capivaras são importantes para a manutenção das populações."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 63–66 (pp. 32–33); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 28,
+      "cientifico": "Amblyomma americanum",
+      "italico": true,
+      "popular": "Carrapato-estrela norte-americano",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Amblyomma",
+        "especie": "<em>Amblyomma americanum</em>"
+      },
+      "img": {
+        "arquivo": "amblyomma_americanum_lineart.jpeg",
+        "legenda": "Fêmea de <em>Amblyomma americanum</em> com um único ponto claro no escudo e macho com pontos e listras pálidas, ambos com olhos, festões e palpos longos.",
+        "estruturas": [
+          "Palpos e hipóstoma longos",
+          "Escudo da fêmea com ponto branco único",
+          "Escudo do macho com pontos e listras pálidas",
+          "Olhos",
+          "Festões",
+          "Pernas listradas",
+          "Coxa I com espinho externo longo e interno curto"
+        ]
+      },
+      "morfologia": [
+        "Carrapato grande e ornamentado, com olhos, festões, pernas listradas e palpos e hipóstoma longos.",
+        "Coxa I com espinho externo longo e espinho interno curto.",
+        "Fêmea: ponto branco único na parte posterior do escudo, que dá o nome de carrapato-estrela; ingurgitada, atinge até 10 mm.",
+        "Macho: 2–3 mm, com pontos e listras pálidas no escudo e sem placas ventrais."
+      ],
+      "formas": [
+        "Ovo: milhares por fêmea, postos no solo.",
+        "Larva: hexápode.",
+        "Ninfa: octópode.",
+        "Adultos: a fêmea faz um único grande repasto de 3–4 semanas, ingerindo cerca de 0,5–2 mL de sangue, e acasala uma vez."
+      ],
+      "hospedeiros": [
+        "Larvas e ninfas: roedores, coelhos e aves que vivem no solo.",
+        "Adultos: cervos, bovinos, equinos e ovinos.",
+        "Todos os estágios picam cães e pessoas."
+      ],
+      "localizacao": [
+        "Ectoparasito temporário; prefere áreas de pele com poucos pelos, como orelhas, axilas e região ventral.",
+        "Distribui-se no sul e no leste dos Estados Unidos até o norte do México, em expansão para o norte."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno: a larva se alimenta no 1º hospedeiro e cai; muda para ninfa no ambiente.",
+        "A ninfa se alimenta no 2º hospedeiro, cai e muda para adulto no ambiente.",
+        "O adulto se alimenta e acasala no 3º hospedeiro; a fêmea ingurgitada cai, põe milhares de ovos e morre.",
+        "O ciclo completo leva cerca de três anos, com apenas 26–28 dias de alimentação no total."
+      ],
+      "transmissao": [
+        "Infestação em áreas de mata e vegetação, onde as formas livres aguardam o hospedeiro.",
+        "Transmite <em>Ehrlichia chaffeensis</em> e <em>E. ewingii</em> (erliquioses humana e canina), <em>Francisella tularensis</em> (tularemia) e vírus como o Heartland e o Bourbon."
+      ],
+      "doenca": [
+        "Espoliação e irritação; as feridas de picada podem ser invadidas por larvas de mosca (miíases).",
+        "Erliquiose granulocítica em cães (<em>E. ewingii</em>), com febre, claudicação e dor articular.",
+        "Pode causar paralisia por carrapato em cães e pessoas."
+      ],
+      "diagnostico": [
+        "Identificação pelo ponto branco único no escudo da fêmea e pelas pernas listradas.",
+        "Doenças associadas: esfregaço sanguíneo, sorologia e PCR."
+      ],
+      "controle": [
+        "Acaricidas de uso veterinário em cães e animais de produção, conforme orientação profissional.",
+        "Manejo da vegetação em áreas frequentadas pelos animais.",
+        "Para pessoas: repelentes, roupas protetoras e inspeção após atividades ao ar livre."
+      ],
+      "zoonose": [
+        "Elevada: pica pessoas com frequência e transmite erliquioses e tularemia; sua picada está associada à síndrome alfa-gal, alergia à carne vermelha."
+      ],
+      "observacoes": [
+        "Não ocorre no Brasil; seu papel nas Américas do Norte é comparável ao do complexo <em>A. cajennense</em> no Brasil.",
+        "O ponto claro no escudo da fêmea é a principal chave de identificação."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 56–62 (pp. 28–31); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 29,
+      "cientifico": "Rhipicephalus (Boophilus) microplus",
+      "italico": true,
+      "popular": "Carrapato do boi, carrapato tropical dos bovinos",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "<em>Rhipicephalus</em> (subgênero <em>Boophilus</em>)",
+        "especie": "<em>Rhipicephalus</em> (<em>Boophilus</em>) <em>microplus</em>"
+      },
+      "img": {
+        "arquivo": "rhipicephalus_microplus_lineart.jpeg",
+        "legenda": "Fêmea de <em>Rhipicephalus</em> (<em>Boophilus</em>) <em>microplus</em> em vista dorsal, com capítulo curto e pernas claras; ao lado, fêmea ingurgitada (teleógina) e detalhe da coxa I bífida.",
+        "estruturas": [
+          "Gnatossoma curto e reto",
+          "Base do capítulo hexagonal",
+          "Palpos curtos",
+          "Escudo não ornamentado",
+          "Olhos pequenos",
+          "Ausência de festões",
+          "Coxa I bífida",
+          "Espiráculos circulares ou ovais",
+          "Pernas de cor creme-clara",
+          "Fêmea ingurgitada (teleógina) muito aumentada"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro pequeno, com corpo oval a retangular, sem ornamentação e sem festões.",
+        "Gnatossoma curto e reto, com palpos curtos e base do capítulo hexagonal.",
+        "Pernas de cor creme-clara; coxa I bífida; espiráculos circulares ou ovais; sulco anal pouco nítido.",
+        "A fêmea ingurgitada (teleógina) pode aumentar até 250 vezes o peso inicial; o macho é bem menor e tem placas adanais."
+      ],
+      "formas": [
+        "Ovo: 2.000–4.500 por fêmea, postos no solo, em massa.",
+        "Larva: hexápode; é a forma que sobe na vegetação e infesta o bovino.",
+        "Ninfa: octópode; não sai do hospedeiro.",
+        "Adultos: o macho permanece no bovino; a fêmea ingurgitada cai ao solo."
+      ],
+      "hospedeiros": [
+        "Bovinos, seu hospedeiro principal; bovinos zebuínos são mais resistentes que os taurinos.",
+        "Ocasionalmente búfalos, equinos, ovinos, caprinos e cervos."
+      ],
+      "localizacao": [
+        "No bovino, fixa-se principalmente na região perineal, úbere, entre as pernas, na barbela e no pescoço.",
+        "Fase de vida livre no solo e nas pastagens.",
+        "Presente em regiões tropicais e subtropicais; no Brasil, ocorre durante todo o ano, com pico de infestação no verão."
+      ],
+      "ciclo": [
+        "Ciclo monoxeno (um hospedeiro): larva, ninfa e adulto alimentam-se e mudam no mesmo bovino.",
+        "Fase parasitária: a larva sobe no bovino; em cerca de três semanas chega a fêmea ingurgitada; o período no hospedeiro varia de 17 a 52 dias.",
+        "Fase de vida livre: a teleógina cai ao solo, põe 2.000–4.500 ovos e morre; as larvas eclodem e sobem na vegetação.",
+        "O ciclo completo leva cerca de dois meses, permitindo várias gerações por ano; as larvas não alimentadas sobrevivem até 20 semanas na pastagem."
+      ],
+      "transmissao": [
+        "O bovino se infesta ao pastar em áreas com larvas na vegetação.",
+        "Transmite <em>Babesia bovis</em> e <em>B. bigemina</em> por via transovariana e <em>Anaplasma marginale</em>, agentes da tristeza parasitária bovina."
+      ],
+      "doenca": [
+        "Espoliação sanguínea, anemia, perda de peso e queda na produção de leite e carne.",
+        "Danos ao couro e feridas que favorecem miíases e infecções secundárias.",
+        "Tristeza parasitária bovina (babesiose e anaplasmose): febre, anemia, icterícia, hemoglobinúria e mortalidade, sobretudo em animais sem imunidade."
+      ],
+      "diagnostico": [
+        "Inspeção e contagem de teleóginas para estimar o nível de infestação.",
+        "Identificação: gnatossoma curto, coxa I bífida, pernas claras e ausência de festões.",
+        "Biocarrapaticidograma para avaliar a resistência a acaricidas; esfregaço sanguíneo para <em>Babesia</em> e <em>Anaplasma</em>."
+      ],
+      "controle": [
+        "Controle estratégico com acaricidas (banhos, pour-on ou injetáveis), planejado conforme a época do ano e o resultado do biocarrapaticidograma.",
+        "Rodízio de bases químicas para retardar a resistência, que é amplamente disseminada.",
+        "Uso de raças ou cruzamentos zebuínos mais resistentes, rotação e descanso de pastagens.",
+        "Respeitar a carência dos produtos para leite e carne."
+      ],
+      "zoonose": [
+        "Não: é praticamente específico de bovinos e raramente pica pessoas."
+      ],
+      "observacoes": [
+        "É considerado o carrapato mais importante para a pecuária no mundo.",
+        "Por ser monoxeno, só a teleógina cai ao solo."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 49–55 (pp. 25–28); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 30,
+      "cientifico": "Rhipicephalus sanguineus",
+      "italico": true,
+      "popular": "Carrapato-marrom-do-cão, carrapato dos canis",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Rhipicephalus",
+        "especie": "<em>Rhipicephalus sanguineus</em> (complexo)"
+      },
+      "img": {
+        "arquivo": "rhipicephalus_sanguineus_lineart.jpeg",
+        "legenda": "Macho e fêmea de <em>Rhipicephalus sanguineus</em> em vista dorsal, com base do capítulo hexagonal, palpos curtos, olhos e festões; em vista ventral do macho, placas adanais e acessórias.",
+        "estruturas": [
+          "Palpos e hipóstoma curtos",
+          "Base do capítulo hexagonal",
+          "Escudo não ornamentado, castanho-avermelhado",
+          "Olhos",
+          "Festões",
+          "Coxa I com dois espinhos",
+          "Placas adanais e acessórias no macho"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro de cor castanho-avermelhada, sem ornamentação, com olhos e festões.",
+        "Adultos não alimentados com 3–4,5 mm; a fêmea ingurgitada chega a 12 mm.",
+        "Palpos e hipóstoma curtos; base do capítulo hexagonal; coxa I com dois espinhos.",
+        "Os machos têm placas adanais e escudos acessórios na face ventral."
+      ],
+      "formas": [
+        "Ovo: cerca de 4.000 por fêmea, postos em frestas do ambiente.",
+        "Larva: hexápode.",
+        "Ninfa: octópode.",
+        "Adultos: acasalam no cão."
+      ],
+      "hospedeiros": [
+        "Cão, hospedeiro preferencial de todas as fases.",
+        "Ocasionalmente gatos e outros mamíferos; o ser humano é picado com pouca frequência."
+      ],
+      "localizacao": [
+        "No cão: orelhas, espaços entre os dedos, pescoço e axilas.",
+        "No ambiente: canis, casas, muros e frestas; adapta-se bem a ambientes urbanos e domésticos.",
+        "Apresenta geotropismo negativo: as fêmeas ingurgitadas sobem por paredes até frestas e tetos para pôr os ovos."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno, em que os três hospedeiros costumam ser cães: cada estágio se alimenta, cai, muda no ambiente e procura novo cão.",
+        "O acasalamento ocorre no hospedeiro; a fêmea ingurgitada cai, sobe para frestas e põe cerca de 4.000 ovos.",
+        "O ciclo mínimo dura cerca de 63 dias, com várias gerações por ano em clima quente.",
+        "Sobrevive bastante sem alimento: larvas até 9 meses, ninfas até 6 meses e adultos até 19 meses."
+      ],
+      "transmissao": [
+        "A infestação ocorre no próprio ambiente onde o cão vive; canis e casas infestados mantêm a reinfestação.",
+        "Transmite <em>Ehrlichia canis</em>, <em>Babesia vogeli</em>, <em>Anaplasma platys</em>, <em>Hepatozoon canis</em> (pela ingestão do carrapato), além de <em>Rickettsia conorii</em> e <em>R. rickettsii</em>."
+      ],
+      "doenca": [
+        "Irritação, dermatite e espoliação sanguínea, com anemia em infestações intensas.",
+        "Erliquiose monocítica canina: febre, apatia, sangramentos, plaquetopenia e, na fase crônica, aplasia de medula.",
+        "Babesiose canina, com anemia hemolítica; trombocitopenia cíclica por <em>A. platys</em>; hepatozoonose."
+      ],
+      "diagnostico": [
+        "Inspeção do cão e do ambiente, incluindo frestas, paredes e tetos.",
+        "Identificação: base do capítulo hexagonal, palpos curtos, coxa I com dois espinhos e placas adanais no macho.",
+        "Hemoparasitoses: hemograma, esfregaço sanguíneo, sorologia e PCR."
+      ],
+      "controle": [
+        "Tratar todos os cães da casa ou do canil com acaricidas de uso veterinário (comprimidos, spot-on ou coleiras).",
+        "Tratar o ambiente com produtos registrados, vedando frestas e limpando o local, já que a maior parte da população fica no ambiente.",
+        "Monitorar a resistência aos acaricidas, que é frequente."
+      ],
+      "zoonose": [
+        "Moderada: pica pessoas com pouca frequência, mas pode transmitir riquétsias da febre maculosa."
+      ],
+      "observacoes": [
+        "Hoje é tratado como complexo de espécies: <em>R. sanguineus</em> sensu stricto, de clima temperado, e <em>R. linnaei</em>, de clima tropical.",
+        "Também é chamado de carrapato vermelho do cão."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 41–48 (pp. 21–24); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 31,
+      "cientifico": "Haemaphysalis leachi",
+      "italico": true,
+      "popular": "Carrapato-amarelo-do-cão",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Haemaphysalis",
+        "especie": "<em>Haemaphysalis leachi</em>"
+      },
+      "img": {
+        "arquivo": "haemaphysalis_leachi_lineart.jpeg",
+        "legenda": "Fêmea de <em>Haemaphysalis leachi</em> em vista dorsal, alongada, sem ornamentação e sem olhos, com 11 festões e palpos largos e triangulares; ao lado, detalhe do palpo com espinho basal.",
+        "estruturas": [
+          "Palpos largos e triangulares, projetados lateralmente",
+          "Segundo artículo do palpo com espinho basal",
+          "Base do capítulo retangular",
+          "Escudo não ornamentado",
+          "Ausência de olhos",
+          "Onze festões",
+          "Corpo alongado"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro de corpo alongado, sem ornamentação e sem olhos.",
+        "Onze festões na margem posterior.",
+        "Palpos largos e triangulares, que ultrapassam lateralmente a base do capítulo; o segundo artículo do palpo tem um espinho basal."
+      ],
+      "formas": [
+        "Ovo: 3.000–5.000 por fêmea, postos no solo.",
+        "Larva: hexápode.",
+        "Ninfa: octópode.",
+        "Adultos: parasitam carnívoros."
+      ],
+      "hospedeiros": [
+        "Adultos: cães e carnívoros silvestres; também gatos.",
+        "Larvas e ninfas: pequenos roedores."
+      ],
+      "localizacao": [
+        "No cão, fixa-se principalmente na cabeça, nas orelhas e no pescoço.",
+        "Distribuição na África tropical e meridional."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno: larva, ninfa e adulto alimentam-se cada um em um hospedeiro e caem ao solo para mudar ou pôr ovos.",
+        "O ingurgitamento leva de 6 a 30 dias, conforme o estágio.",
+        "A fêmea ingurgitada cai, põe 3.000–5.000 ovos e morre."
+      ],
+      "transmissao": [
+        "Infestação pelo contato do cão com áreas onde há formas livres.",
+        "Vetor específico de <em>Babesia rossi</em> (<em>B. canis rossi</em>); também transmite <em>Rickettsia conorii</em> e <em>Coxiella burnetii</em>."
+      ],
+      "doenca": [
+        "Espoliação sanguínea e irritação local.",
+        "Babesiose canina por <em>B. rossi</em>, a forma mais grave da doença, com anemia hemolítica intensa, icterícia, hemoglobinúria e alta mortalidade.",
+        "Também associado à babesiose felina e à febre botonosa."
+      ],
+      "diagnostico": [
+        "Identificação: ausência de olhos, 11 festões e palpos largos e triangulares com espinho basal.",
+        "Babesiose: esfregaço sanguíneo e PCR."
+      ],
+      "controle": [
+        "Acaricidas de uso veterinário em cães e gatos de áreas endêmicas, de forma contínua.",
+        "Inspeção regular dos animais e controle do ambiente."
+      ],
+      "zoonose": [
+        "Sim: pode transmitir <em>Rickettsia conorii</em> (febre botonosa) e <em>Coxiella burnetii</em> ao ser humano."
+      ],
+      "observacoes": [
+        "O formato dos palpos é a principal chave do gênero <em>Haemaphysalis</em>.",
+        "Não ocorre no Brasil; é importante na África."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 37–40 (pp. 19–20); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 32,
+      "cientifico": "Dermacentor variabilis",
+      "italico": true,
+      "popular": "Carrapato do cão americano",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Dermacentor",
+        "especie": "<em>Dermacentor variabilis</em>"
+      },
+      "img": {
+        "arquivo": "dermacentor_variabilis_lineart.jpeg",
+        "legenda": "Macho e fêmea de <em>Dermacentor variabilis</em> em vista dorsal, ornamentados, com olhos, festões, base do capítulo retangular e palpos curtos.",
+        "estruturas": [
+          "Base do capítulo retangular",
+          "Palpos curtos",
+          "Segundo artículo do palpo sem espinho posterodorsal",
+          "Escudo ornamentado com manchas claras",
+          "Olhos",
+          "Festões",
+          "Escudo do macho cobrindo todo o dorso"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro ornamentado, com escudo marrom-claro e manchas acinzentadas.",
+        "Possui olhos e festões; base do capítulo retangular e palpos curtos.",
+        "Chave de identificação: ausência de espinho posterodorsal no segundo artículo do palpo.",
+        "A fêmea ingurgitada chega a 15 mm."
+      ],
+      "formas": [
+        "Ovo: milhares por fêmea, postos no solo.",
+        "Larva: hexápode.",
+        "Ninfa: octópode.",
+        "Adultos: ornamentados; o escudo do macho cobre todo o dorso."
+      ],
+      "hospedeiros": [
+        "Larvas e ninfas: pequenos roedores, como ratos-do-campo (<em>Microtus</em>).",
+        "Adultos: cães, carnívoros silvestres, bovinos, equinos e outros mamíferos maiores; pica pessoas."
+      ],
+      "localizacao": [
+        "No cão, fixa-se principalmente na cabeça, nas orelhas e no pescoço.",
+        "Ocorre na América do Norte, em áreas de vegetação e bordas de mata."
+      ],
+      "ciclo": [
+        "Ciclo trioxeno, com um repasto por estágio.",
+        "Larvas e ninfas alimentam-se em roedores; os adultos, em mamíferos maiores.",
+        "A fêmea ingurgitada cai, põe milhares de ovos e morre.",
+        "As formas não alimentadas sobrevivem por longos períodos, e o ciclo pode durar até dois anos."
+      ],
+      "transmissao": [
+        "Infestação em áreas de vegetação onde os adultos aguardam o hospedeiro.",
+        "Transmite <em>Rickettsia rickettsii</em> (febre maculosa das Montanhas Rochosas) e <em>Francisella tularensis</em> (tularemia); vetor experimental de <em>Anaplasma marginale</em>."
+      ],
+      "doenca": [
+        "Espoliação sanguínea e irritação local.",
+        "Paralisia por carrapato em cães e pessoas, ascendente e reversível com a remoção do carrapato.",
+        "Febre maculosa em cães, com febre, apatia, dor e alterações de coagulação."
+      ],
+      "diagnostico": [
+        "Identificação: ornamentado, base do capítulo retangular, palpos curtos e ausência de espinho no segundo artículo do palpo.",
+        "Doenças associadas: sorologia e PCR."
+      ],
+      "controle": [
+        "Acaricidas de uso veterinário em cães durante a estação de atividade.",
+        "Manejo da vegetação e controle de roedores nas áreas próximas às casas.",
+        "Remoção imediata dos carrapatos encontrados."
+      ],
+      "zoonose": [
+        "Elevada: principal vetor da febre maculosa das Montanhas Rochosas no leste dos Estados Unidos e causa paralisia por carrapato em crianças."
+      ],
+      "observacoes": [
+        "O gênero <em>Dermacentor</em> se distingue pela base do capítulo retangular e pelos palpos curtos.",
+        "Não ocorre no Brasil."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 31–36 (pp. 16–18); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    },
+    {
+      "id": 33,
+      "cientifico": "Dermacentor nitens",
+      "italico": true,
+      "popular": "Carrapato tropical do cavalo",
+      "taxonomia": {
+        "reino": "Animalia",
+        "filo": "Arthropoda",
+        "classe": "Arachnida",
+        "subclasse": "Acari",
+        "superordem": "Parasitiformes",
+        "ordem": "Ixodida",
+        "familia": "Ixodidae",
+        "genero": "Dermacentor",
+        "especie": "<em>Dermacentor nitens</em> (sin. <em>Anocentor nitens</em>)"
+      },
+      "img": {
+        "arquivo": "dermacentor_nitens_lineart.jpeg",
+        "legenda": "Fêmea de <em>Dermacentor nitens</em> em vista dorsal, sem ornamentação, com escudo brilhante mais longo que largo, base do capítulo retangular e palpos curtos; ao lado, teleógina e larva.",
+        "estruturas": [
+          "Base do capítulo retangular",
+          "Palpos curtos",
+          "Escudo não ornamentado, brilhante, mais longo que largo na fêmea",
+          "Olhos",
+          "Festões",
+          "Fêmea ingurgitada (teleógina)",
+          "Larva com três pares de pernas"
+        ]
+      },
+      "morfologia": [
+        "Carrapato duro pequeno, de cor amarelo-acastanhada e sem ornamentação.",
+        "Macho com 2–4 mm e fêmea com 2–5 mm antes do repasto.",
+        "Na fêmea, o escudo é brilhante e mais longo que largo.",
+        "Base do capítulo retangular e palpos curtos, típicos do gênero <em>Dermacentor</em>."
+      ],
+      "formas": [
+        "Ovo: até 3.500 por fêmea, postos no solo.",
+        "Larva: hexápode; sobe na vegetação e infesta o equino.",
+        "Ninfa: octópode; permanece no hospedeiro.",
+        "Adultos: só a fêmea ingurgitada (teleógina) deixa o hospedeiro."
+      ],
+      "hospedeiros": [
+        "Equinos, asininos e muares, seus hospedeiros principais.",
+        "Ocasionalmente bovinos, ovinos, caprinos e cães."
+      ],
+      "localizacao": [
+        "Principalmente no pavilhão auricular e no canal auditivo; também na crina, nas narinas, no abdômen ventral, no períneo e na cauda.",
+        "Ocorre em regiões tropicais das Américas, incluindo o Brasil."
+      ],
+      "ciclo": [
+        "Ciclo monoxeno (um hospedeiro): larva, ninfa e adulto mudam no mesmo equino.",
+        "A muda de larva para ninfa leva 8–16 dias; de ninfa para adulto, 7–29 dias; o período no hospedeiro é de 26–41 dias.",
+        "Somente a teleógina cai ao solo, põe até 3.500 ovos e morre.",
+        "As larvas não alimentadas sobrevivem até 117 dias, e ocorrem várias gerações por ano."
+      ],
+      "transmissao": [
+        "Infestação pela subida de larvas da pastagem para o equino e pelo contato entre animais.",
+        "Transmite <em>Babesia caballi</em> por via transovariana, um dos agentes da babesiose (piroplasmose) equina."
+      ],
+      "doenca": [
+        "Infestação maciça das orelhas, com irritação, inflamação, secreção, sacudir de cabeça e lesões no pavilhão auricular.",
+        "As lesões podem ser invadidas por larvas de mosca (miíases) e infecções bacterianas secundárias.",
+        "Babesiose equina: febre, anemia, icterícia e queda de desempenho."
+      ],
+      "diagnostico": [
+        "Inspeção cuidadosa das orelhas, da crina e da região perineal.",
+        "Identificação: escudo não ornamentado e brilhante, base do capítulo retangular e palpos curtos.",
+        "Babesiose: esfregaço sanguíneo, sorologia e PCR."
+      ],
+      "controle": [
+        "Acaricidas de uso veterinário aplicados com atenção às orelhas e ao períneo, repetidos conforme o ciclo de cerca de um mês no hospedeiro.",
+        "Manejo da pastagem e tratamento de todos os equídeos da propriedade.",
+        "Tratar as feridas das orelhas para evitar miíases."
+      ],
+      "zoonose": [
+        "Não: raramente pica o ser humano e não é vetor relevante de doenças humanas."
+      ],
+      "observacoes": [
+        "Era classificado no gênero <em>Anocentor</em>; hoje é incluído em <em>Dermacentor</em>.",
+        "Assim como <em>R. microplus</em>, é monoxeno, e só a teleógina cai ao solo."
+      ],
+      "fonte": "Aula 4 — Ordem Ixodida, slides 24–30 (pp. 12–15); Merck Veterinary Manual, ‘Ixodid ticks’ (merckvetmanual.com/integumentary-system/ticks/ixodid-ticks)."
+    }
   ]
 }
